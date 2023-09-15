@@ -1,6 +1,7 @@
 - Email kliens fejlesztése, ahol lesz egy Fullstack webes alkalmazás (React, NodeJS, NoSQL MongoDB adatbázis) és egy cross-platform mobilalkalmazás (Flutter, Dart), ahol lesz egy AI scam szűrő, mely értesíti a felhasználót, hogy gyanús emailt talált.
 - Tulajdonképpen egy plusz réteg, mely megvédi a felhasználót a gyanús emailektől.
 - Az AI modell fejlesztése pytorch segítségével fog megtörténni, amely során adat gyűjtés is fontos szerepet játszik.
+    - https://www.kaggle.com/datasets/ozlerhakan/spam-or-not-spam-dataset/code?datasetId=91827&sortBy=voteCount
 - Felhasználói és fejlesztői dokumentációval.
 - Az alkalmazások közötti kommunikáció API-val lehetséges.
 - Környezet kiépítése.

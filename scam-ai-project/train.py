@@ -7,10 +7,11 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics import accuracy_score, classification_report
 import pandas as pd
 import pickle
+import matplotlib.pyplot as plt
 
 from model import TextClassifier
 
-data = pd.read_csv('fraud_email.csv')
+data = pd.read_csv('fraud_email_.csv')
 
 data['Text'].fillna('', inplace=True)
 
@@ -44,12 +45,15 @@ optimizer = optim.Adam(model.parameters(), lr=0.001)
 
 # Training loop
 num_epochs = 20
+train_losses = []
+
 for epoch in range(num_epochs):
     optimizer.zero_grad()
     outputs = model(X_train)
     loss = criterion(outputs, y_train)
     loss.backward()
     optimizer.step()
+    train_losses.append(loss.item())
     print(f'Epoch [{epoch + 1}/{num_epochs}], Loss: {loss.item():.4f}')
 
 torch.save(model.state_dict(), "spam_classifier_model.pth");
@@ -65,3 +69,26 @@ print(f'Accuracy: {accuracy * 100:.2f}%')
 
 # Print classification report
 print(classification_report(y_test.numpy(), predicted.numpy(), target_names=['Not Spam', 'Spam']))
+
+plt.figure(figsize=(8, 6))
+plt.plot(range(1, num_epochs + 1), train_losses, label='Training Loss')
+plt.xlabel('Epoch')
+plt.ylabel('Loss')
+plt.title('Training Loss Over Time')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# Create a pie chart
+spam_count = len(y_test[y_test == 1])
+not_spam_count = len(y_test[y_test == 0])
+labels = ['Spam', 'Not Spam']
+sizes = [spam_count, not_spam_count]
+colors = ['#ff9999', '#66b3ff']  # Define colors for the pie chart slices
+
+plt.figure(figsize=(8, 6))
+plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', startangle=140)
+plt.title('Distribution of Spam and Not Spam')
+plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+
+plt.show()

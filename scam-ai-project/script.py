@@ -53,6 +53,6 @@ input_dim = len(vocab)  # Assuming the input dimension matches the vocabulary si
 model = load_model(model_path, input_dim)
 
 # Test the predict_spam_probability function
-text_to_predict = "You will send me your credit card number tomorrow"
+text_to_predict = "Hack your credit card, will lock your pc, unlock by paying with bitcoin!"
 spam_probability = predict_spam_probability(text_to_predict, model, vectorizer, vocab)
 print(f'The probability of the text being spam is: {spam_probability:.4f}')
