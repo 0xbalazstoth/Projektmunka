@@ -1,3 +1,4 @@
 \contentsline {chapter}{\numberline {1}Követelmények}{2}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Csomagok}{2}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Szoftverek}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.1}Csomagok, szoftverek}{2}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Email spam szűrő AI projekt}{2}{subsection.1.1.1}%
+\contentsline {paragraph}{}{2}{paragraph*.2}%
