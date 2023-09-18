@@ -10,8 +10,14 @@ app = Flask(__name__)
 @app.route("/spam-classification", methods=["POST"])
 def spamClassification():
     data = request.get_json()
-    text = data["text"]
 
+    # Check if "text" key is present in the JSON data
+    if "text" not in data:
+        error_message = {"error": "Missing 'text' key in request data"}
+        return jsonify(error_message), 400  # 400 Bad Request status code for missing data
+
+    text = data["text"]
+    
     prediction = Prediction
     # Define the path to the vocabulary and trained model
     vocab_path = 'count_vectorizer_vocab.pkl'
@@ -33,12 +39,12 @@ def spamClassification():
     print("Text classification: " + result.classification)
 
     data_result = {
+        "text": text,
         "classification": result.classification,
         "probability": format(result.probability, '.4f')
     }
 
     return jsonify(data_result), 201
-    # return jsonify(data)
 
 if __name__ == "__main__":
     app.run(debug=True)
