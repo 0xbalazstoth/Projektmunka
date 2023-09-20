@@ -12,7 +12,6 @@ export default function Sidebar({ children }) {
 		setActiveItem(item);
 	};
 
-	// Add a useEffect to update the 'expanded' state based on window width
 	useEffect(() => {
 		const handleResize = () => {
 			if (window.innerWidth < 475) {

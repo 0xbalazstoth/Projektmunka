@@ -1,46 +1,34 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
-import Sidebar, { SidebarItem } from "./components/SidebarWithContentSeparator";
-import { LayoutDashboard } from "lucide-react";
 import Main from "./components/Main";
 
 function App() {
+	const user = {
+		name: "Tom Cook",
+		email: "tom@example.com",
+		imageUrl:
+			"https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+	};
+	const navigation = [
+		{ name: "Home", href: "/" },
+		{ name: "About", href: "/team" },
+		{ name: "Login", href: "/login" },
+		{ name: "Register", href: "/calendar" },
+	];
+
+	const userNavigation = [
+		{ name: "Your Profile", href: "#" },
+		{ name: "Settings", href: "#" },
+		{ name: "Sign out", href: "#" },
+	];
+
 	return (
-		// <main className="App layout">
-		// 	{/* <Sidebar>
-		// 		<SidebarItem
-		// 			icon={<LayoutDashboard size={20}></LayoutDashboard>}
-		// 			text={"Dashboard"}
-		// 			alert
-		// 		></SidebarItem>
-		// 		<SidebarItem
-		// 			icon={<LayoutDashboard size={20}></LayoutDashboard>}
-		// 			text={"Inbox"}
-		// 		></SidebarItem>
-		// 		<SidebarItem
-		// 			icon={<LayoutDashboard size={20}></LayoutDashboard>}
-		// 			text={"Spam"}
-		// 		></SidebarItem>
-		// 		<hr className="my-3"></hr>
-		// 		<SidebarItem
-		// 			icon={<LayoutDashboard size={20}></LayoutDashboard>}
-		// 			text={"Settings"}
-		// 		></SidebarItem>
-		// 		<SidebarItem
-		// 			icon={<LayoutDashboard size={20}></LayoutDashboard>}
-		// 			text={"Help"}
-		// 		></SidebarItem>
-		// 	</Sidebar> */}
-		// 	<Main>
-		// 		<div>content</div>
-		// 		<footer>footer</footer>
-		// 	</Main>
-		// </main>
-		<Main>
-			<div>content</div>
-			<footer>footer</footer>
-		</Main>
+		<Main
+			navigation={navigation}
+			userNavigation={userNavigation}
+			user={user}
+		></Main>
 	);
 }
 
