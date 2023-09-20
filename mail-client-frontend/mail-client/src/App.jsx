@@ -12,9 +12,8 @@ function App() {
 	};
 	const navigation = [
 		{ name: "Home", href: "/" },
-		{ name: "About", href: "/team" },
 		{ name: "Login", href: "/login" },
-		{ name: "Register", href: "/calendar" },
+		{ name: "Register", href: "/register" },
 	];
 
 	const userNavigation = [

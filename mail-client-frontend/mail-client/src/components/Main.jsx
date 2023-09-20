@@ -8,6 +8,7 @@ import { AlertCircle, LayoutDashboard, Mail } from "lucide-react";
 import LoginView from "../views/LoginView";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import HomeView from "../views/HomeView";
+import RegisterView from "../views/RegisterView";
 
 function classNames(...classes) {
 	return classes.filter(Boolean).join(" ");
@@ -25,12 +26,15 @@ export default function Main({ navigation, userNavigation, user }) {
 							<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 								<div className="flex h-16 items-center justify-between">
 									<div className="flex items-center">
-										<div className="flex-shrink-0">
+										<div className="flex gap-x-3 flex-shrink-0 items-center">
 											<img
 												className="h-8 w-8"
 												src="https://img.logoipsum.com/247.svg"
 												alt="OEMail"
 											/>
+											<span className="text-white font-bold">
+												OEMail
+											</span>
 										</div>
 										<div className="hidden md:block">
 											<div className="ml-10 flex items-baseline space-x-4">
@@ -234,6 +238,10 @@ export default function Main({ navigation, userNavigation, user }) {
 					<Routes>
 						<Route path="/" exact Component={HomeView}></Route>
 						<Route path="/login" Component={LoginView}></Route>
+						<Route
+							path="/register"
+							Component={RegisterView}
+						></Route>
 					</Routes>
 				</main>
 			</div>
