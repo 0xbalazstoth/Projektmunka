@@ -6,31 +6,33 @@ import {
 	CloudArrowUpIcon,
 	FingerPrintIcon,
 	LockClosedIcon,
+	NewspaperIcon,
+	PaintBrushIcon,
 } from "@heroicons/react/24/outline";
 
 const features = [
 	{
-		name: "Push to deploy",
+		name: "New Features Galore",
 		description:
-			"Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
-		icon: CloudArrowUpIcon,
+			"Experience the latest in email technology. Our email client boasts a host of new features that will supercharge your email experience. From smart categorization to intuitive integrations, we've got it all.",
+		icon: NewspaperIcon,
 	},
 	{
-		name: "SSL certificates",
+		name: "Passwordless authentication",
 		description:
-			"Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.",
+			"Your accounts deserve the best protection. Our Passwordless Authentication employs cutting-edge security protocols, making it virtually impossible for unauthorized access, even in the face of advanced threats.",
 		icon: LockClosedIcon,
 	},
 	{
-		name: "Simple queues",
+		name: "Intuitive design",
 		description:
-			"Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.",
-		icon: ArrowPathIcon,
+			"We've reimagined the email client interface, making it sleek, intuitive, and user-friendly. Say hello to a clutter-free inbox that's a joy to navigate.",
+		icon: PaintBrushIcon,
 	},
 	{
 		name: "Advanced security",
 		description:
-			"Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.",
+			"Your privacy is our top priority. Rest easy knowing that your emails are protected with state-of-the-art security measures, ensuring your personal and professional correspondence remains confidential.",
 		icon: FingerPrintIcon,
 	},
 ];
@@ -46,7 +48,9 @@ const HomeView = () => {
 							src="https://img.logoipsum.com/247.svg"
 							alt="OEMail"
 						/>
-						<span className="text-white font-bold">OEMail</span>
+						<span className="text-white font-bold text-2xl">
+							OEMail
+						</span>
 					</div>
 					<h2 className="text-base font-semibold leading-7 text-blue-600">
 						Secure email client
@@ -55,9 +59,10 @@ const HomeView = () => {
 						Everything you need to know about to get started!
 					</p>
 					<p className="mt-6 text-lg leading-8 text-gray-400">
-						Quis tellus eget adipiscing convallis sit sit eget
-						aliquet quis. Suspendisse eget egestas a elementum
-						pulvinar et feugiat blandit at. In mi viverra elit nunc.
+						Elevate your email game with our cutting-edge email
+						client, designed to revolutionize the way you
+						communicate. Say goodbye to the ordinary and embrace a
+						new era of productivity, security, and innovation.
 					</p>
 				</div>
 				<div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">

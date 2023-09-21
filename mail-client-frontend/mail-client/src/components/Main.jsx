@@ -10,12 +10,18 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import HomeView from "../views/HomeView";
 import RegisterView from "../views/RegisterView";
 import NotFoundView from "../views/NotFoundView";
+import MailView from "../views/MailView";
 
 function classNames(...classes) {
 	return classes.filter(Boolean).join(" ");
 }
 
-export default function Main({ navigation, userNavigation, user }) {
+export default function Main({
+	navigation,
+	userNavigation,
+	mailNavigation,
+	user,
+}) {
 	const location = useLocation();
 
 	return (
@@ -187,6 +193,20 @@ export default function Main({ navigation, userNavigation, user }) {
 										</Disclosure.Button>
 									))}
 								</div>
+								<div className="border-t border-gray-700 pb-3">
+									<div className="mt-3 space-y-1 px-2">
+										{mailNavigation.map((item) => (
+											<Disclosure.Button
+												key={item.name}
+												as="a"
+												href={item.href}
+												className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+											>
+												{item.name}
+											</Disclosure.Button>
+										))}
+									</div>
+								</div>
 								<div className="border-t border-gray-700 pb-3 pt-4">
 									<div className="flex items-center px-5">
 										<div className="flex-shrink-0">
@@ -243,6 +263,7 @@ export default function Main({ navigation, userNavigation, user }) {
 							path="/register"
 							Component={RegisterView}
 						></Route>
+						<Route path="/mail" Component={MailView}></Route>
 						<Route path="*" Component={NotFoundView}></Route>
 					</Routes>
 				</main>

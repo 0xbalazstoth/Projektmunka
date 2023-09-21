@@ -22,10 +22,18 @@ function App() {
 		{ name: "Sign out", href: "#" },
 	];
 
+	const mailNavigation = [
+		{ name: "Inbox", href: "#" },
+		{ name: "Spam", href: "#" },
+		{ name: "Sent", href: "#" },
+		{ name: "Starred", href: "#" },
+	];
+
 	return (
 		<Main
 			navigation={navigation}
 			userNavigation={userNavigation}
+			mailNavigation={mailNavigation}
 			user={user}
 		></Main>
 	);
