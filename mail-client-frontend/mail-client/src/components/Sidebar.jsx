@@ -47,8 +47,12 @@ const Sidebar = ({ open, onClose }) => {
 			</span>
 
 			<div className={`mx-[56px] mt-[50px] flex items-center`}>
-				<div className="mt-1 ml-1 h-2.5 text-[26px] font-bold uppercase text-navy-700 dark:text-white">
-					OEMail
+				<div className="flex flex-col items-center mt-1 ml-1 h-2.5 text-[20px] font-bold text-navy-700 dark:text-white">
+					<img
+						src="https://img.logoipsum.com/280.svg"
+						className="w-16"
+					></img>
+					<span>OEMail.</span>
 				</div>
 			</div>
 

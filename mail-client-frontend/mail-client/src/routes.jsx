@@ -13,14 +13,17 @@ import {
 
 import { HiInbox } from "react-icons/hi";
 
-import { BsSend, BsInbox } from "react-icons/bs";
+import { BsSend, BsInbox, BsHouse, BsTrash, BsStar } from "react-icons/bs";
+import SentView from "./views/SentView";
+import TrashView from "./views/TrashView";
+import StarredView from "./views/StarredView";
 
 const routes = [
 	{
 		name: "Home",
 		layout: "/mail",
 		path: "home",
-		icon: <MdLock className="h-6 w-6" />,
+		icon: <BsHouse className="h-6 w-6" />,
 		component: <HomeView></HomeView>,
 	},
 	{
@@ -35,7 +38,21 @@ const routes = [
 		layout: "/mail",
 		path: "sent",
 		icon: <BsSend className="h-6 w-6" />,
-		component: <InboxView></InboxView>,
+		component: <SentView></SentView>,
+	},
+	{
+		name: "Trash",
+		layout: "/mail",
+		path: "trash",
+		icon: <BsTrash className="h-6 w-6" />,
+		component: <TrashView></TrashView>,
+	},
+	{
+		name: "Starred",
+		layout: "/mail",
+		path: "starred",
+		icon: <BsStar className="h-6 w-6" />,
+		component: <StarredView></StarredView>,
 	},
 ];
 

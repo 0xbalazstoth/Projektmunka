@@ -29,7 +29,7 @@ const Links = (props) => {
 								<span
 									className={`${
 										activeRoute(route.path) === true
-											? "font-bold text-[#4A8FCF] dark:text-white"
+											? "font-bold text-[#0e2234] dark:text-white"
 											: "font-medium text-gray-600"
 									}`}
 								>
@@ -46,7 +46,7 @@ const Links = (props) => {
 								</p>
 							</li>
 							{activeRoute(route.path) ? (
-								<div className="absolute right-0 top-px h-9 w-1 rounded-lg bg-[#4A8FCF] dark:bg-[#4A8FCF]" />
+								<div className="absolute right-0 top-px h-9 w-1 rounded-lg bg-[#0e2234] dark:bg-[#0e2234]" />
 							) : null}
 						</div>
 					</Link>

@@ -78,7 +78,7 @@ const MailView = () => {
 			<div className="h-full w-full bg-lightPrimary dark:!bg-navy-900">
 				{/* Main content */}
 				<main
-					className={`mx-[12px] h-full flex-none transition-all md:pr-2 xl:ml-[313px]`}
+					className={`mx-[12px] h-full flex-none transition-all md:pr-2 xl:ml-[220px]`}
 				>
 					{/* Navbar */}
 					<div className="h-full">
