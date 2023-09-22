@@ -20,7 +20,11 @@
 -   Környezet kiépítése.
 -   Összehasonlítások elkészítése más-más email kliens szolgáltatókkal.
 -   Egyéb ötletek:
+
     -   Több email szervert támogatna egyidőben
+
+-   https://ethereal.email/create
+-   https://emailengine.app/?utm_source=ethereal&utm_campaign=ethereal-footer&utm_medium=text#downloads
 
 # Webalkalmazás
 
