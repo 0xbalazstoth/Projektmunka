@@ -17,7 +17,7 @@ import routes from "../routes";
 const MailView = () => {
 	const location = useLocation();
 	const [open, setOpen] = React.useState(true);
-	const [currentRoute, setCurrentRoute] = React.useState("Main Dashboard");
+	const [currentRoute, setCurrentRoute] = React.useState("Mail");
 
 	React.useEffect(() => {
 		window.addEventListener("resize", () =>
@@ -29,7 +29,7 @@ const MailView = () => {
 	}, [location.pathname]);
 
 	const getActiveRoute = (routes) => {
-		let activeRoute = "Main Dashboard";
+		let activeRoute = "Mail";
 		for (let i = 0; i < routes.length; i++) {
 			if (
 				window.location.href.indexOf(
@@ -56,7 +56,7 @@ const MailView = () => {
 	};
 	const getRoutes = (routes) => {
 		return routes.map((prop, key) => {
-			if (prop.layout === "/admin") {
+			if (prop.layout === "/mail") {
 				return (
 					<Route
 						path={`/${prop.path}`}

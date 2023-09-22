@@ -14,14 +14,14 @@ import {
 const routes = [
 	{
 		name: "Home",
-		layout: "/home",
+		layout: "/mail",
 		path: "home",
 		icon: <MdLock className="h-6 w-6" />,
 		component: <HomeView></HomeView>,
 	},
 	{
 		name: "Inbox",
-		layout: "/inbox",
+		layout: "/mail",
 		path: "inbox",
 		icon: <MdLock className="h-6 w-6" />,
 		component: <InboxView></InboxView>,

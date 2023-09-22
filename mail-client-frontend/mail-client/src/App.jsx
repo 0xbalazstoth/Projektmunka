@@ -7,7 +7,6 @@ function App() {
 	return (
 		<Routes>
 			<Route path="mail/*" element={<MailView></MailView>}></Route>
-			<Route path="admin/*" element={<h1>admin</h1>}></Route>
 		</Routes>
 	);
 }
