@@ -1,22 +1,14 @@
 ﻿import React from "react";
-
 import HomeView from "./views/HomeView";
 import InboxView from "./views/InboxView";
-
-import {
-	MdHome,
-	MdOutlineShoppingCart,
-	MdBarChart,
-	MdPerson,
-	MdLock,
-} from "react-icons/md";
-
-import { HiInbox } from "react-icons/hi";
-
 import { BsSend, BsInbox, BsHouse, BsTrash, BsStar } from "react-icons/bs";
+import { RiErrorWarningLine } from "react-icons/ri";
+import { LuMails } from "react-icons/lu";
 import SentView from "./views/SentView";
 import TrashView from "./views/TrashView";
 import StarredView from "./views/StarredView";
+import SpamView from "./views/SpamView";
+import AllView from "./views/AllView";
 
 const routes = [
 	{
@@ -53,6 +45,20 @@ const routes = [
 		path: "starred",
 		icon: <BsStar className="h-6 w-6" />,
 		component: <StarredView></StarredView>,
+	},
+	{
+		name: "Spam",
+		layout: "/mail",
+		path: "spam",
+		icon: <RiErrorWarningLine className="h-6 w-6" />,
+		component: <SpamView></SpamView>,
+	},
+	{
+		name: "All",
+		layout: "/mail",
+		path: "all",
+		icon: <LuMails className="h-6 w-6" />,
+		component: <AllView></AllView>,
 	},
 ];
 
