@@ -11,7 +11,7 @@ import {
 import Dropdown from "../components/Dropdown";
 
 const Navbar = (props) => {
-	const { onOpenSidenav } = props;
+	const { onOpenSidenav, brandText } = props;
 
 	return (
 		<nav className="sticky top-4 z-40 flex flex-row flex-wrap items-center justify-between rounded-xl bg-white/10 p-2 backdrop-blur-xl dark:bg-[#0b14374d]">
@@ -31,7 +31,7 @@ const Navbar = (props) => {
 						className="text-sm font-normal capitalize text-navy-700 hover:underline dark:text-white dark:hover:text-white"
 						to="#"
 					>
-						OEMail
+						{brandText}
 					</Link>
 				</div>
 				<p className="shrink text-[33px] capitalize text-navy-700 dark:text-white">
@@ -39,7 +39,7 @@ const Navbar = (props) => {
 						to="#"
 						className="font-bold capitalize hover:text-navy-700 dark:hover:text-white"
 					>
-						OEMail
+						{brandText}
 					</Link>
 				</p>
 			</div>

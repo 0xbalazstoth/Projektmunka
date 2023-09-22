@@ -5,7 +5,7 @@ import { BsDash } from "react-icons/bs";
 const Links = (props) => {
 	let location = useLocation();
 
-	const { routes } = props;
+	const { routes, handleLinkClick } = props;
 
 	// verifies if routeName is the one active (in browser input)
 	const activeRoute = (routeName) => {
@@ -16,7 +16,11 @@ const Links = (props) => {
 		return routes.map((route, index) => {
 			if (route.layout === "/mail") {
 				return (
-					<Link key={index} to={route.layout + "/" + route.path}>
+					<Link
+						key={index}
+						to={route.layout + "/" + route.path}
+						onClick={handleLinkClick}
+					>
 						<div className="relative mb-3 flex hover:cursor-pointer">
 							<li
 								className="my-[3px] flex cursor-pointer items-center px-8"
@@ -25,7 +29,7 @@ const Links = (props) => {
 								<span
 									className={`${
 										activeRoute(route.path) === true
-											? "font-bold text-brand-500 dark:text-white"
+											? "font-bold text-[#4A8FCF] dark:text-white"
 											: "font-medium text-gray-600"
 									}`}
 								>
@@ -42,7 +46,7 @@ const Links = (props) => {
 								</p>
 							</li>
 							{activeRoute(route.path) ? (
-								<div className="absolute right-0 top-px h-9 w-1 rounded-lg bg-brand-500 dark:bg-brand-400" />
+								<div className="absolute right-0 top-px h-9 w-1 rounded-lg bg-[#4A8FCF] dark:bg-[#4A8FCF]" />
 							) : null}
 						</div>
 					</Link>
