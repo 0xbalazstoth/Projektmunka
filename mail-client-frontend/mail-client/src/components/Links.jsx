@@ -1,16 +1,23 @@
-﻿import React, { useEffect } from "react";
+﻿import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { BsDash } from "react-icons/bs";
 
 const Links = (props) => {
 	let location = useLocation();
-
 	const { routes, handleLinkClick } = props;
+	const [activeLink, setActiveLink] = useState(null);
 
 	// verifies if routeName is the one active (in browser input)
 	const activeRoute = (routeName) => {
 		return location.pathname === routeName;
 	};
+
+	useEffect(() => {
+		// When the component mounts, set the first link as active by default
+		if (routes.length > 0 && activeLink === null) {
+			setActiveLink(routes[0].layout + "/" + routes[0].path);
+		}
+	}, [routes, activeLink]);
 
 	const createLinks = (routes) => {
 		return routes.map((route, index) => {
@@ -21,9 +28,14 @@ const Links = (props) => {
 					<Link
 						key={index}
 						to={linkTo}
-						onClick={handleLinkClick}
+						onClick={() => {
+							handleLinkClick();
+							setActiveLink(linkTo);
+						}}
 						className={`relative mb-3 flex hover:cursor-pointer ${
-							activeRoute(linkTo) ? "active-link" : ""
+							activeRoute(linkTo) || activeLink === linkTo
+								? "active-link"
+								: ""
 						}`}
 					>
 						<li
@@ -32,7 +44,7 @@ const Links = (props) => {
 						>
 							<span
 								className={`${
-									activeRoute(linkTo)
+									activeRoute(linkTo) || activeLink === linkTo
 										? "font-bold text-[#0e2234] dark:text-white"
 										: "font-medium text-gray-600"
 								}`}
@@ -41,7 +53,7 @@ const Links = (props) => {
 							</span>
 							<p
 								className={`leading-1 ml-4 flex ${
-									activeRoute(linkTo)
+									activeRoute(linkTo) || activeLink === linkTo
 										? "font-bold text-navy-700 dark:text-white"
 										: "font-medium text-gray-600"
 								}`}
@@ -49,7 +61,7 @@ const Links = (props) => {
 								{route.name}
 							</p>
 						</li>
-						{activeRoute(linkTo) ? (
+						{activeRoute(linkTo) || activeLink === linkTo ? (
 							<div className="absolute right-0 top-px h-9 w-1 rounded-lg bg-[#0e2234] dark:bg-[#0e2234]" />
 						) : null}
 					</Link>
