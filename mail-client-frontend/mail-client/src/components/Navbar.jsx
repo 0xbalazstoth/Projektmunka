@@ -12,6 +12,7 @@ import Dropdown from "../components/Dropdown";
 
 const Navbar = (props) => {
 	const { onOpenSidenav, brandText } = props;
+	const [darkmode, setDarkmode] = React.useState(false);
 
 	return (
 		<nav className="sticky top-4 z-40 flex flex-row flex-wrap items-center justify-between rounded-xl bg-white/10 p-2 backdrop-blur-xl dark:bg-[#0b14374d]">
@@ -150,6 +151,24 @@ const Navbar = (props) => {
 					}
 					animation="origin-[75%_0%] md:origin-top-right transition-all duration-300 ease-in-out"
 				/>
+				<div
+					className="cursor-pointer text-gray-600"
+					onClick={() => {
+						if (darkmode) {
+							document.body.classList.remove("dark");
+							setDarkmode(false);
+						} else {
+							document.body.classList.add("dark");
+							setDarkmode(true);
+						}
+					}}
+				>
+					{darkmode ? (
+						<RiSunFill className="h-4 w-4 text-gray-600 dark:text-white" />
+					) : (
+						<RiMoonFill className="h-4 w-4 text-gray-600 dark:text-white" />
+					)}
+				</div>
 				<Dropdown
 					button={<span>Profile</span>}
 					children={
