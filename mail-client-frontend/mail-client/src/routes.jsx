@@ -1,7 +1,14 @@
 ﻿import React from "react";
 import HomeView from "./views/HomeView";
 import InboxView from "./views/InboxView";
-import { BsSend, BsInbox, BsHouse, BsTrash, BsStar } from "react-icons/bs";
+import {
+	BsSend,
+	BsInbox,
+	BsHouse,
+	BsTrash,
+	BsStar,
+	BsSendPlus,
+} from "react-icons/bs";
 import { RiErrorWarningLine } from "react-icons/ri";
 import { LuMails } from "react-icons/lu";
 import SentView from "./views/SentView";
@@ -9,6 +16,7 @@ import TrashView from "./views/TrashView";
 import StarredView from "./views/StarredView";
 import SpamView from "./views/SpamView";
 import AllView from "./views/AllView";
+import SendNewMessageView from "./views/SendNewMessageView";
 import FadeInWrapper from "./components/FadeInWrapper";
 
 const routes = [
@@ -18,6 +26,13 @@ const routes = [
 		path: "",
 		icon: <BsHouse className="h-6 w-6" />,
 		component: <HomeView></HomeView>,
+	},
+	{
+		name: "Send new message",
+		layout: "/mail",
+		path: "send",
+		icon: <BsSendPlus className="h-6 w-6"></BsSendPlus>,
+		component: <SendNewMessageView></SendNewMessageView>,
 	},
 	{
 		name: "Inbox",
@@ -33,6 +48,7 @@ const routes = [
 		icon: <BsSend className="h-6 w-6" />,
 		component: <SentView></SentView>,
 	},
+
 	{
 		name: "Trash",
 		layout: "/mail",
