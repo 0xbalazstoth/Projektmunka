@@ -14,7 +14,7 @@ const routes = [
 	{
 		name: "Home",
 		layout: "/mail",
-		path: "home",
+		path: "",
 		icon: <BsHouse className="h-6 w-6" />,
 		component: <HomeView></HomeView>,
 	},

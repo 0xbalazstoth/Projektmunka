@@ -19,7 +19,7 @@ const TypedAnimation = ({ startText, strings }) => {
 
 	return (
 		<div className="flex flex-row gap-x-1 text-center">
-			<span className="text-xl ">{startText}</span>
+			<span className="text-xl">{startText}</span>
 			<span id="typed-animation" className="text-xl font-bold"></span>
 		</div>
 	);
