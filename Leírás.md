@@ -37,6 +37,7 @@
 -   [ ] Autentikátor
     -   [ ] Az egyszer használatos kóddal összekötve már tudja használni a fiókot.
     -   [ ] Kódot generál, ami 60 másodpercig érvényes.
+    -   [ ] VAGY QR-kódos belépés
 
 # AI
 

@@ -46,7 +46,9 @@ const Sidebar = ({ open, onClose }) => {
 				<HiX />
 			</span>
 
-			<div className={`mx-[56px] mt-[50px] flex items-center`}>
+			<div
+				className={`mx-[56px] mt-[50px] flex items-center justify-center`}
+			>
 				<div className="flex flex-col items-center mt-1 ml-1 h-2.5 text-[20px] font-bold text-navy-700 dark:text-white">
 					<img
 						src="https://img.logoipsum.com/280.svg"
