@@ -9,6 +9,7 @@ import TrashView from "./views/TrashView";
 import StarredView from "./views/StarredView";
 import SpamView from "./views/SpamView";
 import AllView from "./views/AllView";
+import FadeInWrapper from "./components/FadeInWrapper";
 
 const routes = [
 	{
