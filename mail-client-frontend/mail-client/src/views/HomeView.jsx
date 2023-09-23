@@ -21,8 +21,8 @@ const HomeView = () => {
 					<span>OEMail.</span>
 				</div>
 				<div className="flex flex-row gap-x-1 text-4xl">
-					<h1>Welcome, </h1>
-					<h1 className="font-bold">username!</h1>
+					<h1 className="dark:text-white">Welcome, </h1>
+					<h1 className="font-bold text-blue-400">username!</h1>
 				</div>
 				<div>
 					<TypedAnimation

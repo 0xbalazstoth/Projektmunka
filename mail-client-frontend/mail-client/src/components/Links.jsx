@@ -13,11 +13,12 @@ const Links = (props) => {
 	};
 
 	useEffect(() => {
-		// When the component mounts, set the first link as active by default
-		if (routes.length > 0 && activeLink === null) {
-			setActiveLink(routes[0].layout + "/" + routes[0].path);
+		if (location.pathname === "/mail") {
+			if (routes.length > 0 && activeLink === null) {
+				setActiveLink(routes[0].layout + "/" + routes[0].path);
+			}
 		}
-	}, [routes, activeLink]);
+	}, [routes, activeLink, location.pathname]);
 
 	const createLinks = (routes) => {
 		return routes.map((route, index) => {
@@ -62,7 +63,7 @@ const Links = (props) => {
 							</p>
 						</li>
 						{activeRoute(linkTo) || activeLink === linkTo ? (
-							<div className="absolute right-0 top-px h-9 w-1 rounded-lg bg-[#0e2234] dark:bg-[#0e2234]" />
+							<div className="absolute right-0 top-px h-9 w-1 rounded-lg bg-[#0e2234] dark:bg-white" />
 						) : null}
 					</Link>
 				);

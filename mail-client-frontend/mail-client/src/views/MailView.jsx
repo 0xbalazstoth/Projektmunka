@@ -13,6 +13,7 @@ import Footer from "../components/Footer";
 import Sidebar from "../components/Sidebar";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import routes from "../routes";
+import HomeView from "./HomeView";
 
 const MailView = () => {
 	const location = useLocation();
@@ -87,7 +88,7 @@ const MailView = () => {
 							secondary={getActiveNavbar(routes)}
 							brandText={currentRoute}
 						></Navbar>
-						<div className="pt-5s mx-auto mb-auto h-full min-h-[84vh] p-4 md:pr-2">
+						<div className="pt-5s mx-auto mb-auto min-h-[84vh] p-4 md:pr-2">
 							<Routes>
 								{getRoutes(routes)}{" "}
 								<Route
@@ -96,6 +97,10 @@ const MailView = () => {
 										<Navigate to="/mail" replace></Navigate>
 									}
 								></Route>
+								<Route
+									path="*"
+									element={<HomeView></HomeView>}
+								/>
 							</Routes>
 						</div>
 						<div className="p-3">

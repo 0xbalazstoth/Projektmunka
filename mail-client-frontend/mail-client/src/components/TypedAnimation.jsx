@@ -13,14 +13,17 @@ const TypedAnimation = ({ startText, strings }) => {
 		const typed = new Typed("#typed-animation", options);
 
 		return () => {
-			typed.destroy(); // Clean up the Typed.js instance when the component unmounts.
+			typed.destroy();
 		};
 	}, [strings]);
 
 	return (
 		<div className="flex flex-row gap-x-1 text-center">
-			<span className="text-xl">{startText}</span>
-			<span id="typed-animation" className="text-xl font-bold"></span>
+			<span className="text-xl dark:text-white">{startText}</span>
+			<span
+				id="typed-animation"
+				className="text-xl font-bold text-blue-400"
+			></span>
 		</div>
 	);
 };
