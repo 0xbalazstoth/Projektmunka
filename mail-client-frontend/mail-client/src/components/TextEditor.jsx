@@ -19,7 +19,7 @@ const TextEditor = (props) => {
 			matchVisual: false,
 		},
 	};
-	const placeholder = "Módosítás...";
+	const placeholder = "Content...";
 	const formats = [
 		"bold",
 		"italic",
@@ -90,9 +90,28 @@ const TextEditor = (props) => {
 			quill.clipboard.dangerouslyPasteHTML("<h1>asd</h1>"); // Set content from db
 			quill.history.clear(); // Needed because of CTRL-Z (undo)
 
+			const qlToolbar = document.querySelector(".ql-toolbar");
+			if (qlToolbar) {
+				qlToolbar.style.border = "none";
+				qlToolbar.style.backgroundColor = "#e9ecef";
+				qlToolbar.style.borderTopRightRadius = "15px";
+				qlToolbar.style.borderTopLeftRadius = "15px";
+			}
+
 			const qlContainer = document.querySelector(".ql-container");
 			if (qlContainer) {
 				qlContainer.style.height = "20vh";
+				qlContainer.style.border = "none";
+				// qlToolbar.style.backgroundColor = "#e9ecef";
+				// qlToolbar.style.borderBottomRightRadius = "15px";
+				// qlToolbar.style.borderBottomLeftRadius = "15px";
+			}
+
+			const qlEditor = document.querySelector(".ql-editor");
+			if (qlEditor) {
+				qlEditor.style.backgroundColor = "#e9ecef";
+				qlEditor.style.borderBottomRightRadius = "15px";
+				qlEditor.style.borderBottomLeftRadius = "15px";
 			}
 		}
 	}, [quill]);
