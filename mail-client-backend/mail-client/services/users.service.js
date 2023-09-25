@@ -78,6 +78,11 @@ module.exports = {
 				}
 			},
 		},
+		me: {
+			async handler(ctx) {
+				return ctx.meta.user;
+			},
+		},
 	},
 
 	methods: {},
