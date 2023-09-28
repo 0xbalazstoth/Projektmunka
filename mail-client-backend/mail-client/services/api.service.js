@@ -58,6 +58,7 @@ module.exports = {
 
 				aliases: {
 					"POST /users/login": "users.login",
+					"POST /users/loginTotp": "users.loginWithTOTP",
 					"GET /users/get/:id": "users.get",
 					"GET /users/me": "users.me",
 					"POST /users/": "users.createUser",

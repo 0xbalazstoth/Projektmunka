@@ -31,6 +31,8 @@
 -   [ ] No-password autentikáció
     -   [ ] Regisztráció után, generál egy egyszer használatos kódot, amit össze kell kötni a mobilalkalmazással.
     -   [ ] Belépéskor csakis a mobilalkalmazás által generált kóddal lehet belépni.
+-   [ ] Deploy: https://dash.cloudflare.com/e393c085a19bc3d952c6513553e24fb6/pages/new/provider/github
+    -   [ ] https://developers.cloudflare.com/pages/framework-guides/deploy-a-vite3-project/
 
 # Mobilalkalmazás
 

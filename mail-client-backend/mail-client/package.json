@@ -39,6 +39,7 @@
 		"mongoose": "^6.11.2",
 		"nodemailer": "^6.9.5",
 		"nodemon": "^3.0.1",
+		"speakeasy": "^2.0.0",
 		"vash": "^0.13.0"
 	},
 	"engines": {

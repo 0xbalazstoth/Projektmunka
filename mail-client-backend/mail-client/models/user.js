@@ -11,6 +11,7 @@ const UserSchema = Schema(
 		apiKeys: { type: [ApiKeySchema], default: [] },
 		profileImageUrl: { type: String, default: "/default.png" },
 		bio: { type: String },
+		totpSecret: { type: String },
 	},
 	{
 		timestamps: true,
