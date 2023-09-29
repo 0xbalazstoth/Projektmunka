@@ -2,12 +2,19 @@
 
 const getClient = () => {
 	return new ImapFlow({
-		host: "ethereal.email",
-		port: 993,
-		secure: true,
+		// host: "ethereal.email",
+		// port: 993,
+		// secure: true,
+		// auth: {
+		// 	user: "adam.beier@ethereal.email",
+		// 	pass: "wByrcW3ubU9QHjM3at",
+		// },
+		host: "192.168.1.135",
+		port: 143,
+		secure: false,
 		auth: {
-			user: "adam.beier@ethereal.email",
-			pass: "wByrcW3ubU9QHjM3at",
+			user: "test@oemail.io",
+			pass: "test",
 		},
 	});
 };

@@ -5,6 +5,16 @@
 \usepackage{graphicx}
 \usepackage{titling}
 \usepackage{geometry}
+\usepackage{titling}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+}
 
 \geometry{
   top=4cm,    % Adjust the top margin as needed
@@ -36,7 +46,9 @@
 \renewcommand\contentsname{Tartalomjegyzék}
 
 \title{Email kliens fejlesztés - Projektmunka}
+\subtitle{Fejlesztői dokumentáció}
 \author{Tóth Balázs - MWZX0D}
+\date{}
 
 \pretitle{%
   \begin{center}
@@ -51,6 +63,7 @@
 
 \tableofcontents
 
+\include{ch-Projects}
 \include{ch-Requirements}
 
 \end{document}

@@ -2,20 +2,20 @@
 
 // Create a transporter using SMTP
 const transporter = nodemailer.createTransport({
-	host: "smtp.ethereal.email",
+	host: "192.168.1.135",
 	port: 587,
 	auth: {
-		user: "adam.beier@ethereal.email",
-		pass: "wByrcW3ubU9QHjM3at",
+		user: "test@oemail.io",
+		pass: "test",
 	},
 });
 
 // Email data
 const mailOptions = {
-	from: "adam.beier@ethereal.email",
-	to: "clare22@ethereal.email",
+	from: "test@oemail.io",
+	to: "test2@oemail.io",
 	subject: "Tesztelek",
-	html: "<h1>HEADING1</h1> test", // text
+	html: "<h1>HEADING111</h1> EZ EGY TESZT", // text
 };
 
 // Send the email
