@@ -15,7 +15,7 @@ const mailOptions = {
 	from: "adam.beier@ethereal.email",
 	to: "clare22@ethereal.email",
 	subject: "Tesztelek",
-	text: "Teszt üzenet!",
+	html: "<h1>HEADING1</h1> test", // text
 };
 
 // Send the email

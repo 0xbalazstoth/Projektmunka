@@ -62,6 +62,7 @@ module.exports = {
 					"GET /users/get/:id": "users.get",
 					"GET /users/me": "users.me",
 					"POST /users/": "users.createUser",
+					"POST /users/sendEmail": "smtp.sendEmail",
 				},
 
 				/**
