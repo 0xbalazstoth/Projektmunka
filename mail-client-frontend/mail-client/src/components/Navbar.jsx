@@ -1,4 +1,4 @@
-﻿import React from "react";
+﻿import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FiAlignJustify } from "react-icons/fi";
 import { BsArrowBarUp } from "react-icons/bs";
@@ -9,10 +9,22 @@ import {
 	IoMdInformationCircleOutline,
 } from "react-icons/io";
 import Dropdown from "../components/Dropdown";
+import { useLocation, useNavigate } from "react-router-dom";
+import UserContext from "../contexts/UserContext";
 
 const Navbar = (props) => {
 	const { onOpenSidenav, brandText } = props;
 	const [darkmode, setDarkmode] = React.useState(false);
+	const { user, setUser } = useContext(UserContext);
+	const navigate = useNavigate();
+
+	const handleLogout = () => {
+		if (user) {
+			localStorage.removeItem("tkn");
+			setUser(null);
+			navigate("/login");
+		}
+	};
 
 	return (
 		<nav className="sticky top-4 z-40 flex flex-row flex-wrap items-center justify-between rounded-xl bg-white/10 p-2 backdrop-blur-xl dark:bg-[#0b14374d]">
@@ -195,12 +207,12 @@ const Navbar = (props) => {
 								>
 									Newsletter Settings
 								</a>
-								<a
-									href=" "
+								<button
+									onClick={handleLogout}
 									className="mt-3 text-sm font-medium text-red-500 hover:text-red-500"
 								>
 									Log Out
-								</a>
+								</button>
 							</div>
 						</div>
 					}

@@ -1,7 +1,11 @@
-﻿import React from "react";
+﻿import React, { useContext } from "react";
 import TypedAnimation from "../components/TypedAnimation";
+import UserContext from "../contexts/UserContext";
 
 const HomeView = () => {
+	const { user } = useContext(UserContext);
+	console.log(user);
+
 	const animationStrings = [
 		"robust security.",
 		"confidence in email.",
@@ -20,7 +24,7 @@ const HomeView = () => {
 			</div>
 			<div className="flex flex-row gap-x-1 text-4xl">
 				<h1 className="dark:text-white">Welcome, </h1>
-				<h1 className="font-bold text-blue-400">username!</h1>
+				<h1 className="font-bold text-blue-400">{user.email}</h1>
 			</div>
 			<div>
 				<TypedAnimation

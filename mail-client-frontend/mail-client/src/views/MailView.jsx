@@ -1,4 +1,4 @@
-﻿import React from "react";
+﻿import React, { useEffect, useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { FiAlignJustify } from "react-icons/fi";
 import { BsArrowBarUp } from "react-icons/bs";
@@ -11,21 +11,33 @@ import {
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Sidebar from "../components/Sidebar";
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import {
+	Routes,
+	Route,
+	Navigate,
+	useLocation,
+	useNavigate,
+} from "react-router-dom";
 import routes from "../routes";
 import HomeView from "./HomeView";
+import UserContext from "../contexts/UserContext";
 
 const MailView = () => {
 	const location = useLocation();
 	const [open, setOpen] = React.useState(true);
 	const [currentRoute, setCurrentRoute] = React.useState("Mail");
 
-	React.useEffect(() => {
+	const { user } = useContext(UserContext);
+
+	const navigate = useNavigate();
+
+	useEffect(() => {
 		window.addEventListener("resize", () =>
 			window.innerWidth < 1200 ? setOpen(false) : setOpen(true)
 		);
-	}, []);
-	React.useEffect(() => {
+	});
+
+	useEffect(() => {
 		getActiveRoute(routes);
 	}, [location.pathname]);
 
