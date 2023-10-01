@@ -4,7 +4,6 @@ import UserContext from "../contexts/UserContext";
 
 const HomeView = () => {
 	const { user } = useContext(UserContext);
-	console.log(user);
 
 	const animationStrings = [
 		"robust security.",
@@ -24,7 +23,7 @@ const HomeView = () => {
 			</div>
 			<div className="flex flex-row gap-x-1 text-4xl">
 				<h1 className="dark:text-white">Welcome, </h1>
-				<h1 className="font-bold text-blue-400">{user.email}</h1>
+				<h1 className="font-bold text-blue-400">{user.firstName}</h1>
 			</div>
 			<div>
 				<TypedAnimation

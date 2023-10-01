@@ -65,7 +65,7 @@ const Navbar = (props) => {
 					<input
 						type="text"
 						placeholder="Search..."
-						className="block h-full w-full rounded-full bg-lightPrimary text-sm font-medium text-navy-700 outline-none placeholder:!text-gray-400 dark:bg-navy-900 dark:text-white dark:placeholder:!text-white sm:w-fit"
+						className="block h-full w-full rounded-full bg-lightPrimary border-none text-sm font-medium text-navy-700 outline-none placeholder:!text-gray-400 dark:bg-navy-900 dark:text-white dark:placeholder:!text-white sm:w-fit"
 					/>
 				</div>
 				<span
@@ -184,11 +184,11 @@ const Navbar = (props) => {
 				<Dropdown
 					button={<span>Profile</span>}
 					children={
-						<div className="flex h-48 w-56 flex-col justify-start rounded-[20px] bg-white bg-cover bg-no-repeat shadow-xl shadow-shadow-500 dark:!bg-navy-700 dark:text-white dark:shadow-none">
+						<div className="flex h-[11vh] w-56 flex-col justify-start rounded-[20px] bg-white bg-cover bg-no-repeat shadow-xl shadow-shadow-500 dark:!bg-navy-700 dark:text-white dark:shadow-none">
 							<div className="mt-3 ml-4">
 								<div className="flex items-center gap-2">
 									<p className="text-sm font-bold text-navy-700 dark:text-white">
-										👋 Hey, Adela
+										👋 Hey, {user.firstName}
 									</p>{" "}
 								</div>
 							</div>
@@ -200,12 +200,6 @@ const Navbar = (props) => {
 									className="text-sm text-gray-800 dark:text-white hover:dark:text-white"
 								>
 									Profile Settings
-								</a>
-								<a
-									href=" "
-									className="mt-3 text-sm text-gray-800 dark:text-white hover:dark:text-white"
-								>
-									Newsletter Settings
 								</a>
 								<button
 									onClick={handleLogout}

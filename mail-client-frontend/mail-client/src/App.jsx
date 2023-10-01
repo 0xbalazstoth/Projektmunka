@@ -11,6 +11,7 @@ import NotFound from "./views/NotFound";
 import LoginView from "./views/LoginView";
 import UserContext from "./contexts/UserContext";
 import { appFetchCall } from "./handlers/api";
+import CreateAccountView from "./views/CreateAccountView";
 
 function App() {
 	const [user, setUser] = useState(null);
@@ -59,6 +60,16 @@ function App() {
 					path="login"
 					element={user ? <Navigate to="/mail" /> : <LoginView />}
 				/>
+				<Route
+					path="create"
+					element={
+						user ? (
+							<Navigate to="/mail"></Navigate>
+						) : (
+							<CreateAccountView></CreateAccountView>
+						)
+					}
+				></Route>
 				<Route
 					path="mail/*"
 					element={

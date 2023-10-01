@@ -3,33 +3,31 @@ import { appPostRequest } from "../handlers/api";
 import UserContext from "../contexts/UserContext.jsx";
 import { useNavigate } from "react-router-dom";
 
-const LoginView = () => {
+const CreateAccountView = () => {
 	const [email, setEmail] = useState("");
 	const [pwd, setPwd] = useState("");
-	const [error, setError] = useState(null); // New state for error handling
-	const { setUser } = useContext(UserContext);
-	const loginEndpoint = "/api/users/login";
+	const [firstName, setFirstName] = useState("");
+	const [lastName, setLastName] = useState("");
+
+	const [error, setError] = useState(null);
+	const createAccountEndpoint = "/api/users/";
 
 	const navigate = useNavigate();
 
 	const handleSubmit = async () => {
 		try {
-			// Make API call to login
-			const response = await appPostRequest(loginEndpoint, {
-				email: email,
-				password: pwd,
+			const response = await appPostRequest(createAccountEndpoint, {
+				user: {
+					email: email,
+					password: pwd,
+					firstName: firstName,
+					lastName: lastName,
+				},
 			});
 
-			// Assuming the API response contains a token
-			const token = response.apiKeys[0].token;
-
-			// Store the token in local storage
-			localStorage.setItem("tkn", token);
-			setUser(response.data);
-			navigate("/mail");
+			navigate("/login");
 		} catch (error) {
-			// Handle login error
-			console.error("Login failed", error.message);
+			console.error("Account creation failed", error.message);
 			setError("Invalid email or password. Please try again."); // Set error message
 		}
 	};
@@ -55,6 +53,50 @@ const LoginView = () => {
 							handleSubmit();
 						}}
 					>
+						<div>
+							<label
+								htmlFor="firstName"
+								className="block text-sm font-medium leading-6 text-gray-900"
+							>
+								First Name
+							</label>
+							<div className="mt-2">
+								<input
+									id="firstName"
+									name="firstName"
+									type="text"
+									autoComplete="given-name"
+									onChange={(e) =>
+										setFirstName(e.target.value)
+									}
+									required
+									className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+								/>
+							</div>
+						</div>
+
+						<div>
+							<label
+								htmlFor="lastName"
+								className="block text-sm font-medium leading-6 text-gray-900"
+							>
+								Last Name
+							</label>
+							<div className="mt-2">
+								<input
+									id="lastName"
+									name="lastName"
+									type="text"
+									autoComplete="family-name"
+									onChange={(e) =>
+										setLastName(e.target.value)
+									}
+									required
+									className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+								/>
+							</div>
+						</div>
+
 						<div>
 							<label
 								htmlFor="email"
@@ -115,12 +157,12 @@ const LoginView = () => {
 					)}
 
 					<p className="mt-10 text-center text-sm text-gray-500">
-						Not a member?{" "}
+						Already a member?{" "}
 						<a
-							href="/create"
+							href="/login"
 							className="font-semibold leading-6 text-blue-600 hover:text-blue-500"
 						>
-							Create new account!
+							Login to your account!
 						</a>
 					</p>
 				</div>
@@ -129,4 +171,4 @@ const LoginView = () => {
 	);
 };
 
-export default LoginView;
+export default CreateAccountView;
