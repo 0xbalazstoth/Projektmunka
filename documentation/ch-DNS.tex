@@ -1,0 +1,33 @@
+﻿\graphicspath{ {./assets/} }
+
+\chapter{DNS szerver}
+
+\section{Indítás}
+Ahhoz, hogy használni tudjuk az email klienst, kritikus fontosságú a DNS szervernek a futtatása. Természetesen arra vonatkozik ez a megkötés, ha lokálisan futtatjuk az email szervert!
+\begin{itemize}
+    \item \verb|docker-compose up -d|
+\end{itemize}
+
+\begin{flushleft}
+    Parancs futtatása után látható, hogy sikeresen elindult a DNS szerver.
+    \begin{center}
+        \includegraphics[width=0.9\textwidth]{docker-up-dns-server.png}
+    \end{center}
+\end{flushleft}
+
+\section{Konfiguráció}
+\begin{flushleft}
+    Magát a konfigurációt webes környezetben hajthatjuk végre, amely látható is, hogy a \textbf{5380} porton fut. Cím, amelyen a konfigurációt elvégezhetjük:
+    \begin{itemize}
+        \item \verb|http://localhost:5380/|
+    \end{itemize}
+\end{flushleft}
+
+\subsection{Zóna hozzáadása}
+Megadott paraméterek:
+\begin{itemize}
+    \item Zóna neve: \verb|oemail.io|
+    \item Típus: \verb|Primary Zone|
+\end{itemize}
+
+\subsection{Record hozzáadása}
