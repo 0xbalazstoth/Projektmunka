@@ -35,11 +35,11 @@ module.exports = {
 			async handler(ctx) {
 				// Create a transporter using SMTP
 				const transporter = nodemailer.createTransport({
-					host: "smtp.ethereal.email",
+					host: "192.168.1.135",
 					port: 587,
 					auth: {
-						user: "adam.beier@ethereal.email",
-						pass: "wByrcW3ubU9QHjM3at",
+						user: "test@oemail.io",
+						pass: "test",
 					},
 				});
 

@@ -184,7 +184,7 @@ const Navbar = (props) => {
 				<Dropdown
 					button={<span>Profile</span>}
 					children={
-						<div className="flex h-[11vh] w-56 flex-col justify-start rounded-[20px] bg-white bg-cover bg-no-repeat shadow-xl shadow-shadow-500 dark:!bg-navy-700 dark:text-white dark:shadow-none">
+						<div className="flex w-56 flex-col justify-start rounded-[20px] bg-white bg-cover bg-no-repeat shadow-xl shadow-shadow-500 dark:!bg-navy-700 dark:text-white dark:shadow-none">
 							<div className="mt-3 ml-4">
 								<div className="flex items-center gap-2">
 									<p className="text-sm font-bold text-navy-700 dark:text-white">
@@ -194,7 +194,7 @@ const Navbar = (props) => {
 							</div>
 							<div className="mt-3 h-px w-full bg-gray-200 dark:bg-white/20 " />
 
-							<div className="mt-3 ml-4 flex flex-col">
+							<div className="mt-3 p-2 text-center flex flex-col">
 								<a
 									href=" "
 									className="text-sm text-gray-800 dark:text-white hover:dark:text-white"

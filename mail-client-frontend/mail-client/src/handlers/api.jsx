@@ -1,7 +1,7 @@
 ﻿// apiHandler.js
 import axios from "axios";
 
-const baseURL = "http://127.0.0.1:3000"; // Replace with your API base URL
+const baseURL = "http://192.168.1.135:3000"; // Replace with your API base URL
 
 const api = axios.create({
 	baseURL,

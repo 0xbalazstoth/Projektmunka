@@ -1,0 +1,24 @@
+﻿version: "3"
+
+services:
+    technitium:
+        image: m400/technitium:latest
+        container_name: oemail-io-dns
+        ports:
+            - "53:53/udp"
+            - "53:53/tcp"
+            - "5380:5380"
+        hostname: oemail.io-dns
+        environment:
+            - DNS_SERVER_LOG_USING_LOCAL_TIME=true
+            - TZ=Europe/Budapest
+            - DNS_SERVER_DOMAIN=dns-server
+        volumes:
+            - config:/app/config
+            - ssl:/etc/ssl
+            - logs:/app/config/logs
+
+volumes:
+    config:
+    ssl:
+    logs:

@@ -1,6 +1,8 @@
-﻿import React, { useState } from "react";
+﻿import React, { useContext, useState } from "react";
 import { GrAttachment } from "react-icons/gr";
 import TextEditor from "../components/TextEditor";
+import { appPostRequest } from "../handlers/api";
+import UserContext from "../contexts/UserContext";
 
 const SendNewMessageView = () => {
 	const [toInput, setToInput] = useState("");
@@ -9,6 +11,11 @@ const SendNewMessageView = () => {
 	const [content, setContent] = useState("");
 	const [attachments, setAttachments] = useState([]);
 	const [toError, setToError] = useState("");
+	const [errorMessage, setErrorMessage] = useState("");
+
+	const { user } = useContext(UserContext);
+
+	const sendEmailEndpoint = "/api/users/sendEmail";
 
 	const handleToInputChange = (e) => {
 		const inputValue = e.target.value;
@@ -27,6 +34,20 @@ const SendNewMessageView = () => {
 			}
 		} else {
 			setToError("");
+		}
+	};
+
+	const handleToInputBlur = () => {
+		// Check for duplicate email address
+		if (toInput.trim() !== "" && !toAddresses.includes(toInput.trim())) {
+			// Add the email address to the list
+			setToAddresses([...toAddresses, toInput.trim()]);
+
+			// Clear the input
+			setToInput("");
+		} else if (toAddresses.includes(toInput.trim())) {
+			// Show duplicate error message
+			setToError("Duplicate email address");
 		}
 	};
 
@@ -74,8 +95,30 @@ const SendNewMessageView = () => {
 		setAttachments(updatedAttachments);
 	};
 
-	const handleSend = () => {
+	const handleSend = async () => {
 		// Implement your send message logic here.
+		const text = document.querySelector(".ql-editor").innerHTML;
+
+		try {
+			const response = await appPostRequest(sendEmailEndpoint, {
+				from: user.email,
+				receivers: toAddresses.join(","),
+				subject: subject,
+				content: text,
+			});
+
+			// Clear input fields
+			setToAddresses([]);
+			setSubject("");
+			setContent("");
+			setAttachments([]);
+			setErrorMessage("");
+
+			document.querySelector(".ql-editor").innerHTML = "";
+		} catch (error) {
+			console.error("An error occurred:", error);
+			setErrorMessage("Failed to send message.");
+		}
 	};
 
 	return (
@@ -108,6 +151,7 @@ const SendNewMessageView = () => {
 						value={toInput}
 						onChange={handleToInputChange}
 						onKeyDown={handleToInputKeyDown}
+						onBlur={handleToInputBlur}
 						placeholder="E-mail address"
 					/>
 				</div>
@@ -181,6 +225,10 @@ const SendNewMessageView = () => {
 					</div>
 				) : (
 					<></>
+				)}
+
+				{errorMessage && (
+					<div className="text-red-400 mt-2">{errorMessage}</div>
 				)}
 			</div>
 		</div>

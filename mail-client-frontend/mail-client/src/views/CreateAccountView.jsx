@@ -28,7 +28,7 @@ const CreateAccountView = () => {
 			navigate("/login");
 		} catch (error) {
 			console.error("Account creation failed", error.message);
-			setError("Invalid email or password. Please try again."); // Set error message
+			setError("Invalid email or password. Please try again.");
 		}
 	};
 
@@ -49,7 +49,7 @@ const CreateAccountView = () => {
 						className="space-y-6"
 						onSubmit={(e) => {
 							e.preventDefault();
-							setError(null); // Clear previous errors
+							setError(null);
 							handleSubmit();
 						}}
 					>
@@ -144,7 +144,7 @@ const CreateAccountView = () => {
 								type="submit"
 								className="flex w-full justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
 							>
-								Sign in
+								Create
 							</button>
 						</div>
 					</form>
