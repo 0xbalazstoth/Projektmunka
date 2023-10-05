@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  5 OCT 2023 19:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  5 OCT 2023 21:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -541,17 +541,12 @@ File: ./assets/docker-up-dns-server.png Graphic file (type png)
 <use ./assets/docker-up-dns-server.png>
 Package pdftex.def Info: ./assets/docker-up-dns-server.png  used on input line 14.
 (pdftex.def)             Requested size: 424.82523pt x 74.15945pt.
-<./assets/dnsdom.png, id=130, 127.97812pt x 70.76437pt>
-File: ./assets/dnsdom.png Graphic file (type png)
-<use ./assets/dnsdom.png>
-Package pdftex.def Info: ./assets/dnsdom.png  used on input line 55.
-(pdftex.def)             Requested size: 113.81102pt x 62.9304pt.
 ) [5
 
 
 
 
- <./assets/docker-up-dns-server.png> <./assets/dnsdom.png>] (documentation.aux (ch-Projects.aux) (ch-Requirements.aux) (ch-DNS.aux))
+ <./assets/docker-up-dns-server.png>] (documentation.aux (ch-Projects.aux) (ch-Requirements.aux) (ch-DNS.aux))
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
@@ -560,17 +555,17 @@ Package rerunfilecheck Info: File `documentation.out' has not changed.
 (rerunfilecheck)             Checksum: C5ED8DBC9C65CB28E093170F9401E155;2260.
  ) 
 Here is how much of TeX's memory you used:
- 20019 strings out of 475550
- 380854 string characters out of 5762533
+ 20010 strings out of 475550
+ 380641 string characters out of 5762533
  1929238 words of memory out of 5000000
- 40883 multiletter control sequences out of 15000+600000
+ 40874 multiletter control sequences out of 15000+600000
  563779 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,89p,504b,1225s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\rpgix\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on documentation.pdf (6 pages, 395917 bytes).
+Output written on documentation.pdf (6 pages, 394466 bytes).
 PDF statistics:
- 191 PDF objects out of 1000 (max. 8388607)
+ 189 PDF objects out of 1000 (max. 8388607)
  25 named destinations out of 1000 (max. 500000)
- 148 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 143 words of extra memory for PDF output out of 10000 (max. 10000000)
 
