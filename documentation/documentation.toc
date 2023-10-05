@@ -12,4 +12,5 @@
 \contentsline {section}{\numberline {3.1}Indítás}{5}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Konfiguráció}{5}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Zóna hozzáadása}{5}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Record hozzáadása}{5}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.2}Rekordok hozzáadása}{5}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Tesztelés nslookup parancs segítségével}{5}{subsection.3.2.3}%

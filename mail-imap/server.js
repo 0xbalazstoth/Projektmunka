@@ -13,7 +13,7 @@ const getClient = () => {
 		port: 143,
 		secure: false,
 		auth: {
-			user: "test@oemail.io",
+			user: "test2@oemail.io",
 			pass: "test",
 		},
 	});
