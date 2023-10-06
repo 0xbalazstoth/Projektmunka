@@ -4,13 +4,12 @@
 \contentsline {section}{\numberline {1.3}Előkövetelmények, csomagok, keretrendszerek}{3}{section.1.3}%
 \contentsline {subsection}{\numberline {1.3.1}Webalkalmazás}{3}{subsection.1.3.1}%
 \contentsline {subsection}{\numberline {1.3.2}AI Scam szűrő}{3}{subsection.1.3.2}%
-\contentsline {chapter}{\numberline {2}Követelmények}{4}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Csomagok, szoftverek}{4}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Email spam szűrő AI projekt}{4}{subsection.2.1.1}%
-\contentsline {paragraph}{}{4}{paragraph*.2}%
-\contentsline {chapter}{\numberline {3}DNS szerver}{5}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Indítás}{5}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Konfiguráció}{5}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Zóna hozzáadása}{5}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Rekordok hozzáadása}{5}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Tesztelés nslookup parancs segítségével}{5}{subsection.3.2.3}%
+\contentsline {chapter}{\numberline {2}DNS szerver}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Indítás}{4}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Konfiguráció}{4}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Zóna hozzáadása}{4}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Rekordok hozzáadása}{4}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Tesztelés nslookup parancs segítségével}{4}{subsection.2.2.3}%
+\contentsline {chapter}{\numberline {3}SMTP, IMAP szerver}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}hMailServer}{5}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Tesztelés}{5}{section.3.2}%

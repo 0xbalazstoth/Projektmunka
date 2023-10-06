@@ -11,7 +11,7 @@ const mailOptions = {
 	from: "test@oemail.io",
 	to: "test2@oemail.io,test3@oemail.io",
 	subject: "Tesztelek",
-	html: "Egyszerű tartalomasd!", // text
+	html: "Simple content!",
 };
 
 // Send the email
