@@ -3,6 +3,7 @@ const DBMixin = require("../mixins/db.mixin");
 const AuthenticationMixin = require("../mixins/authentication.mixin");
 const { MoleculerError } = require("moleculer").Errors;
 const { ImapFlow } = require("imapflow");
+const simpleParser = require("mailparser").simpleParser;
 
 module.exports = {
 	name: "imap",
@@ -35,13 +36,9 @@ module.exports = {
 								source: true,
 							}
 						);
-						console.info(message.source.toString());
-						return message.source;
 
-						// List subjects for all messages
-						// for await (let message of client.fetch("1:*", { envelope: true })) {
-						// 	console.log(`${message.uid}: ${message.envelope.subject}`);
-						// }
+						let parsedMail = await simpleParser(message.source);
+						return parsedMail;
 					} finally {
 						lock.release();
 					}
@@ -59,7 +56,7 @@ module.exports = {
 				port: process.env.IMAP_PORT || 143,
 				auth: {
 					user: ctx.meta.user.email,
-					pass: "test", // TODO, user's password here
+					pass: "test",
 				},
 			});
 		},

@@ -32,6 +32,7 @@
 		"imapflow": "^1.0.144",
 		"ioredis": "^5.0.0",
 		"jsonwebtoken": "^9.0.2",
+		"mailparser": "^3.6.5",
 		"moleculer": "^0.14.26",
 		"moleculer-db": "^0.8.20",
 		"moleculer-db-adapter-mongo": "^0.4.15",

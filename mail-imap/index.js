@@ -1,4 +1,5 @@
 ﻿const { ImapFlow } = require("imapflow");
+const simpleParser = require("mailparser").simpleParser;
 
 const getClient = () => {
 	return new ImapFlow({
@@ -24,15 +25,22 @@ const fetchAndListMessages = async (mailboxName) => {
 
 		try {
 			// Fetch the latest message source
-			let message = await client.fetchOne(client.mailbox.exists, {
-				source: true,
-			});
-			console.info(message.source.toString());
+			// let message = await client.fetchOne(client.mailbox.exists, {
+			// 	source: true,
+			// });
+			// console.info(message.source.toString());
 
 			// List subjects for all messages
-			// for await (let message of client.fetch("1:*", { envelope: true })) {
-			// 	console.log(`${message.uid}: ${message.envelope.subject}`);
-			// }
+			for await (let message of client.fetch("1:*", {
+				envelope: true,
+				bodyParts: true,
+				source: true,
+				bodyStructure: true,
+			})) {
+				//console.log(message.source.toString());
+				let parsed = await simpleParser(message.source);
+				console.log(parsed);
+			}
 		} finally {
 			// Make sure the lock is released; otherwise, the next `getMailboxLock()` never returns
 			lock.release();
