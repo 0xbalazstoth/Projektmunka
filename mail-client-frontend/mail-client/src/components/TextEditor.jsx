@@ -87,7 +87,6 @@ const TextEditor = (props) => {
 				quill.format("color", value);
 			});
 
-			quill.clipboard.dangerouslyPasteHTML("<h1>asd</h1>"); // Set content from db
 			quill.history.clear(); // Needed because of CTRL-Z (undo)
 
 			const qlToolbar = document.querySelector(".ql-toolbar");

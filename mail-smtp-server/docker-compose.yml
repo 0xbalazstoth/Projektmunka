@@ -1,0 +1,8 @@
+﻿version: "3"
+services:
+    mailslurper:
+        image: marcopas/docker-mailslurper
+        ports:
+            - "2500:2500"
+            - "9000:8080"
+            - "8085:8085"

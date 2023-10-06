@@ -7,22 +7,19 @@ const AuthenticationMixin = require("../mixins/authentication.mixin");
 const { MoleculerError } = require("moleculer").Errors;
 const UserExistsError = require("../exceptions/userExists.error");
 const jwt = require("jsonwebtoken");
-const speakeasy = require("speakeasy");
-var QRCode = require("qrcode");
 
 module.exports = {
 	name: "users",
 	mixins: [DBMixin("users"), AuthenticationMixin],
 	model: User,
 	settings: {
-		fields: ["_id", "email", "firstName", "lastName", "bio", "totpSecret"],
+		fields: ["_id", "email", "firstName", "lastName", "bio"],
 		entityValidator: {
 			email: { type: "email" },
 			password: { type: "string" },
 			firstName: { type: "string" },
 			lastName: { type: "string" },
 			bio: { type: "string", optional: true },
-			totpSecret: { type: "string", optional: true },
 		},
 	},
 
@@ -45,20 +42,7 @@ module.exports = {
 				const user = new User(ctx.params.user);
 				await this.validateEntity(user);
 
-				// Generate TOTP secret for the user
-				const totpSecret = speakeasy.generateSecret({
-					length: 200,
-				}).base32;
-
 				user.password = bcrypt.hashSync(user.password, 10);
-				user.totpSecret = totpSecret;
-
-				console.log(
-					speakeasy.otpauthURL({
-						secret: totpSecret,
-						label: user.email,
-					})
-				);
 
 				const token = jwt.sign(
 					{ userId: user._id },

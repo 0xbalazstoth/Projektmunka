@@ -4,18 +4,14 @@
 const transporter = nodemailer.createTransport({
 	host: "127.0.0.1",
 	port: 587,
-	auth: {
-		user: "test@oemail.io",
-		pass: "test",
-	},
 });
 
 // Email data
 const mailOptions = {
 	from: "test@oemail.io",
-	to: "test2@oemail.io",
-	subject: "Tesztelekasd",
-	html: "<h1>HH2</h1> EZ EGY 2323TESZT2", // text
+	to: "test2@oemail.io,test3@oemail.io",
+	subject: "Tesztelek",
+	html: "Egyszerű tartalomasd!", // text
 };
 
 // Send the email

@@ -35,21 +35,16 @@ module.exports = {
 			async handler(ctx) {
 				// Create a transporter using SMTP
 				const transporter = nodemailer.createTransport({
-					host: "192.168.1.135",
-					port: 587,
-					auth: {
-						user: "test@oemail.io",
-						pass: "test",
-					},
+					host: process.env.SMTP_HOST || "127.0.0.1",
+					port: process.env.SMTP_PORT || 587,
 				});
 
 				// Email data
 				const mailOptions = {
-					from: ctx.params.from, // "adam.beier@ethereal.email",
-					to: ctx.params.receivers, // clare22@ethereal.email
+					from: ctx.params.from,
+					to: ctx.params.receivers,
 					subject: ctx.params.subject,
-					html: ctx.params.content, // html: "<h1>HEADING1</h1> test"
-					// text: "simple text"
+					html: ctx.params.content,
 				};
 
 				// Send the email
