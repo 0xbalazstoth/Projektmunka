@@ -24,14 +24,14 @@ const OpenedMail = ({ handleGoBackMail, selectedMailId, mailData }) => {
 						</div>
 						<div className="h-[1vh] border-b-2 border-b-gray-50"></div>
 						{mailData.map((mail) =>
-							mail.id === selectedMailId ? (
-								<div key={mail.id}>
+							mail.messageId === selectedMailId ? (
+								<div key={mail.messageId}>
 									<h1 className="font-bold text-2xl">
-										{mail.title}
+										{mail.subject}
 									</h1>
 									<p>{mail.subject}</p>
 									<div className="h-[35vh] overflow-y-auto">
-										{parse(mail.content)}
+										{parse(mail.html)}
 									</div>
 								</div>
 							) : null

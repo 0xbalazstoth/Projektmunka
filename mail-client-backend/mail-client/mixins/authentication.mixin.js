@@ -1,8 +1,10 @@
 ﻿const bcrypt = require("bcrypt");
 const hat = require("hat");
 const UserNotFoundError = require("../exceptions/userNotFound.error");
+const UnAuthorizedError = require("../exceptions/unauthorized.error");
 const jwt = require("jsonwebtoken");
 const ApiGateway = require("moleculer-web");
+var CryptoJS = require("crypto-js");
 
 module.exports = {
 	actions: {
@@ -68,10 +70,12 @@ module.exports = {
 					{ expiresIn: process.env.JWT_EXPIRES_IN }
 				);
 
-				const passwordMatch = await bcrypt.compare(
-					password,
-					user.password
+				var bytes = CryptoJS.AES.decrypt(
+					user.password,
+					process.env.ENCRYPTION_SECRET
 				);
+				var decryptedPwd = bytes.toString(CryptoJS.enc.Utf8);
+				const passwordMatch = decryptedPwd === password;
 
 				if (!passwordMatch) {
 					throw new UnAuthorizedError();

@@ -62,7 +62,9 @@ module.exports = {
 					"GET /users/me": "users.me",
 					"POST /users/": "users.createUser",
 					"POST /users/sendEmail": "smtp.sendEmail",
-					"GET /users/getEmail": "imap.getEmail",
+					"GET /users/getEmailByMailBox": "imap.getEmailByMailBox",
+					"POST /users/getAllEmailByMailBox":
+						"imap.getAllEmailByMailBox",
 				},
 
 				/**

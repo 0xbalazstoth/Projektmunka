@@ -7,6 +7,7 @@ const AuthenticationMixin = require("../mixins/authentication.mixin");
 const { MoleculerError } = require("moleculer").Errors;
 const UserExistsError = require("../exceptions/userExists.error");
 const jwt = require("jsonwebtoken");
+var CryptoJS = require("crypto-js");
 
 module.exports = {
 	name: "users",
@@ -42,7 +43,10 @@ module.exports = {
 				const user = new User(ctx.params.user);
 				await this.validateEntity(user);
 
-				user.password = bcrypt.hashSync(user.password, 10);
+				user.password = CryptoJS.AES.encrypt(
+					user.password,
+					process.env.ENCRYPTION_SECRET
+				).toString();
 
 				const token = jwt.sign(
 					{ userId: user._id },

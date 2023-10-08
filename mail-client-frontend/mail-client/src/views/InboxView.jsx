@@ -2,83 +2,32 @@
 import { BsTrash, BsStar, BsBack, BsBackspace } from "react-icons/bs";
 import MailList from "../components/MailList";
 import OpenedMail from "../components/OpenedMail";
+import { appPostRequest } from "../handlers/api";
 
 const InboxView = () => {
-	const mailData = [
-		{
-			title: "Title",
-			subject: "Subject",
-			content:
-				"Content1 <b>BOLD</b> asd as das as dasd <br>asdasd asd ad<br>asdasd asd asd <br>asdasdas <br><br><br>asdasd asd as d<br><br><br>asdasd asd as d<br><br><br>asdasd asd as d<br><br><br>asdasd asd as d<br><br><br>asdasd asd as d",
-			date: "2023.09.23",
-			imageUrl: "https://img.logoipsum.com/280.svg",
-			id: 1,
-		},
-		{
-			title: "Title2",
-			subject: "Subject2",
-			content: "asd2 <p>ddd</p>",
-			date: "2023.09.23",
-			imageUrl: "https://img.logoipsum.com/280.svg",
-			id: 2,
-		},
-		{
-			title: "Title3",
-			subject: "Subject3",
-			content: "simple text",
-			date: "2023.09.23",
-			imageUrl: "https://img.logoipsum.com/280.svg",
-			id: 3,
-		},
-		{
-			title: "Title3",
-			subject: "Subject3",
-			content: "simple text",
-			date: "2023.09.23",
-			imageUrl: "https://img.logoipsum.com/280.svg",
-			id: 4,
-		},
-		{
-			title: "Title3",
-			subject: "Subject3",
-			content: "simple text",
-			date: "2023.09.23",
-			imageUrl: "https://img.logoipsum.com/280.svg",
-			id: 5,
-		},
-		{
-			title: "Title3",
-			subject: "Subject3",
-			content: "simple text",
-			date: "2023.09.23",
-			imageUrl: "https://img.logoipsum.com/280.svg",
-			id: 6,
-		},
-		{
-			title: "Title3",
-			subject: "Subject3",
-			content: "simple text",
-			date: "2023.09.23",
-			imageUrl: "https://img.logoipsum.com/280.svg",
-			id: 7,
-		},
-		{
-			title: "Title3",
-			subject: "Subject3",
-			content: "simple text",
-			date: "2023.09.23",
-			imageUrl: "https://img.logoipsum.com/280.svg",
-			id: 8,
-		},
-		{
-			title: "Title3",
-			subject: "Subject3",
-			content: "simple text",
-			date: "2023.09.23",
-			imageUrl: "https://img.logoipsum.com/280.svg",
-			id: 9,
-		},
-	];
+	const getAllEmailEndpoint = "/api/users/getAllEmailByMailBox";
+	const [emails, setEmails] = useState();
+	const [loading, setLoading] = useState(true);
+
+	const handleGet = async () => {
+		const mailBoxName = "INBOX";
+
+		try {
+			const response = await appPostRequest(getAllEmailEndpoint, {
+				mailBoxName: mailBoxName,
+			});
+
+			setEmails(response);
+			setLoading(false);
+		} catch (err) {
+			console.log(err);
+			setLoading(false);
+		}
+	};
+
+	useEffect(() => {
+		handleGet();
+	}, []);
 
 	const [selectedMailId, setSelectedMailId] = useState(null);
 	const [openMailView, setOpenMailView] = useState(
@@ -86,7 +35,7 @@ const InboxView = () => {
 	);
 
 	const handleSelectedMail = (email, openMailView) => {
-		setSelectedMailId(email.id);
+		setSelectedMailId(email.messageId);
 
 		setOpenMailView(openMailView);
 	};
@@ -97,36 +46,39 @@ const InboxView = () => {
 
 	return (
 		<>
-			{/* Desktop */}
-			<div className="hidden lg:flex gap-x-6 min-h-[50vh]">
-				<MailList
-					mailData={mailData}
-					handleSelectedMail={handleSelectedMail}
-					selectedMailId={selectedMailId}
-				></MailList>
-				<OpenedMail
-					selectedMailId={selectedMailId}
-					handleGoBackMail={handleGoBackMail}
-					mailData={mailData}
-				></OpenedMail>
-			</div>
-
-			{/* Rest */}
-			<div className="lg:hidden flex h-full">
-				{openMailView ? (
-					<MailList
-						mailData={mailData}
-						handleSelectedMail={handleSelectedMail}
-						selectedMailId={selectedMailId}
-					></MailList>
-				) : (
-					<OpenedMail
-						selectedMailId={selectedMailId}
-						handleGoBackMail={handleGoBackMail}
-						mailData={mailData}
-					></OpenedMail>
-				)}
-			</div>
+			{loading ? (
+				<p>Loading...</p>
+			) : (
+				<>
+					<div className="hidden lg:flex gap-x-6 min-h-[50vh]">
+						<MailList
+							mailData={emails}
+							handleSelectedMail={handleSelectedMail}
+							selectedMailId={selectedMailId}
+						></MailList>
+						<OpenedMail
+							selectedMailId={selectedMailId}
+							handleGoBackMail={handleGoBackMail}
+							mailData={emails}
+						></OpenedMail>
+					</div>
+					<div className="lg:hidden flex h-full">
+						{openMailView ? (
+							<MailList
+								mailData={emails}
+								handleSelectedMail={handleSelectedMail}
+								selectedMailId={selectedMailId}
+							></MailList>
+						) : (
+							<OpenedMail
+								selectedMailId={selectedMailId}
+								handleGoBackMail={handleGoBackMail}
+								mailData={emails}
+							></OpenedMail>
+						)}
+					</div>
+				</>
+			)}
 		</>
 	);
 };
