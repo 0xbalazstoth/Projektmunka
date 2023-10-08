@@ -31,7 +31,13 @@ const OpenedMail = ({ handleGoBackMail, selectedMailId, mailData }) => {
 									</h1>
 									<p>{mail.subject}</p>
 									<div className="h-[35vh] overflow-y-auto">
-										{parse(mail.html)}
+										{/* {parse(mail.html)} */}
+										{console.log(mail.html)}
+										<div
+											dangerouslySetInnerHTML={{
+												__html: mail.html,
+											}}
+										></div>
 									</div>
 								</div>
 							) : null

@@ -5,7 +5,7 @@ import OpenedMail from "../components/OpenedMail";
 import { appPostRequest } from "../handlers/api";
 
 const InboxView = () => {
-	const getAllEmailEndpoint = "/api/users/getAllEmailByMailBox";
+	const getAllEmailEndpoint = "/api/mail/getAllEmailByMailBox";
 	const [emails, setEmails] = useState();
 	const [loading, setLoading] = useState(true);
 
@@ -51,11 +51,18 @@ const InboxView = () => {
 			) : (
 				<>
 					<div className="hidden lg:flex gap-x-6 min-h-[50vh]">
-						<MailList
-							mailData={emails}
-							handleSelectedMail={handleSelectedMail}
-							selectedMailId={selectedMailId}
-						></MailList>
+						{emails && emails.length > 0 ? (
+							<MailList
+								mailData={emails}
+								handleSelectedMail={handleSelectedMail}
+								selectedMailId={selectedMailId}
+							></MailList>
+						) : (
+							<div className="flex flex-col gap-y-4 w-full">
+								<span>No messages.</span>
+							</div>
+						)}
+
 						<OpenedMail
 							selectedMailId={selectedMailId}
 							handleGoBackMail={handleGoBackMail}
@@ -63,6 +70,11 @@ const InboxView = () => {
 						></OpenedMail>
 					</div>
 					<div className="lg:hidden flex h-full">
+						{emails.length === 0 ? (
+							<div className="flex flex-col gap-y-4 w-full">
+								<span>No messages.</span>
+							</div>
+						) : null}
 						{openMailView ? (
 							<MailList
 								mailData={emails}

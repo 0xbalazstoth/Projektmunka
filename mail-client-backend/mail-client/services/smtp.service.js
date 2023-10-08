@@ -33,10 +33,9 @@ module.exports = {
 				// ],
 			},
 			async handler(ctx) {
-				// Create a transporter using SMTP
 				const transporter = nodemailer.createTransport({
-					host: process.env.SMTP_HOST || "127.0.0.1",
-					port: process.env.SMTP_PORT || 587,
+					host: process.env.SMTP_HOST,
+					port: process.env.SMTP_PORT,
 				});
 
 				// Email data

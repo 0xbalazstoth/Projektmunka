@@ -15,7 +15,7 @@ const SendNewMessageView = () => {
 
 	const { user } = useContext(UserContext);
 
-	const sendEmailEndpoint = "/api/users/sendEmail";
+	const sendEmailEndpoint = "/api/mail/sendEmail";
 
 	const handleToInputChange = (e) => {
 		const inputValue = e.target.value;
@@ -96,8 +96,12 @@ const SendNewMessageView = () => {
 	};
 
 	const handleSend = async () => {
-		// Implement your send message logic here.
 		const text = document.querySelector(".ql-editor").innerHTML;
+
+		if (toAddresses.length === 0) {
+			setErrorMessage("At least give one email address to send!");
+			return;
+		}
 
 		try {
 			const response = await appPostRequest(sendEmailEndpoint, {
@@ -106,6 +110,8 @@ const SendNewMessageView = () => {
 				subject: subject,
 				content: text,
 			});
+
+			console.log(text);
 
 			// Clear input fields
 			setToAddresses([]);

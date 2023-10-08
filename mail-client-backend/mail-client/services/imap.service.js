@@ -11,6 +11,23 @@ module.exports = {
 	mixins: [],
 	settings: [],
 	actions: {
+		listMailBoxes: {
+			auth: true,
+			async handler(ctx) {
+				const client = this.getClient(ctx);
+
+				try {
+					await client.connect();
+					await client.idle();
+
+					let list = await client.list();
+
+					return list;
+				} finally {
+					await client.logout();
+				}
+			},
+		},
 		getAllEmailByMailBox: {
 			auth: true,
 			params: {
