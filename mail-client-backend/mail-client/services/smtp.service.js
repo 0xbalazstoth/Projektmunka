@@ -73,16 +73,39 @@ module.exports = {
 						);
 
 						// Move message to 'SENT'
-						await ctx.mcall({
-							moveMessage: {
-								action: "imap.moveMessage",
-								params: {
-									message: message,
-								},
-							},
-						});
+						// TODO, if one of the 'to' addresses is the 'from' address, it should be copied, not moved.
+						const toAddresses = message.to.value;
+						const isFromContainsToAddresses = toAddresses.some(
+							(toAddress) => toAddress.address === ctx.params.from
+						);
 
-						console.info(info);
+						if (isFromContainsToAddresses) {
+							// COPY
+							await ctx.mcall({
+								copyMessage: {
+									action: "imap.copyMessage",
+									params: {
+										message: message,
+										fromMailBoxName: "INBOX",
+										toMailBoxName: "SENT",
+									},
+								},
+							});
+						} else {
+							// MOVE, because current sender's address is not in 'to' addresses.
+							await ctx.mcall({
+								moveMessage: {
+									action: "imap.moveMessage",
+									params: {
+										message: message,
+										fromMailBoxName: "INBOX",
+										toMailBoxName: "SENT",
+									},
+								},
+							});
+						}
+
+						//console.info(info);
 						console.info(
 							"Message URL: " + nodemailer.getTestMessageUrl(info)
 						);

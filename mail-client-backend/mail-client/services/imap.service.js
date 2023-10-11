@@ -70,11 +70,17 @@ module.exports = {
 				}
 			},
 		},
-		moveMessage: {
+		copyMessage: {
 			auth: true,
 			params: {
 				message: {
 					type: "object",
+				},
+				fromMailBoxName: {
+					type: "string",
+				},
+				toMailBoxName: {
+					type: "string",
 				},
 			},
 			async handler(ctx) {
@@ -88,12 +94,47 @@ module.exports = {
 						header: { "Message-ID": ctx.params.message.messageId },
 					};
 
-					await client.mailboxOpen("INBOX");
+					await client.mailboxOpen(ctx.params.fromMailBoxName);
+					const res = await client.messageCopy(
+						searchCriteria,
+						ctx.params.toMailBoxName
+					);
+
+					return "";
+				} finally {
+					await client.logout();
+				}
+			},
+		},
+		moveMessage: {
+			auth: true,
+			params: {
+				message: {
+					type: "object",
+				},
+				fromMailBoxName: {
+					type: "string",
+				},
+				toMailBoxName: {
+					type: "string",
+				},
+			},
+			async handler(ctx) {
+				const client = this.getClient(ctx);
+
+				try {
+					await client.connect();
+					await client.idle();
+
+					const searchCriteria = {
+						header: { "Message-ID": ctx.params.message.messageId },
+					};
+
+					await client.mailboxOpen(ctx.params.fromMailBoxName);
 					const res = await client.messageMove(
 						searchCriteria,
-						"SENT"
+						ctx.params.toMailBoxName
 					);
-					console.log(res);
 
 					return "";
 				} finally {
