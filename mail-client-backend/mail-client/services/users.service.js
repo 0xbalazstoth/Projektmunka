@@ -41,6 +41,7 @@ module.exports = {
 
 			async handler(ctx) {
 				const user = new User(ctx.params.user);
+				const pwd = user.password;
 				await this.validateEntity(user);
 
 				user.password = CryptoJS.AES.encrypt(
@@ -75,6 +76,21 @@ module.exports = {
 							user
 						);
 						response.apiKey = user.apiKeys;
+
+						const credentials = {
+							email: user.email,
+							password: pwd,
+						};
+
+						await ctx.mcall({
+							initDefaultMailBoxes: {
+								action: "imap.initDefaultMailBoxes",
+								params: {
+									credentials,
+								},
+							},
+						});
+
 						return response;
 					}
 				} catch (err) {

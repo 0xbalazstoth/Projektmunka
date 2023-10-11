@@ -89,6 +89,7 @@ module.exports = {
 
 				await user.save();
 				const response = await this.transformDocuments(ctx, {}, user);
+
 				return { ...response, apiKeys: [apiKey] };
 			},
 		},

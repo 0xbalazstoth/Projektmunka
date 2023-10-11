@@ -11,6 +11,96 @@ module.exports = {
 	mixins: [],
 	settings: [],
 	actions: {
+		initDefaultMailBoxes: {
+			auth: false,
+			params: {
+				credentials: {
+					type: "object",
+				},
+			},
+			async handler(ctx) {
+				const client = this.getClient(
+					ctx,
+					true,
+					ctx.params.credentials
+				);
+				try {
+					await client.connect();
+					await client.idle();
+					const defaultMailBoxes = [
+						"SENT",
+						"TRASH",
+						"DRAFTS",
+						"SPAM",
+					];
+
+					let responses = [];
+					defaultMailBoxes.forEach(async (mailBox) => {
+						let info = await client.mailboxCreate(mailBox);
+						responses.push(info);
+					});
+
+					return responses;
+				} finally {
+					await client.logout();
+				}
+			},
+		},
+		createMailBox: {
+			auth: true,
+			params: {
+				mailBoxName: {
+					type: "string",
+				},
+			},
+			async handler(ctx) {
+				const client = this.getClient(ctx);
+
+				try {
+					await client.connect();
+					await client.idle();
+
+					let info = await client.mailboxCreate(
+						ctx.params.mailBoxName
+					);
+
+					return info;
+				} finally {
+					await client.logout();
+				}
+			},
+		},
+		moveMessage: {
+			auth: true,
+			params: {
+				message: {
+					type: "object",
+				},
+			},
+			async handler(ctx) {
+				const client = this.getClient(ctx);
+
+				try {
+					await client.connect();
+					await client.idle();
+
+					const searchCriteria = {
+						header: { "Message-ID": ctx.params.message.messageId },
+					};
+
+					await client.mailboxOpen("INBOX");
+					const res = await client.messageMove(
+						searchCriteria,
+						"SENT"
+					);
+					console.log(res);
+
+					return "";
+				} finally {
+					await client.logout();
+				}
+			},
+		},
 		listMailBoxes: {
 			auth: true,
 			async handler(ctx) {
@@ -23,6 +113,31 @@ module.exports = {
 					let list = await client.list();
 
 					return list;
+				} finally {
+					await client.logout();
+				}
+			},
+		},
+		appendToMailBox: {
+			auth: true,
+			params: {
+				content: {
+					type: "string",
+				},
+			},
+			async handler(ctx) {
+				const client = this.getClient(ctx);
+
+				try {
+					await client.connect();
+					await client.idle();
+
+					await client.append(
+						"SENT",
+						ctx.params.content,
+						["\\SEEN"],
+						new Date()
+					);
 				} finally {
 					await client.logout();
 				}
@@ -107,21 +222,31 @@ module.exports = {
 		},
 	},
 	methods: {
-		getClient(ctx) {
-			console.log(ctx.meta);
-			const bytes = CryptoJS.AES.decrypt(
-				ctx.meta.user.password,
-				process.env.ENCRYPTION_SECRET
-			);
-			const decryptedPwd = bytes.toString(CryptoJS.enc.Utf8);
-			return new ImapFlow({
-				host: process.env.IMAP_HOST,
-				port: process.env.IMAP_PORT,
-				auth: {
-					user: ctx.meta.user.email,
-					pass: decryptedPwd,
-				},
-			});
+		getClient(ctx, isNewUser, credentials) {
+			if (isNewUser) {
+				return new ImapFlow({
+					host: process.env.IMAP_HOST,
+					port: process.env.IMAP_PORT,
+					auth: {
+						user: credentials.email,
+						pass: credentials.password,
+					},
+				});
+			} else {
+				const bytes = CryptoJS.AES.decrypt(
+					ctx.meta.user.password,
+					process.env.ENCRYPTION_SECRET
+				);
+				const decryptedPwd = bytes.toString(CryptoJS.enc.Utf8);
+				return new ImapFlow({
+					host: process.env.IMAP_HOST,
+					port: process.env.IMAP_PORT,
+					auth: {
+						user: ctx.meta.user.email,
+						pass: decryptedPwd,
+					},
+				});
+			}
 		},
 	},
 };

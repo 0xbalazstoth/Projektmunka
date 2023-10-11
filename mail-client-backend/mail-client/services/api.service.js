@@ -57,15 +57,19 @@ module.exports = {
 				autoAliases: true,
 
 				aliases: {
+					// USERS
 					"POST /users/login": "users.login",
 					"GET /users/get/:id": "users.get",
 					"GET /users/me": "users.me",
 					"POST /users/": "users.createUser",
+
+					// MAIL
 					"POST /mail/sendEmail": "smtp.sendEmail",
 					"GET /mail/getEmailByMailBox": "imap.getEmailByMailBox",
 					"POST /mail/getAllEmailByMailBox":
 						"imap.getAllEmailByMailBox",
-					"POST /mail/listMailBoxes": "imap.listMailBoxes",
+					"GET /mail/listMailBoxes": "imap.listMailBoxes",
+					"POST /mail/createMailBox": "imap.createMailBox",
 				},
 
 				/**

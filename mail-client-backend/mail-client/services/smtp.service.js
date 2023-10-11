@@ -44,14 +44,45 @@ module.exports = {
 					to: ctx.params.receivers,
 					subject: ctx.params.subject,
 					html: ctx.params.content,
+					bcc: ctx.params.from, // copy (for 'SENT')
+					// Bcc (Blind Carbon Copy) is a practical
+					// solution in scenarios where you want a copy of the email to be stored in your inbox,
+					// allowing you to append it to the "Sent" folder without relying on self-sending.
 				};
 
 				// Send the email
-				transporter.sendMail(mailOptions, (error, info) => {
+				transporter.sendMail(mailOptions, async (error, info) => {
 					if (error) {
 						console.error("Error sending email: ", error);
 					} else {
 						console.info("Email sent successfully!");
+
+						// TODO: Fetch message by messageId
+						const messageId = info.messageId;
+						const inboxMessages = await ctx.mcall({
+							getAllEmailByMailBox: {
+								action: "imap.getAllEmailByMailBox",
+								params: {
+									mailBoxName: "INBOX",
+								},
+							},
+						});
+
+						const message = inboxMessages.getAllEmailByMailBox.find(
+							(message) => message.messageId === messageId
+						);
+
+						// Move message to 'SENT'
+						await ctx.mcall({
+							moveMessage: {
+								action: "imap.moveMessage",
+								params: {
+									message: message,
+								},
+							},
+						});
+
+						console.info(info);
 						console.info(
 							"Message URL: " + nodemailer.getTestMessageUrl(info)
 						);
