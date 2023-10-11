@@ -19,7 +19,20 @@ const OpenedMail = ({ handleGoBackMail, selectedMailId, mailData }) => {
 							</div>
 							<div className="flex items-center flex-row gap-x-2">
 								<BsSend size={15}></BsSend>
-								<span>{mailData[0].date}</span>
+								<span>
+									{new Date(
+										mailData.find(
+											(x) =>
+												x.messageId === selectedMailId
+										).date
+									).toLocaleDateString("hu-HU", {
+										year: "numeric",
+										month: "2-digit",
+										day: "2-digit",
+										hour: "2-digit",
+										minute: "2-digit",
+									})}
+								</span>
 							</div>
 						</div>
 						<div className="h-[1vh] border-b-2 border-b-gray-50"></div>
