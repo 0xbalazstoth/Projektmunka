@@ -3,7 +3,7 @@ import { GrAttachment } from "react-icons/gr";
 import TextEditor from "../components/TextEditor";
 import { appPostRequest } from "../handlers/api";
 import UserContext from "../contexts/UserContext";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 const SendNewMessageView = () => {
 	const [toInput, setToInput] = useState("");

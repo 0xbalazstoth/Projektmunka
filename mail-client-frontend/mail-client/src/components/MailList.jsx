@@ -1,11 +1,37 @@
 ﻿import React from "react";
 import { BsStar, BsTrash } from "react-icons/bs";
+import { appPostRequest } from "../handlers/api";
+import toast from "react-hot-toast";
 
-const MailList = ({ mailData, selectedMailId, handleSelectedMail }) => {
+const MailList = ({
+	mailData,
+	selectedMailId,
+	handleSelectedMail,
+	mailBoxName,
+}) => {
 	const sortedMailData = mailData
 		.slice()
 		.sort((a, b) => new Date(b.date) - new Date(a.date));
-	console.log(sortedMailData);
+
+	const notifyMovedMessageToMailbox = (mailbox) =>
+		toast.success(`Moved to ${mailbox}`);
+	const moveMailBoxEndpoint = "/api/mail/moveMessage";
+
+	const handleMoveToMailBox = async (
+		message,
+		fromMailBoxName,
+		toMailBoxName
+	) => {
+		notifyMovedMessageToMailbox(toMailBoxName);
+
+		// TODO: If toMailBoxName is 'TRASH', the deletion should be permament.
+
+		const response = await appPostRequest(moveMailBoxEndpoint, {
+			message: message,
+			fromMailBoxName: fromMailBoxName,
+			toMailBoxName: toMailBoxName,
+		});
+	};
 
 	return (
 		<div className="flex flex-col gap-y-4 w-full h-[50vh] overflow-y-auto">
@@ -48,7 +74,11 @@ const MailList = ({ mailData, selectedMailId, handleSelectedMail }) => {
 									className="rounded-xl hover:text-gray-400"
 									onClick={(e) => {
 										e.stopPropagation();
-										console.log("DELETE");
+										handleMoveToMailBox(
+											mail,
+											mailBoxName,
+											"TRASH"
+										);
 									}}
 								>
 									<BsTrash size={20}></BsTrash>
@@ -57,7 +87,11 @@ const MailList = ({ mailData, selectedMailId, handleSelectedMail }) => {
 									className="rounded-xl hover:text-gray-400"
 									onClick={(e) => {
 										e.stopPropagation();
-										console.log("STAR");
+										handleMoveToMailBox(
+											mail,
+											mailBoxName,
+											"STARS"
+										);
 									}}
 								>
 									<BsStar size={20}></BsStar>

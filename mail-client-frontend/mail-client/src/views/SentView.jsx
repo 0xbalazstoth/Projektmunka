@@ -56,6 +56,7 @@ const SentView = () => {
 								mailData={emails}
 								handleSelectedMail={handleSelectedMail}
 								selectedMailId={selectedMailId}
+								mailBoxName="SENT"
 							></MailList>
 						) : (
 							<div className="flex flex-col gap-y-4 w-full">
@@ -80,6 +81,7 @@ const SentView = () => {
 								mailData={emails}
 								handleSelectedMail={handleSelectedMail}
 								selectedMailId={selectedMailId}
+								mailBoxName="SENT"
 							></MailList>
 						) : (
 							<OpenedMail

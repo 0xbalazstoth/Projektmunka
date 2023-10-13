@@ -56,6 +56,7 @@ const SpamView = () => {
 								mailData={emails}
 								handleSelectedMail={handleSelectedMail}
 								selectedMailId={selectedMailId}
+								mailBoxName="SPAM"
 							></MailList>
 						) : (
 							<div className="flex flex-col gap-y-4 w-full">
@@ -84,6 +85,7 @@ const SpamView = () => {
 								mailData={emails}
 								handleSelectedMail={handleSelectedMail}
 								selectedMailId={selectedMailId}
+								mailBoxName="SPAM"
 							></MailList>
 						) : (
 							<OpenedMail

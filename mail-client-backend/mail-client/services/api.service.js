@@ -72,6 +72,7 @@ module.exports = {
 					"POST /mail/createMailBox": "imap.createMailBox",
 					"POST /mail/filterInboxFromSpam":
 						"imap.filterInboxFromSpam",
+					"POST /mail/moveMessage": "imap.moveMessage",
 				},
 
 				/**

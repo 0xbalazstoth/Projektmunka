@@ -57,6 +57,7 @@ const InboxView = () => {
 								mailData={emails}
 								handleSelectedMail={handleSelectedMail}
 								selectedMailId={selectedMailId}
+								mailBoxName="INBOX"
 							></MailList>
 						) : (
 							<div className="flex flex-col gap-y-4 w-full">
@@ -81,6 +82,7 @@ const InboxView = () => {
 								mailData={emails}
 								handleSelectedMail={handleSelectedMail}
 								selectedMailId={selectedMailId}
+								mailBoxName="INBOX"
 							></MailList>
 						) : (
 							<OpenedMail
