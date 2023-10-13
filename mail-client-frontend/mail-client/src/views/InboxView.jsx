@@ -6,6 +6,7 @@ import { appPostRequest } from "../handlers/api";
 
 const InboxView = () => {
 	const getAllEmailEndpoint = "/api/mail/getAllEmailByMailBox";
+
 	const [emails, setEmails] = useState();
 	const [loading, setLoading] = useState(true);
 

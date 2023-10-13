@@ -1,9 +1,11 @@
 ﻿import React from "react";
+import { BsStar, BsTrash } from "react-icons/bs";
 
 const MailList = ({ mailData, selectedMailId, handleSelectedMail }) => {
 	const sortedMailData = mailData
 		.slice()
 		.sort((a, b) => new Date(b.date) - new Date(a.date));
+	console.log(sortedMailData);
 
 	return (
 		<div className="flex flex-col gap-y-4 w-full h-[50vh] overflow-y-auto">
@@ -24,7 +26,7 @@ const MailList = ({ mailData, selectedMailId, handleSelectedMail }) => {
 									{mail.subject}
 								</p>
 								<p className="mt-1 truncate text-xs leading-5 text-gray-500">
-									{mail.subject}
+									{mail.text}
 								</p>
 							</div>
 						</div>
@@ -41,6 +43,26 @@ const MailList = ({ mailData, selectedMailId, handleSelectedMail }) => {
 									}
 								)}
 							</p>
+							<div className="flex flex-row gap-x-5">
+								<button
+									className="rounded-xl hover:text-gray-400"
+									onClick={(e) => {
+										e.stopPropagation();
+										console.log("DELETE");
+									}}
+								>
+									<BsTrash size={20}></BsTrash>
+								</button>
+								<button
+									className="rounded-xl hover:text-gray-400"
+									onClick={(e) => {
+										e.stopPropagation();
+										console.log("STAR");
+									}}
+								>
+									<BsStar size={20}></BsStar>
+								</button>
+							</div>
 						</div>
 					</li>
 				))}

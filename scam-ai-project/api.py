@@ -4,8 +4,10 @@ import torch
 import pickle
 from sklearn.feature_extraction.text import CountVectorizer
 from model import TextClassifier
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/spam-classification", methods=["POST"])
 def spamClassification():
@@ -41,7 +43,8 @@ def spamClassification():
     data_result = {
         "text": text,
         "classification": result.classification,
-        "probability": format(result.probability, '.4f')
+        "probability": format(result.probability, '.4f'),
+        "isSpam": True if result.classification == "Spam" else False
     }
 
     return jsonify(data_result), 201

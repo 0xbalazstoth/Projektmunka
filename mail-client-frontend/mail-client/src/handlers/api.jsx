@@ -1,7 +1,7 @@
 ﻿// apiHandler.js
 import axios from "axios";
 
-const baseURL = "http://192.168.1.135:3000"; // Replace with your API base URL
+const baseURL = "http://127.0.0.1:3000";
 
 const api = axios.create({
 	baseURL,
@@ -9,11 +9,9 @@ const api = axios.create({
 		"Content-Type": "application/json",
 		Accept: "application/json",
 		Origin: "http://0.0.0.0:3000",
-		// You can add more default headers here
 	},
 });
 
-// Interceptors for handling requests and responses
 api.interceptors.request.use(
 	(config) => {
 		const token = localStorage.getItem("tkn");

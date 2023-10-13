@@ -70,6 +70,8 @@ module.exports = {
 						"imap.getAllEmailByMailBox",
 					"GET /mail/listMailBoxes": "imap.listMailBoxes",
 					"POST /mail/createMailBox": "imap.createMailBox",
+					"POST /mail/filterInboxFromSpam":
+						"imap.filterInboxFromSpam",
 				},
 
 				/**

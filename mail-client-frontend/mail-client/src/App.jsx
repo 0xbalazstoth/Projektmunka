@@ -12,6 +12,7 @@ import LoginView from "./views/LoginView";
 import UserContext from "./contexts/UserContext";
 import { appFetchCall } from "./handlers/api";
 import CreateAccountView from "./views/CreateAccountView";
+import toast, { Toaster } from "react-hot-toast";
 
 function App() {
 	const [user, setUser] = useState(null);
@@ -49,6 +50,7 @@ function App() {
 
 	return (
 		<UserContext.Provider value={{ user, setUser }}>
+			<Toaster></Toaster>
 			<Routes>
 				<Route
 					path="login"

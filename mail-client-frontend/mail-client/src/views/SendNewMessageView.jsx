@@ -3,6 +3,7 @@ import { GrAttachment } from "react-icons/gr";
 import TextEditor from "../components/TextEditor";
 import { appPostRequest } from "../handlers/api";
 import UserContext from "../contexts/UserContext";
+import toast, { Toaster } from "react-hot-toast";
 
 const SendNewMessageView = () => {
 	const [toInput, setToInput] = useState("");
@@ -12,6 +13,9 @@ const SendNewMessageView = () => {
 	const [attachments, setAttachments] = useState([]);
 	const [toError, setToError] = useState("");
 	const [errorMessage, setErrorMessage] = useState("");
+
+	const notifySentMessage = (to) =>
+		toast.success(`Email sent to ${to} successfully!`);
 
 	const { user } = useContext(UserContext);
 
@@ -121,6 +125,8 @@ const SendNewMessageView = () => {
 			setErrorMessage("");
 
 			document.querySelector(".ql-editor").innerHTML = "";
+
+			notifySentMessage(toAddresses.join(","));
 		} catch (error) {
 			console.error("An error occurred:", error);
 			setErrorMessage("Failed to send message.");

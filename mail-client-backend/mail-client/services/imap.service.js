@@ -5,6 +5,7 @@ const { MoleculerError } = require("moleculer").Errors;
 const { ImapFlow } = require("imapflow");
 const simpleParser = require("mailparser").simpleParser;
 var CryptoJS = require("crypto-js");
+const axios = require("axios");
 
 module.exports = {
 	name: "imap",
@@ -42,6 +43,58 @@ module.exports = {
 					});
 
 					return responses;
+				} finally {
+					await client.logout();
+				}
+			},
+		},
+		filterInboxFromSpam: {
+			auth: true,
+			async handler(ctx) {
+				const client = this.getClient(ctx);
+
+				try {
+					await client.connect();
+					await client.idle();
+
+					const messages = await ctx.mcall({
+						getAllEmailByMailBox: {
+							action: "imap.getAllEmailByMailBox",
+							params: {
+								mailBoxName: "INBOX",
+							},
+						},
+					});
+
+					let messagesToInbox = [];
+					const messageTexts = messages.getAllEmailByMailBox;
+
+					await Promise.all(
+						messageTexts.map(async (message) => {
+							const classificationResponse =
+								await this.postRequest(message.text);
+							const isSpam = classificationResponse.isSpam;
+
+							if (isSpam === false) {
+								messagesToInbox.push(classificationResponse);
+							} else {
+								// TODO: Move spam to 'SPAM' mailbox
+								await ctx.mcall({
+									moveMessage: {
+										action: "imap.moveMessage",
+										params: {
+											message: message,
+											fromMailBoxName: "INBOX",
+											toMailBoxName: "SPAM",
+										},
+									},
+								});
+							}
+						})
+					);
+
+					console.log(messagesToInbox);
+					return messagesToInbox;
 				} finally {
 					await client.logout();
 				}
@@ -137,7 +190,7 @@ module.exports = {
 						ctx.params.toMailBoxName
 					);
 
-					return "";
+					return res;
 				} finally {
 					await client.logout();
 				}
@@ -264,6 +317,28 @@ module.exports = {
 		},
 	},
 	methods: {
+		async postRequest(text) {
+			const spamClassificationEndpoint = "spam-classification";
+			const url = "http://127.0.0.1:5000";
+
+			const data = {
+				text: text,
+			};
+
+			const headers = { "Content-Type": "application/json" };
+
+			try {
+				const response = await axios.post(
+					`${url}/${spamClassificationEndpoint}`,
+					data,
+					{ headers }
+				);
+
+				return response.data;
+			} catch (err) {
+				return err;
+			}
+		},
 		getClient(ctx, isNewUser, credentials) {
 			if (isNewUser) {
 				return new ImapFlow({
