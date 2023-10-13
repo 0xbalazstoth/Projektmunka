@@ -5,7 +5,7 @@ import OpenedMail from "../components/OpenedMail";
 import { appPostRequest } from "../handlers/api";
 
 const InboxView = () => {
-	const getAllEmailEndpoint = "/api/mail/getAllEmailByMailBox";
+	const getAllEmailEndpoint = "/api/mail/filterInboxFromSpam";
 
 	const [emails, setEmails] = useState();
 	const [loading, setLoading] = useState(true);
@@ -18,6 +18,7 @@ const InboxView = () => {
 				mailBoxName: mailBoxName,
 			});
 
+			console.log(response);
 			setEmails(response);
 			setLoading(false);
 		} catch (err) {

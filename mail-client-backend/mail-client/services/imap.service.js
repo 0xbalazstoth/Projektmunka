@@ -93,7 +93,6 @@ module.exports = {
 						})
 					);
 
-					console.log(messagesToInbox);
 					return messagesToInbox;
 				} finally {
 					await client.logout();

@@ -26,7 +26,7 @@ const MailList = ({
 
 		// TODO: If toMailBoxName is 'TRASH', the deletion should be permament.
 
-		const response = await appPostRequest(moveMailBoxEndpoint, {
+		await appPostRequest(moveMailBoxEndpoint, {
 			message: message,
 			fromMailBoxName: fromMailBoxName,
 			toMailBoxName: toMailBoxName,
