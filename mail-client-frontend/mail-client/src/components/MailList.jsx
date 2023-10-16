@@ -15,22 +15,41 @@ const MailList = ({
 
 	const notifyMovedMessageToMailbox = (mailbox) =>
 		toast.success(`Moved to ${mailbox}`);
+
 	const moveMailBoxEndpoint = "/api/mail/moveMessage";
+	const deleteMessageEndpoint = "/api/mail/deleteMessage";
+
+	const handleDelete = async (message) => {
+		console.log(mailBoxName);
+
+		if (mailBoxName === "TRASH") {
+			toast.success("Message deleted!");
+
+			await appPostRequest(deleteMessageEndpoint, {
+				message: message,
+				mailBoxName: mailBoxName,
+			});
+		}
+	};
 
 	const handleMoveToMailBox = async (
 		message,
 		fromMailBoxName,
 		toMailBoxName
 	) => {
-		notifyMovedMessageToMailbox(toMailBoxName);
+		if (mailBoxName !== "TRASH")
+		{
+			notifyMovedMessageToMailbox(toMailBoxName);
 
-		// TODO: If toMailBoxName is 'TRASH', the deletion should be permament.
-
-		await appPostRequest(moveMailBoxEndpoint, {
-			message: message,
-			fromMailBoxName: fromMailBoxName,
-			toMailBoxName: toMailBoxName,
-		});
+			// TODO: If toMailBoxName is 'TRASH', the deletion should be permament.
+	
+			await appPostRequest(moveMailBoxEndpoint, {
+				message: message,
+				fromMailBoxName: fromMailBoxName,
+				toMailBoxName: toMailBoxName,
+			});
+		}
+		
 	};
 
 	return (
@@ -79,6 +98,8 @@ const MailList = ({
 											mailBoxName,
 											"TRASH"
 										);
+
+										handleDelete(mail);
 									}}
 								>
 									<BsTrash size={20}></BsTrash>

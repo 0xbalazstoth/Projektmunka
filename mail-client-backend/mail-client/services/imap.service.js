@@ -159,6 +159,34 @@ module.exports = {
 				}
 			},
 		},
+		deleteMessage: {
+			auth: true,
+			params: {
+				message: {
+					type: "object",
+				},
+				mailBoxName: {
+					type: "string",
+				},
+			},
+			async handler(ctx) {
+				const client = this.getClient(ctx);
+
+				try {
+					await client.connect();
+					await client.idle();
+
+					const searchCriteria = {
+						header: { "Message-ID": ctx.params.message.messageId },
+					};
+
+					await client.mailboxOpen(ctx.params.mailBoxName);
+					await client.messageDelete(searchCriteria);
+				} finally {
+					await client.logout();
+				}
+			},
+		},
 		moveMessage: {
 			auth: true,
 			params: {
