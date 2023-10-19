@@ -45,18 +45,46 @@ module.exports = {
 			},
 		},
 
-		validateTOTP: {
+		totpValidation: {
 			auth: true,
 			params: {
 				code: {
 					type: "string",
 				},
 			},
-
 			async handler(ctx) {
 				const user = ctx.meta.user;
+				const totpSecret = user.totpSecret;
 
-				console.log(user);
+				const isValid = VsAuthenticator.verifyTOTP(
+					ctx.params.code,
+					totpSecret.base32Secret
+				);
+
+				const response = {
+					isValid: isValid,
+				};
+
+				return response;
+			},
+		},
+
+		totpCodeGeneration: {
+			auth: true,
+			params: {},
+			async handler(ctx) {
+				const user = ctx.meta.user;
+				const totpSecret = user.totpSecret;
+
+				const totp = VsAuthenticator.generateTOTP(
+					totpSecret.base32Secret
+				);
+
+				const response = {
+					totpCode: totp,
+				};
+
+				return response;
 			},
 		},
 

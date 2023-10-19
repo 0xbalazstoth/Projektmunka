@@ -64,7 +64,8 @@ module.exports = {
 					"POST /users/": "users.createUser",
 
 					// Validate TOTP after login
-					"POST /users/totp": "users.validateTOTP",
+					"POST /users/totpGeneration": "users.totpCodeGeneration",
+					"POST /users/totpValidation": "users.totpValidation",
 
 					// MAIL
 					"POST /mail/sendEmail": "smtp.sendEmail",
