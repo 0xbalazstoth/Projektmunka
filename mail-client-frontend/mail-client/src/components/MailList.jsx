@@ -37,19 +37,15 @@ const MailList = ({
 		fromMailBoxName,
 		toMailBoxName
 	) => {
-		if (mailBoxName !== "TRASH")
-		{
+		if (mailBoxName !== "TRASH") {
 			notifyMovedMessageToMailbox(toMailBoxName);
 
-			// TODO: If toMailBoxName is 'TRASH', the deletion should be permament.
-	
 			await appPostRequest(moveMailBoxEndpoint, {
 				message: message,
 				fromMailBoxName: fromMailBoxName,
 				toMailBoxName: toMailBoxName,
 			});
 		}
-		
 	};
 
 	return (
