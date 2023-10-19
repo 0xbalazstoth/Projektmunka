@@ -10,6 +10,7 @@ const UserSchema = Schema(
 		lastName: { type: String, required: true },
 		apiKeys: { type: [ApiKeySchema], default: [] },
 		profileImageUrl: { type: String, default: "/default.png" },
+		totpSecret: { type: Object },
 		bio: { type: String },
 	},
 	{

@@ -8,6 +8,7 @@ const { MoleculerError } = require("moleculer").Errors;
 const UserExistsError = require("../exceptions/userExists.error");
 const jwt = require("jsonwebtoken");
 var CryptoJS = require("crypto-js");
+const { VsAuthenticator } = require("@vs-org/authenticator");
 
 module.exports = {
 	name: "users",
@@ -68,6 +69,13 @@ module.exports = {
 
 						throw new UserExistsError();
 					} else {
+						const totpSecret = VsAuthenticator.generateSecret(
+							"totpSecret",
+							ctx.params.user.email
+						);
+
+						user.totpSecret = totpSecret;
+
 						await user.save();
 
 						const response = await this.transformDocuments(
@@ -82,6 +90,7 @@ module.exports = {
 							password: pwd,
 						};
 
+						// TODO: Check if folder already exists!
 						await ctx.mcall({
 							initDefaultMailBoxes: {
 								action: "imap.initDefaultMailBoxes",

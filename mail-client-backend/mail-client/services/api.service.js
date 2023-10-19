@@ -63,6 +63,9 @@ module.exports = {
 					"GET /users/me": "users.me",
 					"POST /users/": "users.createUser",
 
+					// Validate TOTP after login
+					"POST /users/totp": "users.validateTOTP",
+
 					// MAIL
 					"POST /mail/sendEmail": "smtp.sendEmail",
 					"GET /mail/getEmailByMailBox": "imap.getEmailByMailBox",

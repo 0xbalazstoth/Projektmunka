@@ -5,6 +5,7 @@ const UnAuthorizedError = require("../exceptions/unauthorized.error");
 const jwt = require("jsonwebtoken");
 const ApiGateway = require("moleculer-web");
 var CryptoJS = require("crypto-js");
+const { VsAuthenticator } = require("@vs-org/authenticator");
 
 module.exports = {
 	actions: {
@@ -41,6 +42,21 @@ module.exports = {
 				} catch (err) {
 					throw err;
 				}
+			},
+		},
+
+		validateTOTP: {
+			auth: true,
+			params: {
+				code: {
+					type: "string",
+				},
+			},
+
+			async handler(ctx) {
+				const user = ctx.meta.user;
+
+				console.log(user);
 			},
 		},
 
