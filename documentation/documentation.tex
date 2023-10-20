@@ -1,5 +1,9 @@
 \documentclass{report}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ifpdf}
+\usepackage{cmap}
+\usepackage{lmodern}
 \usepackage{titlesec}
 \usepackage{hyperref}
 \usepackage{graphicx}
@@ -7,6 +11,10 @@
 \usepackage{geometry}
 \usepackage{titling}
 \usepackage{tikz}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{minted}
+\usepackage{caption}
 \usetikzlibrary{trees}
 
 \newcommand{\subtitle}[1]{%
@@ -15,6 +23,9 @@
     \begin{center}\large#1\end{center}
     \vskip0.5em}%
 }
+
+% Customize the caption label for listings
+\renewcommand\listingscaption{Kód}
 
 \geometry{
   top=4cm,    % Adjust the top margin as needed
@@ -44,6 +55,7 @@
 }
 
 \renewcommand\contentsname{Tartalomjegyzék}
+\renewcommand\listoflistingscaption{Kódok}
 
 \title{Email kliens fejlesztés - Projektmunka}
 \subtitle{Fejlesztői dokumentáció}
@@ -66,5 +78,8 @@
 \include{ch-Projects}
 \include{ch-DNS}
 \include{ch-Mail}
+\include{ch-Backend}
+
+\listoflistings
 
 \end{document}

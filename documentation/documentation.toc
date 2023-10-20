@@ -12,4 +12,13 @@
 \contentsline {subsection}{\numberline {2.2.3}Tesztelés nslookup parancs segítségével}{4}{subsection.2.2.3}%
 \contentsline {chapter}{\numberline {3}SMTP, IMAP szerver}{5}{chapter.3}%
 \contentsline {section}{\numberline {3.1}hMailServer}{5}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Tesztelés}{5}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Alapértelmezett mappák}{5}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Backend}{6}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Bejelentkezés}{6}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Regisztráció}{6}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Adott email lekérése mappából}{7}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Összes email lekérése mappából}{7}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Email törlése mappából}{7}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Spam szűrés}{8}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Mappa létrehozása}{8}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Mappák lekérése}{8}{section.4.8}%

@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  6 OCT 2023 12:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  20 OCT 2023 20:37
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **"f:/Egyetemi anyagok/Mesterképzés/2023-2024/Első félév/Projektmunka/documentation/documentation.tex"
@@ -28,6 +28,52 @@ File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
+) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+ (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/cmap\cmap.sty
+Package: cmap 2021/02/06 v1.0j CMap support: searchable PDF
+
+
+Package cmap Warning: fontenc already loaded - some fonts may be unprocessed.
+
+) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 ) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
 Package: titlesec 2021/07/05 v2.14 Sectioning titles
 \ttl@box=\box51
@@ -43,8 +89,6 @@ Package: titlesec 2021/07/05 v2.14 Sectioning titles
 Package: hyperref 2023-07-08 v7.01b Hypertext links for LaTeX
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
 ) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
@@ -382,53 +426,202 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@expandcount=\count295
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytrees.code.tex
+))) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count296
+\lst@gtempboxa=\box63
+\lst@token=\toks34
+\lst@length=\count297
+\lst@currlwidth=\dimen266
+\lst@column=\count298
+\lst@pos=\count299
+\lst@lostspace=\dimen267
+\lst@width=\dimen268
+\lst@newlines=\count300
+\lst@lineno=\count301
+\lst@maxwidth=\dimen269
+ (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count302
+\lst@skipnumbers=\count303
+\lst@framebox=\box64
+) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+ (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/minted\minted.sty
+Package: minted 2023/09/12 v2.8 Yet another Pygments shim for LaTeX
+ (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/fvextra\fvextra.sty
+Package: fvextra 2022/11/30 v1.5 fvextra - extensions and patches for fancyvrb
+ (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
+Package: fancyvrb 2023/01/19 4.5a verbatim text (tvz,hv)
+\FV@CodeLineNo=\count304
+\FV@InFile=\read3
+\FV@TabBox=\box65
+\c@FancyVerbLine=\count305
+\FV@StepNumber=\count306
+\FV@OutFile=\write4
+) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
+ (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+))
+(C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
+Package: lineno 2023/05/20 line numbers on paragraphs v5.3
+\linenopenalty=\count307
+\output=\toks35
+\linenoprevgraf=\count308
+\linenumbersep=\dimen270
+\linenumberwidth=\dimen271
+\c@linenumber=\count309
+\c@pagewiselinenumber=\count310
+\c@LN@truepage=\count311
+\c@internallinenumber=\count312
+\c@internallinenumbers=\count313
+\quotelinenumbersep=\dimen272
+\bframerule=\dimen273
+\bframesep=\dimen274
+\bframebox=\box66
+LaTeX Info: Redefining \\ on input line 3180.
+)
+\c@FV@TrueTabGroupLevel=\count314
+\c@FV@TrueTabCounter=\count315
+\FV@TabBox@Group=\box67
+\FV@TmpLength=\skip56
+\c@FV@HighlightLinesStart=\count316
+\c@FV@HighlightLinesStop=\count317
+\FV@LoopCount=\count318
+\FV@NCharsBox=\box68
+\FV@BreakIndent=\dimen275
+\FV@BreakIndentNChars=\count319
+\FV@BreakSymbolSepLeft=\dimen276
+\FV@BreakSymbolSepLeftNChars=\count320
+\FV@BreakSymbolSepRight=\dimen277
+\FV@BreakSymbolSepRightNChars=\count321
+\FV@BreakSymbolIndentLeft=\dimen278
+\FV@BreakSymbolIndentLeftNChars=\count322
+\FV@BreakSymbolIndentRight=\dimen279
+\FV@BreakSymbolIndentRightNChars=\count323
+\c@FancyVerbLineBreakLast=\count324
+\FV@LineBox=\box69
+\FV@LineIndentBox=\box70
+\c@FV@BreakBufferDepth=\count325
+\FV@LineWidth=\dimen280
+) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
+Package: shellesc 2023/04/15 v1.0d unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/ifplatform\ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+ (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/generic/catchfile\catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+ (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex
+\xs_counta=\count326
+\xs_countb=\count327
+)
+Package: xstring 2023/08/22 v1.86 String manipulations (CT)
+) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/framed\framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip57
+\fb@frw=\dimen281
+\fb@frh=\dimen282
+\FrameRule=\dimen283
+\FrameSep=\dimen284
+) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count328
+\float@exts=\toks36
+\float@box=\box71
+\@float@everytoks=\toks37
+\@floatcapt=\box72
+)
+\minted@appexistsfile=\read4
+\minted@bgbox=\box73
+\minted@code=\write5
+\c@minted@FancyVerbLineTemp=\count329
+\c@minted@pygmentizecounter=\count330
+\@float@every@listing=\toks38
+\c@listing=\count331
+)
+runsystem(if not exist _minted-documentation mkdir _minted-documentation)...executed.
+
+ (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/03/12 v3.6j Customizing captions (AR)
+ (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
+\caption@tempdima=\dimen285
+\captionmargin=\dimen286
+\caption@leftmargin=\dimen287
+\caption@rightmargin=\dimen288
+\caption@width=\dimen289
+\caption@indent=\dimen290
+\caption@parindent=\dimen291
+\caption@hangindent=\dimen292
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count332
+\c@continuedfloat=\count333
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytrees.code.tex
 File: tikzlibrarytrees.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 44.
- (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+Package hyperref Info: Option `colorlinks' set `true' on input line 55.
+runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > documentation.aex <nul: /p x=^%~$PATH:i>> documentation.aex)...executed.
+
+runsystem(del documentation.aex)...executed.
+
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 72.
+ (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)<<t1.cmap>> (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count296
-\l__pdf_internal_box=\box63
-) (documentation.aux (ch-Projects.aux) (ch-DNS.aux) (ch-Mail.aux))
+\l__color_backend_stack_int=\count334
+\l__pdf_internal_box=\box74
+) (documentation.aux (ch-Projects.aux) (ch-DNS.aux) (ch-Mail.aux) (ch-Backend.aux))
 \openout1 = `documentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-Package hyperref Info: Link coloring ON on input line 60.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+Package hyperref Info: Link coloring ON on input line 72.
  (documentation.out) (documentation.out)
-\@outlinefile=\write4
-\openout4 = `documentation.out'.
+\@outlinefile=\write6
+\openout6 = `documentation.out'.
 
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count297
-\scratchdimen=\dimen266
-\scratchbox=\box64
-\nofMPsegments=\count298
-\nofMParguments=\count299
-\everyMPshowfont=\toks34
-\MPscratchCnt=\count300
-\MPscratchDim=\dimen267
-\MPnumerator=\count301
-\makeMPintoPDFobject=\count302
-\everyMPtoPDFconversion=\toks35
+\scratchcounter=\count335
+\scratchdimen=\dimen293
+\scratchbox=\box75
+\nofMPsegments=\count336
+\nofMParguments=\count337
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count338
+\MPscratchDim=\dimen294
+\MPnumerator=\count339
+\makeMPintoPDFobject=\count340
+\everyMPtoPDFconversion=\toks40
 ) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -469,33 +662,55 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<oe_logo.png, id=66, 723.9045pt x 407.3619pt>
+\c@lstlisting=\count341
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+<oe_logo.png, id=103, 723.9045pt x 407.3619pt>
 File: oe_logo.png Graphic file (type png)
 <use oe_logo.png>
-Package pdftex.def Info: oe_logo.png  used on input line 62.
+Package pdftex.def Info: oe_logo.png  used on input line 74.
 (pdftex.def)             Requested size: 188.8096pt x 106.24724pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 62.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 62.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 62.
-[1
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 74.
+(C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)<<ot1.cmap>>
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 74.
+ (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)<<oml.cmap>>
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 74.
+ (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)<<oms.cmap>>
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 74.
+ (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 74.
+<<omx.cmap>>
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 74.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 74.
+ [1
 
-{C:/Users/rpgix/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./oe_logo.png>] (documentation.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
+{C:/Users/rpgix/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <./oe_logo.png>] (documentation.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 2.
+LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
+LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 2.
 )
-\tf@toc=\write5
-\openout5 = `documentation.toc'.
+\tf@toc=\write7
+\openout7 = `documentation.toc'.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.66 \include{ch-Projects}
+l.78 \include{ch-Projects}
                            [1
 
 ]
@@ -503,20 +718,22 @@ l.66 \include{ch-Projects}
 
  (ch-Projects.tex
 Chapter 1.
-[2
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 47.
+(C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [2
 
 
-]) [3]
+{C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]) [3]
 \openout2 = `ch-DNS.aux'.
 
  (ch-DNS.tex
 Chapter 2.
-
-Overfull \hbox (6.57042pt too wide) in paragraph at lines 6--7
-\OT1/cmr/m/n/10 Ahhoz, hogy haszn^^Salni tudjuk az email klienst, kri-tikus fontoss^^Sag^^Su a DNS sz-ervernek a fut-tat^^Sasa. Term^^Seszetesen
- []
-
-<./assets/docker-up-dns-server.png, id=115, 603.75563pt x 105.39375pt>
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 8.
+(C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+<./assets/docker-up-dns-server.png, id=165, 603.75563pt x 105.39375pt>
 File: ./assets/docker-up-dns-server.png Graphic file (type png)
 <use ./assets/docker-up-dns-server.png>
 Package pdftex.def Info: ./assets/docker-up-dns-server.png  used on input line 14.
@@ -531,7 +748,7 @@ Package pdftex.def Info: ./assets/docker-up-dns-server.png  used on input line 1
 
  (ch-Mail.tex
 Chapter 3.
-<./assets/hmailServer-accounts.png, id=122, 203.25937pt x 99.37125pt>
+<./assets/hmailServer-accounts.png, id=172, 203.25937pt x 99.37125pt>
 File: ./assets/hmailServer-accounts.png Graphic file (type png)
 <use ./assets/hmailServer-accounts.png>
 Package pdftex.def Info: ./assets/hmailServer-accounts.png  used on input line 7.
@@ -541,26 +758,70 @@ Package pdftex.def Info: ./assets/hmailServer-accounts.png  used on input line 7
 
 
 
- <./assets/hmailServer-accounts.png>] (documentation.aux (ch-Projects.aux) (ch-DNS.aux) (ch-Mail.aux))
+ <./assets/hmailServer-accounts.png>]
+\openout2 = `ch-Backend.aux'.
+
+ (ch-Backend.tex
+Chapter 4.
+\openout4 = `documentation.pyg'.
+
+(_minted-documentation/default.pygstyle) (_minted-documentation/2F9B7ACA9A16A04B642AC0968C8B4C9D8731B9E3AEDD7D78028B3188D6EE1DB3.pygtex
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 3.
+)
+Package hyperref Info: bookmark level for unknown listing defaults to 0 on input line 25.
+\openout4 = `documentation.pyg'.
+
+ (_minted-documentation/0470AF1682095A4D24878E547426E85B8731B9E3AEDD7D78028B3188D6EE1DB3.pygtex) [6
+
+
+
+
+]
+\openout4 = `documentation.pyg'.
+
+ (_minted-documentation/91ADB64E4E0AFFF9463F00BE42FFFD688731B9E3AEDD7D78028B3188D6EE1DB3.pygtex)
+\openout4 = `documentation.pyg'.
+
+ (_minted-documentation/91ADB64E4E0AFFF9463F00BE42FFFD688731B9E3AEDD7D78028B3188D6EE1DB3.pygtex)
+\openout4 = `documentation.pyg'.
+
+ (_minted-documentation/91ADB64E4E0AFFF9463F00BE42FFFD688731B9E3AEDD7D78028B3188D6EE1DB3.pygtex) [7]
+\openout4 = `documentation.pyg'.
+
+ (_minted-documentation/91ADB64E4E0AFFF9463F00BE42FFFD688731B9E3AEDD7D78028B3188D6EE1DB3.pygtex)
+\openout4 = `documentation.pyg'.
+
+ (_minted-documentation/91ADB64E4E0AFFF9463F00BE42FFFD688731B9E3AEDD7D78028B3188D6EE1DB3.pygtex)) [8] (documentation.lol)
+\tf@lol=\write8
+\openout8 = `documentation.lol'.
+
+ [9
+
+
+
+] (documentation.aux (ch-Projects.aux) (ch-DNS.aux) (ch-Mail.aux) (ch-Backend.aux))
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
 Package rerunfilecheck Info: File `documentation.out' has not changed.
-(rerunfilecheck)             Checksum: C4F0192BF9FA9FE4FF1340BF48554376;2125.
+(rerunfilecheck)             Checksum: 3DD8A9E6BBD0CD1CBDAE5B17FB647779;3562.
+runsystem(del documentation.pyg)...executed.
+
  ) 
 Here is how much of TeX's memory you used:
- 20014 strings out of 475550
- 380702 string characters out of 5762533
- 1929238 words of memory out of 5000000
- 40881 multiletter control sequences out of 15000+600000
- 563779 words of font info for 55 fonts, out of 8000000 for 9000
+ 26385 strings out of 475550
+ 507507 string characters out of 5762533
+ 1930238 words of memory out of 5000000
+ 47031 multiletter control sequences out of 15000+600000
+ 615896 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,89p,504b,1225s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\rpgix\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on documentation.pdf (6 pages, 367424 bytes).
+ 84i,12n,89p,503b,1225s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+Output written on documentation.pdf (10 pages, 514697 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 22 named destinations out of 1000 (max. 500000)
- 148 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 258 PDF objects out of 1000 (max. 8388607)
+ 43 named destinations out of 1000 (max. 500000)
+ 240 words of extra memory for PDF output out of 10000 (max. 10000000)
 
