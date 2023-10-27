@@ -1,4 +1,5 @@
 ﻿import 'package:authenticator_app/components/c_input.dart';
+import 'package:authenticator_app/components/qr_scanner.dart';
 import 'package:authenticator_app/styles/styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -70,7 +71,18 @@ class _MainViewState extends State<MainView> {
                             size: 40,
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          showModalBottomSheet(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return QrScanner(
+                                onScanned: (value) {
+                                  print(value.code);
+                                },
+                              );
+                            },
+                          );
+                        },
                       ),
                     ),
                   ],

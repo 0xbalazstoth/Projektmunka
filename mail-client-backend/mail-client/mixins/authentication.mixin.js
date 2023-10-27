@@ -82,12 +82,6 @@ module.exports = {
 				const user = ctx.meta.user;
 				const totpSecret = user.totpSecret;
 
-				const secret = VsAuthenticator.generateSecret(
-					user.firstName,
-					user.email
-				);
-				console.log(secret);
-
 				const totp = VsAuthenticator.generateTOTP(
 					totpSecret.base32Secret
 				);
