@@ -6,6 +6,12 @@ const jwt = require("jsonwebtoken");
 const ApiGateway = require("moleculer-web");
 var CryptoJS = require("crypto-js");
 const { VsAuthenticator } = require("@vs-org/authenticator");
+const {
+	generateSecret,
+	generateUri,
+	generateToken,
+	validateToken,
+} = require("@sunknudsen/totp");
 
 module.exports = {
 	actions: {
@@ -75,6 +81,12 @@ module.exports = {
 			async handler(ctx) {
 				const user = ctx.meta.user;
 				const totpSecret = user.totpSecret;
+
+				const secret = VsAuthenticator.generateSecret(
+					user.firstName,
+					user.email
+				);
+				console.log(secret);
 
 				const totp = VsAuthenticator.generateTOTP(
 					totpSecret.base32Secret
