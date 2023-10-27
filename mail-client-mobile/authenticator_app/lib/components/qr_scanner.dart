@@ -1,4 +1,5 @@
-﻿import 'package:flutter/material.dart';
+﻿import 'package:authenticator_app/styles/styles.dart';
+import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
 class QrScanner extends StatefulWidget {
@@ -18,7 +19,8 @@ class _QrScannerState extends State<QrScanner> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('QR Code Scanner'),
+        title: Text('Scan your QR code.'),
+        backgroundColor: COLOR_PRIMARY,
       ),
       body: Column(
         children: [
@@ -40,8 +42,13 @@ class _QrScannerState extends State<QrScanner> {
       // Handle the scanned data here
       widget.onScanned(scanData);
 
-      // Close the scanner screen
-      Navigator.pop(context);
+      if (Navigator.of(context).canPop()) {
+        // Close the scanner screen
+        Navigator.pop(context);
+      } else {
+        // If there are no pages in the stack, you might want to navigate to a different screen or handle it accordingly.
+        print("Nowhere to pop!");
+      }
     });
   }
 
