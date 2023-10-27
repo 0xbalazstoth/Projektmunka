@@ -8,6 +8,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:otp_util/otp_util.dart';
+import "package:lottie/lottie.dart";
 
 class MainView extends StatefulWidget {
   const MainView({Key? key}) : super(key: key);
@@ -99,7 +100,7 @@ class _MainViewState extends State<MainView> {
                             borderRadius: BorderRadius.circular(15),
                           ),
                           child: Icon(
-                            Icons.add,
+                            Icons.qr_code,
                             color: Colors.white,
                             size: 40,
                           ),
@@ -137,6 +138,18 @@ class _MainViewState extends State<MainView> {
                 ),
                 SizedBox(height: 30),
                 if (isScanned)
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      totpIssuer,
+                      style: TextStyle(
+                        color: Colors.grey[700],
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                SizedBox(height: 10),
+                if (totpIssuer != null && totpIssuer.isNotEmpty)
                   Row(
                     children: [
                       Container(
@@ -197,6 +210,8 @@ class _MainViewState extends State<MainView> {
                       ),
                     ],
                   ),
+                if (!isScanned) // Show Lottie animation only if not scanned
+                  Lottie.asset('assets/illustrations/animation_s1.json'),
               ],
             ),
           ),
