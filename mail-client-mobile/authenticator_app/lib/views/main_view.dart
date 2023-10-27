@@ -18,6 +18,8 @@ class MainView extends StatefulWidget {
 
 class _MainViewState extends State<MainView> {
   late TOTP totp = TOTP();
+  late String totpIssuer = "";
+
   late Timer timer;
   bool isScanned = false;
 
@@ -76,7 +78,7 @@ class _MainViewState extends State<MainView> {
                       child: CInput(
                         height: 50,
                         width: double.infinity,
-                        placeholder: "Keresés...",
+                        placeholder: "Search",
                         icon: Icon(Icons.search),
                         isInputPassword: false,
                         changed: (text) {
@@ -115,7 +117,8 @@ class _MainViewState extends State<MainView> {
                                   setState(() {
                                     totp = TOTP(secret: secret);
                                     isScanned = true;
-                                    startTimer(); // Start the timer when scanned
+                                    totpIssuer = parsedData["issuer"]!;
+                                    startTimer();
                                   });
                                 },
                               );
@@ -132,19 +135,41 @@ class _MainViewState extends State<MainView> {
                   thickness: 0.5,
                   color: Colors.grey[300],
                 ),
+                SizedBox(height: 30),
                 if (isScanned)
-                  Column(
+                  Row(
                     children: [
-                      Text(
-                        totp.secret != null && totp.secret!.isNotEmpty
-                            ? totp.now().toString()
-                            : 'No scanned value',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
+                      Container(
+                        width: 50,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: COLOR_POSITIVE, // Background color
+                        ),
+                        child: Center(
+                          child: Text(
+                            totpIssuer[0].toUpperCase() +
+                                totpIssuer[1].toUpperCase(),
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                              color: Colors.grey[200],
+                            ),
+                          ),
                         ),
                       ),
-                      SizedBox(height: 10),
+                      SizedBox(width: 20),
+                      Expanded(
+                        child: Text(
+                          totp.secret != null && totp.secret!.isNotEmpty
+                              ? totp.now().toString()
+                              : 'No scanned value',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
                       Stack(
                         alignment: Alignment.center,
                         children: [
@@ -163,7 +188,7 @@ class _MainViewState extends State<MainView> {
                           Text(
                             '$timeLeft',
                             style: TextStyle(
-                              fontSize: 24,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold,
                               color: secondsTextColor, // Seconds text color
                             ),
