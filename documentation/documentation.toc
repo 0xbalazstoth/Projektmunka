@@ -4,26 +4,27 @@
 \contentsline {section}{\numberline {1.3}Előkövetelmények, csomagok, keretrendszerek}{3}{section.1.3}%
 \contentsline {subsection}{\numberline {1.3.1}Webalkalmazás}{3}{subsection.1.3.1}%
 \contentsline {subsection}{\numberline {1.3.2}AI Scam szűrő}{3}{subsection.1.3.2}%
-\contentsline {chapter}{\numberline {2}DNS szerver}{4}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Indítás}{4}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Konfiguráció}{4}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Zóna hozzáadása}{4}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Rekordok hozzáadása}{4}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Tesztelés nslookup parancs segítségével}{4}{subsection.2.2.3}%
-\contentsline {chapter}{\numberline {3}SMTP, IMAP szerver}{5}{chapter.3}%
-\contentsline {section}{\numberline {3.1}hMailServer}{5}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Alapértelmezett mappák}{5}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Backend}{6}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Bejelentkezés}{6}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Regisztráció}{6}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Adott email lekérése mappából}{7}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Összes email lekérése mappából}{7}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Email törlése mappából}{7}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Spam szűrés}{8}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Mappa létrehozása}{8}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Mappák lekérése}{8}{section.4.8}%
-\contentsline {chapter}{\numberline {5}AI Scam szűrő API}{9}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Tanítási adatok felépítése}{9}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Modell}{9}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Tanítás}{10}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Spam szűrése}{13}{section.5.4}%
+\contentsline {chapter}{\numberline {2}Összehasonlítások}{4}{chapter.2}%
+\contentsline {chapter}{\numberline {3}DNS szerver}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Indítás}{5}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Konfiguráció}{5}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Zóna hozzáadása}{5}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Rekordok hozzáadása}{5}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Tesztelés nslookup parancs segítségével}{5}{subsection.3.2.3}%
+\contentsline {chapter}{\numberline {4}SMTP, IMAP szerver}{6}{chapter.4}%
+\contentsline {section}{\numberline {4.1}hMailServer}{6}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Alapértelmezett mappák}{6}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Backend}{7}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Bejelentkezés}{7}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Regisztráció}{7}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Adott email lekérése mappából}{8}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Összes email lekérése mappából}{8}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Email törlése mappából}{8}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Spam szűrés}{9}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Mappa létrehozása}{9}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Mappák lekérése}{9}{section.5.8}%
+\contentsline {chapter}{\numberline {6}AI Scam szűrő API}{10}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Tanítási adatok felépítése}{10}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Modell}{10}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Tanítás}{11}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Spam szűrése}{14}{section.6.4}%

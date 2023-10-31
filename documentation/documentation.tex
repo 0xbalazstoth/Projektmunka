@@ -14,9 +14,12 @@
 \usepackage{tikz}
 \usepackage{listings}
 \usepackage{color}
+\usepackage{tabularx}
 \usepackage{minted}
+\usepackage{booktabs}
 \usepackage{caption}
 \usetikzlibrary{trees}
+\usepackage{fontawesome5}
 \usepackage{chngcntr}
 \counterwithin{listing}{chapter}
 
@@ -26,7 +29,6 @@
     \begin{center}\large#1\end{center}
     \vskip0.5em}%
 }
-
 
 \geometry{
   top=4cm,    % Adjust the top margin as needed
@@ -56,12 +58,16 @@
 }
 
 \renewcommand\contentsname{Tartalomjegyzék}
+\renewcommand{\tablename}{Tábla}
 
 \captionsetup[listing]{labelfont={bf},name={Kód},labelsep=colon}
 \renewcommand\listoflistingscaption{Kódjegyzék}
 
 \captionsetup[figure]{labelfont={bf},name={Ábra},labelsep=colon}
 \renewcommand{\listfigurename}{Ábrajegyzék}
+
+\captionsetup[table]{labelfont={bf},name={Tábla},labelsep=colon}
+\renewcommand\listtablename{Táblajegyzék}
 
 \title{Email kliens fejlesztés - Projektmunka}
 \subtitle{Fejlesztői dokumentáció}
@@ -82,6 +88,7 @@
 \tableofcontents
 
 \include{ch-Projects}
+\include{ch-Compare}
 \include{ch-DNS}
 \include{ch-Mail}
 \include{ch-Backend}
@@ -89,5 +96,6 @@
 
 \listoflistings
 \listoffigures
+\listoftables
 
 \end{document}
