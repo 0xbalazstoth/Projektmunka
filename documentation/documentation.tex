@@ -3,6 +3,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{ifpdf}
 \usepackage{cmap}
+% \usepackage[hungarian]{babel}
 \usepackage{lmodern}
 \usepackage{titlesec}
 \usepackage{hyperref}
@@ -16,6 +17,8 @@
 \usepackage{minted}
 \usepackage{caption}
 \usetikzlibrary{trees}
+\usepackage{chngcntr}
+\counterwithin{listing}{chapter}
 
 \newcommand{\subtitle}[1]{%
   \posttitle{%
@@ -24,8 +27,6 @@
     \vskip0.5em}%
 }
 
-% Customize the caption label for listings
-\renewcommand\listingscaption{Kód}
 
 \geometry{
   top=4cm,    % Adjust the top margin as needed
@@ -55,7 +56,12 @@
 }
 
 \renewcommand\contentsname{Tartalomjegyzék}
-\renewcommand\listoflistingscaption{Kódok}
+
+\captionsetup[listing]{labelfont={bf},name={Kód},labelsep=colon}
+\renewcommand\listoflistingscaption{Kódjegyzék}
+
+\captionsetup[figure]{labelfont={bf},name={Ábra},labelsep=colon}
+\renewcommand{\listfigurename}{Ábrajegyzék}
 
 \title{Email kliens fejlesztés - Projektmunka}
 \subtitle{Fejlesztői dokumentáció}
@@ -79,7 +85,9 @@
 \include{ch-DNS}
 \include{ch-Mail}
 \include{ch-Backend}
+\include{ch-AI}
 
 \listoflistings
+\listoffigures
 
 \end{document}

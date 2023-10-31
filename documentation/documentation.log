@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  20 OCT 2023 20:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  31 OCT 2023 12:48
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"f:/Egyetemi anyagok/Mesterképzés/2023-2024/Első félév/Projektmunka/documentation/documentation.tex"
-(f:/Egyetemi anyagok/Mesterképzés/2023-2024/Első félév/Projektmunka/documentation/documentation.tex
+**"f:/Egyetemi anyagok/Mesterkepzes/2023-2024/Elso felev/Projektmunka/documentation/documentation.tex"
+(f:/Egyetemi anyagok/Mesterkepzes/2023-2024/Elso felev/Projektmunka/documentation/documentation.tex
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
 (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
@@ -570,41 +570,49 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 ) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytrees.code.tex
 File: tikzlibrarytrees.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/chngcntr\chngcntr.sty
+Package: chngcntr 2018/04/09 v1.1a change counter resetting
+Package chngcntr Info: \counterwithout already defined.
+(chngcntr)             Quitting chngcntr on input line 21.
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 55.
+Package hyperref Info: Option `colorlinks' set `true' on input line 56.
 runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > documentation.aex <nul: /p x=^%~$PATH:i>> documentation.aex)...executed.
 
 runsystem(del documentation.aex)...executed.
 
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 72.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 78.
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )<<t1.cmap>> (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count334
 \l__pdf_internal_box=\box74
-) (documentation.aux (ch-Projects.aux) (ch-DNS.aux) (ch-Mail.aux) (ch-Backend.aux))
+) (documentation.aux (ch-Projects.aux) (ch-DNS.aux) (ch-Mail.aux) (ch-Backend.aux) (ch-AI.aux
+
+LaTeX Warning: Label `code:forward' multiply defined.
+
+))
 \openout1 = `documentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-Package hyperref Info: Link coloring ON on input line 72.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+Package hyperref Info: Link coloring ON on input line 78.
  (documentation.out) (documentation.out)
 \@outlinefile=\write6
 \openout6 = `documentation.out'.
@@ -665,34 +673,34 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 \c@lstlisting=\count341
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<oe_logo.png, id=103, 723.9045pt x 407.3619pt>
+<oe_logo.png, id=123, 723.9045pt x 407.3619pt>
 File: oe_logo.png Graphic file (type png)
 <use oe_logo.png>
-Package pdftex.def Info: oe_logo.png  used on input line 74.
+Package pdftex.def Info: oe_logo.png  used on input line 80.
 (pdftex.def)             Requested size: 188.8096pt x 106.24724pt.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 74.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 80.
 (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )<<ot1.cmap>>
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 74.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 80.
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )<<oml.cmap>>
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 74.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 80.
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )<<oms.cmap>>
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 74.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 80.
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 74.
+(Font)              <12> on input line 80.
 <<omx.cmap>>
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 74.
+(Font)              <8> on input line 80.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 74.
+(Font)              <6> on input line 80.
  [1
 
 {C:/Users/rpgix/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <./oe_logo.png>] (documentation.toc
@@ -710,7 +718,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.78 \include{ch-Projects}
+l.84 \include{ch-Projects}
                            [1
 
 ]
@@ -733,7 +741,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 8.
 (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<./assets/docker-up-dns-server.png, id=165, 603.75563pt x 105.39375pt>
+<./assets/docker-up-dns-server.png, id=190, 603.75563pt x 105.39375pt>
 File: ./assets/docker-up-dns-server.png Graphic file (type png)
 <use ./assets/docker-up-dns-server.png>
 Package pdftex.def Info: ./assets/docker-up-dns-server.png  used on input line 14.
@@ -748,7 +756,7 @@ Package pdftex.def Info: ./assets/docker-up-dns-server.png  used on input line 1
 
  (ch-Mail.tex
 Chapter 3.
-<./assets/hmailServer-accounts.png, id=172, 203.25937pt x 99.37125pt>
+<./assets/hmailServer-accounts.png, id=197, 203.25937pt x 99.37125pt>
 File: ./assets/hmailServer-accounts.png Graphic file (type png)
 <use ./assets/hmailServer-accounts.png>
 Package pdftex.def Info: ./assets/hmailServer-accounts.png  used on input line 7.
@@ -792,36 +800,83 @@ Package hyperref Info: bookmark level for unknown listing defaults to 0 on input
  (_minted-documentation/91ADB64E4E0AFFF9463F00BE42FFFD688731B9E3AEDD7D78028B3188D6EE1DB3.pygtex)
 \openout4 = `documentation.pyg'.
 
- (_minted-documentation/91ADB64E4E0AFFF9463F00BE42FFFD688731B9E3AEDD7D78028B3188D6EE1DB3.pygtex)) [8] (documentation.lol)
+ (_minted-documentation/91ADB64E4E0AFFF9463F00BE42FFFD688731B9E3AEDD7D78028B3188D6EE1DB3.pygtex)) [8]
+\openout2 = `ch-AI.aux'.
+
+ (ch-AI.tex
+Chapter 5.
+\openout4 = `documentation.pyg'.
+
+(_minted-documentation/222B63B1677E4E1B5BABAC63A974A53CC731A7548AEC117701644DC59D46C3FD.pygtex) [9
+
+
+
+
+{C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
+\openout4 = `documentation.pyg'.
+
+ (_minted-documentation/406A2431FD859A42325FC7A0C0EBB57FC731A7548AEC117701644DC59D46C3FD.pygtex)
+\openout4 = `documentation.pyg'.
+
+ (_minted-documentation/AA8A743869C28481631CB38D842CB094C731A7548AEC117701644DC59D46C3FD.pygtex
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 2.
+ (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmtt.fd
+File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)) [10{C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
+\openout4 = `documentation.pyg'.
+
+ (_minted-documentation/3E034FA40AEFA9B8120FCCAF03710BBEC731A7548AEC117701644DC59D46C3FD.pygtex)
+\openout4 = `documentation.pyg'.
+
+ (_minted-documentation/79AC0913BED6F9BC915765DF1F3998FFC731A7548AEC117701644DC59D46C3FD.pygtex) [11]
+\openout4 = `documentation.pyg'.
+
+ (_minted-documentation/04AEA04E75F42AE253E6F210FB54535FC731A7548AEC117701644DC59D46C3FD.pygtex)
+\openout4 = `documentation.pyg'.
+
+ (_minted-documentation/8B78529D43EEFEBD42EB630B14BE30FDC731A7548AEC117701644DC59D46C3FD.pygtex) [12]
+\openout4 = `documentation.pyg'.
+
+ (_minted-documentation/C53BC1DEAD3A40164157CEEBDED4A74EC731A7548AEC117701644DC59D46C3FD.pygtex)) [13] (documentation.lol)
 \tf@lol=\write8
 \openout8 = `documentation.lol'.
 
- [9
+ [14
 
 
 
-] (documentation.aux (ch-Projects.aux) (ch-DNS.aux) (ch-Mail.aux) (ch-Backend.aux))
+] (documentation.lof)
+\tf@lof=\write9
+\openout9 = `documentation.lof'.
+
+ [15
+
+] (documentation.aux (ch-Projects.aux) (ch-DNS.aux) (ch-Mail.aux) (ch-Backend.aux) (ch-AI.aux))
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `documentation.out' has not changed.
-(rerunfilecheck)             Checksum: 3DD8A9E6BBD0CD1CBDAE5B17FB647779;3562.
+(rerunfilecheck)             Checksum: 09D61971E442AD417F5177A0BB24A7BA;4217.
 runsystem(del documentation.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 26385 strings out of 475550
- 507507 string characters out of 5762533
+ 26644 strings out of 475550
+ 517251 string characters out of 5762533
  1930238 words of memory out of 5000000
- 47031 multiletter control sequences out of 15000+600000
- 615896 words of font info for 70 fonts, out of 8000000 for 9000
+ 47218 multiletter control sequences out of 15000+600000
+ 625173 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,89p,503b,1225s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on documentation.pdf (10 pages, 514697 bytes).
+ 84i,12n,89p,799b,1225s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+Output written on documentation.pdf (16 pages, 612070 bytes).
 PDF statistics:
- 258 PDF objects out of 1000 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
- 240 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 355 PDF objects out of 1000 (max. 8388607)
+ 65 named destinations out of 1000 (max. 500000)
+ 280 words of extra memory for PDF output out of 10000 (max. 10000000)
 
