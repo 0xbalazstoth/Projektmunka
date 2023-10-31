@@ -13,3 +13,4 @@
 \contentsline {listing}{\numberline {5.6}{\ignorespaces Vesztéség és optimalizáló algoritmus definiálása\relax }}{12}{listing.5.6}%
 \contentsline {listing}{\numberline {5.7}{\ignorespaces Tanítási ciklus\relax }}{12}{listing.5.7}%
 \contentsline {listing}{\numberline {5.8}{\ignorespaces Modell kiértékelése\relax }}{13}{listing.5.8}%
+\contentsline {listing}{\numberline {5.9}{\ignorespaces Példa adatok a spam üzenet szűrésére\relax }}{13}{listing.5.9}%

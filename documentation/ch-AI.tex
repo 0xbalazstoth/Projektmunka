@@ -202,3 +202,25 @@
 \end{listing}
 
 \section{Spam szűrése}
+\begin{itemize}
+    \item Végpont - \textbf{/spam-classification}
+    \begin{itemize}
+        \item \textbf{POST} (JSON)
+    \end{itemize}
+    \item Előfeltétel(ek): \textbf{Nincs}
+\end{itemize}
+\begin{itemize}
+    \item Bemeneti paraméter(ek):
+    \begin{itemize}
+        \item text - Típus: \textbf{string}
+    \end{itemize}
+\end{itemize}
+\begin{listing}[H]
+    \begin{minted}[linenos, numbersep=-10pt]{json}
+        {
+            "text": "SAMPLE TEXT"
+        }
+    \end{minted}
+    \caption{Példa adatok a spam üzenet szűrésére}
+    \label{code:json_mailbox_one}
+\end{listing}
