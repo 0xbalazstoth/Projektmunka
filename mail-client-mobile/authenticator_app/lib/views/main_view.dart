@@ -21,13 +21,14 @@ class _MainViewState extends State<MainView> {
   List<TOTP> totpList = [];
   List<String> totpIssuerList = [];
 
+  final TextEditingController searchController = TextEditingController();
+
   late Timer timer;
   bool isScanning = false;
 
   @override
   void initState() {
     super.initState();
-    // Initialize the timer immediately if there are scanned values
     if (totpList.isNotEmpty) {
       startTimer();
     }
@@ -37,6 +38,13 @@ class _MainViewState extends State<MainView> {
   void dispose() {
     timer.cancel();
     super.dispose();
+  }
+
+  void deleteItem(int index) {
+    setState(() {
+      totpList.removeAt(index);
+      totpIssuerList.removeAt(index);
+    });
   }
 
   void startTimer() {
@@ -87,6 +95,7 @@ class _MainViewState extends State<MainView> {
                         changed: (text) {
                           print(text);
                         },
+                        controller: searchController,
                       ),
                     ),
                     SizedBox(width: 10),
@@ -195,6 +204,25 @@ class _MainViewState extends State<MainView> {
                                 ),
                               ),
                             ),
+                            // DELETE BUTTON
+                            GestureDetector(
+                              onTap: () => deleteItem(i),
+                              child: Container(
+                                width: 50,
+                                height: 50,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: COLOR_NEGATIVE, // Background color
+                                ),
+                                child: Center(
+                                  child: Icon(
+                                    Icons.delete,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 20),
                             Stack(
                               alignment: Alignment.center,
                               children: [

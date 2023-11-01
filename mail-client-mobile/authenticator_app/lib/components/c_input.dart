@@ -12,6 +12,7 @@ class CInput extends StatefulWidget {
     required this.changed,
     required this.icon,
     required this.isInputPassword,
+    required this.controller,
   }) : super(key: key);
 
   final double height;
@@ -20,6 +21,7 @@ class CInput extends StatefulWidget {
   final Function(String text) changed;
   final Icon icon;
   final bool isInputPassword;
+  final TextEditingController controller;
 
   @override
   _CInputState createState() => _CInputState();
@@ -56,6 +58,7 @@ class _CInputState extends State<CInput> {
           // TextField here
           Expanded(
             child: TextField(
+              controller: widget.controller, // Use the provided controller
               onChanged: widget.changed,
               obscureText: widget.isInputPassword ? true : false,
               enableSuggestions: widget.isInputPassword ? true : false,
