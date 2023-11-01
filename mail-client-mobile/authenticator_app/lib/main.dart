@@ -15,7 +15,7 @@ class MainApp extends StatelessWidget {
         SystemUiOverlayStyle(statusBarColor: Colors.transparent));
 
     return MaterialApp(
-      title: 'OEAuth',
+      title: 'OEAuth.',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: "Quicksand",

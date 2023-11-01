@@ -9,6 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:otp_util/otp_util.dart';
 import "package:lottie/lottie.dart";
+import 'package:qr_code_scanner/qr_code_scanner.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MainView extends StatefulWidget {
   const MainView({Key? key}) : super(key: key);
@@ -29,6 +31,7 @@ class _MainViewState extends State<MainView> {
   @override
   void initState() {
     super.initState();
+    loadData();
     if (totpList.isNotEmpty) {
       startTimer();
     }
@@ -40,11 +43,66 @@ class _MainViewState extends State<MainView> {
     super.dispose();
   }
 
+  void saveData() async {
+    // Save (List<String>) totpIssuerList
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setStringList("totpIssuerList", totpIssuerList);
+  }
+
+  void loadData() async {
+    // Load (List<String>) totpIssuerList
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    List<String>? savedIssuerList = prefs.getStringList('totpIssuerList');
+
+    if (savedIssuerList != null) {
+      setState(() {
+        totpIssuerList = savedIssuerList;
+
+        // Loop through totpIssuerList to push data to totpList
+        totpIssuerList.forEach((x) {
+          final parsedData = parseTotpUrl(x);
+          final secret = parsedData["secret"]!;
+          totpList.add(TOTP(secret: secret));
+          startTimer();
+        });
+      });
+    }
+  }
+
+  void clearData() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.clear();
+  }
+
   void deleteItem(int index) {
-    setState(() {
-      totpList.removeAt(index);
-      totpIssuerList.removeAt(index);
-    });
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text("Delete Item"),
+          content: Text("Are you sure you want to delete this item?"),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text("Cancel"),
+            ),
+            TextButton(
+              onPressed: () {
+                setState(() {
+                  totpList.removeAt(index);
+                  totpIssuerList.removeAt(index);
+                  saveData();
+                });
+                Navigator.pop(context);
+              },
+              child: Text("Delete"),
+            ),
+          ],
+        );
+      },
+    );
   }
 
   void startTimer() {
@@ -74,7 +132,7 @@ class _MainViewState extends State<MainView> {
             child: Column(
               children: [
                 Text(
-                  "OEAuth",
+                  "OEAuth.",
                   style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
@@ -126,14 +184,18 @@ class _MainViewState extends State<MainView> {
                                   onScanned: (value) {
                                     if (!isScanning) return;
 
-                                    print(value.code);
-
                                     final parsedData =
                                         parseTotpUrl(value.code!);
                                     final secret = parsedData["secret"]!;
                                     setState(() {
+                                      // Initializing TOTP
                                       totpList.add(TOTP(secret: secret));
-                                      totpIssuerList.add(parsedData["issuer"]!);
+
+                                      // totpIssuerList.add(parsedData["issuer"]!);
+                                      totpIssuerList.add(value.code!);
+
+                                      saveData();
+
                                       startTimer();
                                     });
                                   },
@@ -162,7 +224,7 @@ class _MainViewState extends State<MainView> {
                         Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                            totpIssuerList[i],
+                            parseTotpUrl(totpIssuerList[i])["issuer"]!,
                             style: TextStyle(
                               color: Colors.grey[700],
                               fontWeight: FontWeight.bold,
@@ -181,8 +243,11 @@ class _MainViewState extends State<MainView> {
                               ),
                               child: Center(
                                 child: Text(
-                                  totpIssuerList[i][0].toUpperCase() +
-                                      totpIssuerList[i][1].toUpperCase(),
+                                  parseTotpUrl(totpIssuerList[i])["issuer"]![0]
+                                          .toUpperCase() +
+                                      parseTotpUrl(
+                                              totpIssuerList[i])["issuer"]![1]
+                                          .toUpperCase(),
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20,
@@ -204,7 +269,6 @@ class _MainViewState extends State<MainView> {
                                 ),
                               ),
                             ),
-                            // DELETE BUTTON
                             GestureDetector(
                               onTap: () => deleteItem(i),
                               child: Container(
@@ -251,6 +315,11 @@ class _MainViewState extends State<MainView> {
                               ],
                             ),
                           ],
+                        ),
+                        SizedBox(height: 10),
+                        Divider(
+                          color: Colors.grey[200],
+                          thickness: 0.5,
                         ),
                       ],
                     ),
