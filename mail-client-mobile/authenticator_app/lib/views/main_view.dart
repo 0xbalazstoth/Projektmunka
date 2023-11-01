@@ -18,17 +18,17 @@ class MainView extends StatefulWidget {
 }
 
 class _MainViewState extends State<MainView> {
-  late TOTP totp = TOTP();
-  late String totpIssuer = "";
+  List<TOTP> totpList = [];
+  List<String> totpIssuerList = [];
 
   late Timer timer;
-  bool isScanned = false;
+  bool isScanning = false;
 
   @override
   void initState() {
     super.initState();
-    // Initialize the timer immediately if a value is already scanned
-    if (isScanned) {
+    // Initialize the timer immediately if there are scanned values
+    if (totpList.isNotEmpty) {
       startTimer();
     }
   }
@@ -47,7 +47,9 @@ class _MainViewState extends State<MainView> {
 
   @override
   Widget build(BuildContext context) {
-    int timeLeft = totp.interval - (DateTime.now().second % totp.interval);
+    int timeLeft = totpList.isNotEmpty
+        ? totpList[0].interval - (DateTime.now().second % totpList[0].interval)
+        : 0;
 
     bool isLessThan10Seconds = timeLeft <= 10;
     Color indicatorColor = isLessThan10Seconds ? Colors.red : COLOR_PRIMARY;
@@ -106,25 +108,32 @@ class _MainViewState extends State<MainView> {
                           ),
                         ),
                         onPressed: () {
-                          showModalBottomSheet(
-                            context: context,
-                            builder: (BuildContext context) {
-                              return QrScanner(
-                                onScanned: (value) {
-                                  print(value.code);
+                          if (!isScanning) {
+                            isScanning = true;
+                            showModalBottomSheet(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return QrScanner(
+                                  onScanned: (value) {
+                                    if (!isScanning) return;
 
-                                  final parsedData = parseTotpUrl(value.code!);
-                                  final secret = parsedData["secret"]!;
-                                  setState(() {
-                                    totp = TOTP(secret: secret);
-                                    isScanned = true;
-                                    totpIssuer = parsedData["issuer"]!;
-                                    startTimer();
-                                  });
-                                },
-                              );
-                            },
-                          );
+                                    print(value.code);
+
+                                    final parsedData =
+                                        parseTotpUrl(value.code!);
+                                    final secret = parsedData["secret"]!;
+                                    setState(() {
+                                      totpList.add(TOTP(secret: secret));
+                                      totpIssuerList.add(parsedData["issuer"]!);
+                                      startTimer();
+                                    });
+                                  },
+                                );
+                              },
+                            ).whenComplete(() {
+                              isScanning = false;
+                            });
+                          }
                         },
                       ),
                     ),
@@ -137,80 +146,88 @@ class _MainViewState extends State<MainView> {
                   color: Colors.grey[300],
                 ),
                 SizedBox(height: 30),
-                if (isScanned)
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      totpIssuer,
-                      style: TextStyle(
-                        color: Colors.grey[700],
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                SizedBox(height: 10),
-                if (totpIssuer != null && totpIssuer.isNotEmpty)
-                  Row(
-                    children: [
-                      Container(
-                        width: 50,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: COLOR_POSITIVE, // Background color
-                        ),
-                        child: Center(
+                if (totpList.isNotEmpty)
+                  for (int i = 0; i < totpList.length; i++)
+                    Column(
+                      children: [
+                        Align(
+                          alignment: Alignment.centerLeft,
                           child: Text(
-                            totpIssuer[0].toUpperCase() +
-                                totpIssuer[1].toUpperCase(),
+                            totpIssuerList[i],
                             style: TextStyle(
+                              color: Colors.grey[700],
                               fontWeight: FontWeight.bold,
-                              fontSize: 20,
-                              color: Colors.grey[200],
                             ),
                           ),
                         ),
-                      ),
-                      SizedBox(width: 20),
-                      Expanded(
-                        child: Text(
-                          totp.secret != null && totp.secret!.isNotEmpty
-                              ? totp.now().toString()
-                              : 'No scanned value',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        SizedBox(height: 10),
+                        Row(
+                          children: [
+                            Container(
+                              width: 50,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: COLOR_POSITIVE, // Background color
+                              ),
+                              child: Center(
+                                child: Text(
+                                  totpIssuerList[i][0].toUpperCase() +
+                                      totpIssuerList[i][1].toUpperCase(),
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20,
+                                    color: Colors.grey[200],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 20),
+                            Expanded(
+                              child: Text(
+                                totpList[i].secret != null &&
+                                        totpList[i].secret!.isNotEmpty
+                                    ? totpList[i].now().toString()
+                                    : 'No scanned value',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                            Stack(
+                              alignment: Alignment.center,
+                              children: [
+                                Container(
+                                  width: 50, // Adjust the width as needed
+                                  height: 50, // Adjust the height as needed
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.grey[300], // Background color
+                                  ),
+                                ),
+                                CircularProgressIndicator(
+                                  value: (totpList[i].interval - timeLeft) /
+                                      totpList[i].interval,
+                                  color: indicatorColor, // Indicator color
+                                ),
+                                Text(
+                                  '$timeLeft',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    color:
+                                        secondsTextColor, // Seconds text color
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
-                      ),
-                      Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          Container(
-                            width: 50, // Adjust the width as needed
-                            height: 50, // Adjust the height as needed
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.grey[300], // Background color
-                            ),
-                          ),
-                          CircularProgressIndicator(
-                            value: (totp.interval - timeLeft) / totp.interval,
-                            color: indicatorColor, // Indicator color
-                          ),
-                          Text(
-                            '$timeLeft',
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: secondsTextColor, // Seconds text color
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                if (!isScanned) // Show Lottie animation only if not scanned
+                      ],
+                    ),
+                if (totpList
+                    .isEmpty) // Show Lottie animation only if not scanned
                   Lottie.asset('assets/illustrations/animation_s1.json'),
               ],
             ),
