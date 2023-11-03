@@ -196,7 +196,7 @@ const Navbar = (props) => {
 
 							<div className="mt-3 p-2 text-center flex flex-col">
 								<a
-									href=" "
+									href="/mail/profile-settings"
 									className="text-sm text-gray-800 dark:text-white hover:dark:text-white"
 								>
 									Profile Settings

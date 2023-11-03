@@ -21,6 +21,7 @@ import {
 import routes from "../routes";
 import HomeView from "./HomeView";
 import UserContext from "../contexts/UserContext";
+import ProfileSettingsView from "../views/ProfileSettingsView";
 
 const MailView = () => {
 	const location = useLocation();
@@ -52,6 +53,11 @@ const MailView = () => {
 				setCurrentRoute(routes[i].name);
 			}
 		}
+
+		if (window.location.pathname === "/mail/profile-settings") {
+			setCurrentRoute("Profile settings");
+		}
+
 		return activeRoute;
 	};
 	const getActiveNavbar = (routes) => {
@@ -103,6 +109,10 @@ const MailView = () => {
 						<div className="pt-5s mx-auto mb-auto min-h-[84vh] p-4 md:pr-2">
 							<Routes>
 								{getRoutes(routes)}{" "}
+								<Route
+									path="profile-settings"
+									element={<ProfileSettingsView />}
+								/>
 								<Route
 									path="/"
 									element={
