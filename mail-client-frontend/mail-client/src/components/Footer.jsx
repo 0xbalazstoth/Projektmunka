@@ -11,7 +11,7 @@
 					<li>
 						<a
 							target="blank"
-							href="mailto:hello@simmmple.com"
+							href="mailto:support@oemail.io"
 							className="text-base font-medium text-gray-600 hover:text-gray-600"
 						>
 							Support
@@ -29,7 +29,7 @@
 					<li>
 						<a
 							target="blank"
-							href="https://simmmple.com/terms-of-service"
+							href="/mail"
 							className="text-base font-medium text-gray-600 hover:text-gray-600"
 						>
 							Terms of Use

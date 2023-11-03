@@ -11,6 +11,7 @@ const UserSchema = Schema(
 		apiKeys: { type: [ApiKeySchema], default: [] },
 		profileImageUrl: { type: String, default: "/default.png" },
 		totpSecret: { type: Object },
+		totpAuthentication: { type: Boolean, default: false },
 		bio: { type: String },
 	},
 	{

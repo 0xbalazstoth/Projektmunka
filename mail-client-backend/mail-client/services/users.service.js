@@ -6,6 +6,7 @@ const hat = require("hat");
 const AuthenticationMixin = require("../mixins/authentication.mixin");
 const { MoleculerError } = require("moleculer").Errors;
 const UserExistsError = require("../exceptions/userExists.error");
+const UserNotFoundError = require("../exceptions/userNotFound.error");
 const jwt = require("jsonwebtoken");
 var CryptoJS = require("crypto-js");
 const { VsAuthenticator } = require("@vs-org/authenticator");
@@ -106,6 +107,33 @@ module.exports = {
 					if (err instanceof MoleculerError) {
 						throw err;
 					}
+				}
+			},
+		},
+		modifyUserDetails: {
+			auth: true,
+			params: {
+				user: {
+					type: "object",
+				},
+			},
+			async handler(ctx) {
+				const existingUser = await User.findOne({
+					email: ctx.params.user.email,
+				});
+
+				if (!existingUser) {
+					throw new UserNotFoundError();
+				} else {
+					const { email, ...updatedUserData } = ctx.params.user;
+
+					const updatedUser = await User.findOneAndUpdate(
+						{ email: ctx.params.user.email },
+						updatedUserData,
+						{ new: true, useFindAndModify: false }
+					);
+
+					return updatedUser;
 				}
 			},
 		},

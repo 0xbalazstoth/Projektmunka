@@ -78,7 +78,6 @@ module.exports = {
 							if (isSpam === false) {
 								messagesToInbox.push(classificationResponse);
 							} else {
-								// TODO: Move spam to 'SPAM' mailbox
 								await ctx.mcall({
 									moveMessage: {
 										action: "imap.moveMessage",

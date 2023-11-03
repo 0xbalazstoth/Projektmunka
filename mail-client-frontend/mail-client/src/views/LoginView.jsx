@@ -14,21 +14,17 @@ const LoginView = () => {
 
 	const handleSubmit = async () => {
 		try {
-			// Make API call to login
 			const response = await appPostRequest(loginEndpoint, {
 				email: email,
 				password: pwd,
 			});
 
-			// Assuming the API response contains a token
 			const token = response.apiKeys[0].token;
 
-			// Store the token in local storage
 			localStorage.setItem("tkn", token);
 			setUser(response.data);
 			navigate("/mail");
 		} catch (error) {
-			// Handle login error
 			console.error("Login failed", error.message);
 			setError("Invalid email or password. Please try again."); // Set error message
 		}
