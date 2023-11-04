@@ -10,6 +10,7 @@ const UserNotFoundError = require("../exceptions/userNotFound.error");
 const jwt = require("jsonwebtoken");
 var CryptoJS = require("crypto-js");
 const { VsAuthenticator } = require("@vs-org/authenticator");
+var randomstring = require("randomstring");
 
 module.exports = {
 	name: "users",
@@ -136,6 +137,29 @@ module.exports = {
 
 					return updatedUser;
 				}
+			},
+		},
+		generateRecoveryKeys: {
+			auth: true,
+			async handler(ctx) {
+				const recoveryKeys = [];
+
+				for (let i = 0; i < 3; i++) {
+					recoveryKeys.push(randomstring.generate(7));
+				}
+
+				const userEmail = ctx.meta.user.email;
+				const user = await User.findOneAndUpdate(
+					{ email: userEmail },
+					{ totpRecoveryKeys: recoveryKeys },
+					{ new: true }
+				);
+
+				const response = {
+					recoveryKeys: recoveryKeys,
+				};
+
+				return response;
 			},
 		},
 		me: {

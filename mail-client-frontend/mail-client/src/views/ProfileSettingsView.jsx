@@ -12,6 +12,7 @@ const ProfileSettingsView = () => {
 	const { user } = useContext(UserContext);
 	const [firstName, setFirstName] = useState(user ? user.firstName : "");
 	const [lastName, setLastName] = useState(user ? user.lastName : "");
+	const [testTOTPCode, setTestTOTPCode] = useState();
 	const [totpEnabled, setTotpEnabled] = useState(user.totpAuthentication);
 	const [isTOTPActivateModalOpen, setTOTPActivateModalOpen] = useState(false);
 	const [isTOTPDeactivateModalOpen, setTOTPDeactivateModalOpen] =
@@ -172,19 +173,50 @@ const ProfileSettingsView = () => {
 											</Dialog.Title>
 											<div className="mt-2 flex flex-col gap-y-3">
 												<div className="flex md:flex-row md:gap-x-[3vh] flex-col justify-center gap-y-2">
-													<p className="text-sm text-gray-500 text-justify">
-														Are you sure you want to
-														<strong>
-															{" "}
-															activate
-														</strong>{" "}
-														TOTP authentication?{" "}
-														<strong>
-															More safer{" "}
-														</strong>
-														way to log in to your
-														account!
-													</p>
+													<div className="mt-2">
+														<p className="text-sm text-gray-500 text-justify">
+															Are you sure you
+															want to
+															<strong>
+																{" "}
+																activate
+															</strong>{" "}
+															TOTP authentication?{" "}
+															<strong>
+																More safer{" "}
+															</strong>
+															way to log in to
+															your account!
+														</p>
+														<label
+															htmlFor="firstName"
+															className="block text-sm font-medium leading-6 text-gray-900"
+														>
+															Test it!
+														</label>
+														<div className="flex gap-x-2">
+															<input
+																id="testTOTPCode"
+																name="testTOTPCode"
+																type="text"
+																onChange={(e) =>
+																	setTestTOTPCode(
+																		e.target
+																			.value
+																	)
+																}
+																className="w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+															/>
+															<button
+																type="button"
+																onClick={() => {}}
+																className="flex justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+															>
+																Test
+															</button>
+														</div>
+													</div>
+
 													<div
 														style={{
 															height: "auto",
