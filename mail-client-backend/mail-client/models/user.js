@@ -13,6 +13,7 @@ const UserSchema = Schema(
 		totpSecret: { type: Object },
 		totpAuthentication: { type: Boolean, default: false },
 		bio: { type: String },
+		totpRecoveryKeys: { type: [String], default: [] },
 	},
 	{
 		timestamps: true,

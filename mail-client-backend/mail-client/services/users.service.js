@@ -125,7 +125,8 @@ module.exports = {
 				if (!existingUser) {
 					throw new UserNotFoundError();
 				} else {
-					const { email, ...updatedUserData } = ctx.params.user;
+					const { email, password, ...updatedUserData } =
+						ctx.params.user;
 
 					const updatedUser = await User.findOneAndUpdate(
 						{ email: ctx.params.user.email },

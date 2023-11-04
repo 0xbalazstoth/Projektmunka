@@ -83,3 +83,12 @@ export const appDeleteCall = async (url) => {
 		throw new Error("Something went wrong!");
 	}
 };
+
+export const appPutRequest = async (url, payload) => {
+	try {
+		const response = await api.put(url, payload);
+		return response;
+	} catch (error) {
+		throw new Error(error.message);
+	}
+};

@@ -26,6 +26,7 @@
 		"moleculer-repl": "^0.7.3"
 	},
 	"dependencies": {
+		"@heroicons/react": "^2.0.18",
 		"@sunknudsen/totp": "^1.1.0",
 		"@vs-org/authenticator": "^0.0.8",
 		"axios": "^1.5.1",
