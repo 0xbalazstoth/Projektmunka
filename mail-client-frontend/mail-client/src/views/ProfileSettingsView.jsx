@@ -68,6 +68,7 @@ const ProfileSettingsView = () => {
 	const handleValidateTOTPCode = async () => {
 		try {
 			const response = await appPostRequest(validateTOTPCodeEndpoint, {
+				totpSecret: user.totpSecret.base32Secret,
 				code: testTOTPCode,
 			});
 

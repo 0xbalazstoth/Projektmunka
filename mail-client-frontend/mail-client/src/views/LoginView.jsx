@@ -48,10 +48,13 @@ const LoginView = () => {
 			});
 			setLoginResponse(response);
 
-			if (response.totpAuthentication) {
+			if (response.totpAuthentication === true) {
 				setTOTPValidationModalOpen(true);
 			} else {
-				handleNavigation();
+				const token = response.apiKeys[0].token;
+				localStorage.setItem("tkn", token);
+				setUser(response.data);
+				navigate("/mail");
 			}
 		} catch (error) {
 			console.error("Login failed", error.message);
