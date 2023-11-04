@@ -1,7 +1,7 @@
 ﻿import React, { useState, useContext } from "react";
 import UserContext from "../contexts/UserContext";
 import toast from "react-hot-toast";
-import { appPutRequest } from "../handlers/api";
+import { appPostRequest, appPutRequest } from "../handlers/api";
 import axios from "axios";
 import Modal from "../components/Modal";
 import { Dialog, Transition } from "@headlessui/react";
@@ -14,15 +14,19 @@ const ProfileSettingsView = () => {
 	const [lastName, setLastName] = useState(user ? user.lastName : "");
 	const [testTOTPCode, setTestTOTPCode] = useState();
 	const [totpEnabled, setTotpEnabled] = useState(user.totpAuthentication);
+	const [recoveryCodes, setRecoveryCodes] = useState([]);
 	const [isTOTPActivateModalOpen, setTOTPActivateModalOpen] = useState(false);
 	const [isTOTPDeactivateModalOpen, setTOTPDeactivateModalOpen] =
 		useState(false);
 	const [error, setError] = useState(null);
 
 	const updateUserEndpoint = "/api/users/";
+	const recoveryCodesGenerationEndpoint = "/api/users/recoveryGeneration";
+	const validateTOTPCodeEndpoint = "/api/users/totpValidation";
 
 	const notifySaved = () => toast.success(`Saved!`);
 	const notifyError = (error) => toast.error(error);
+	const notifySuccessful = (message) => toast.success(message);
 
 	const handleSubmit = async () => {
 		const userData = {
@@ -41,11 +45,45 @@ const ProfileSettingsView = () => {
 		}
 	};
 
-	const handleToggleTotp = () => {
+	const handleValidateTOTPCode = async () => {
+		try {
+			const response = await appPostRequest(validateTOTPCodeEndpoint, {
+				code: testTOTPCode,
+			});
+
+			if (response.isValid) {
+				notifySuccessful("Valid code!");
+			} else {
+				notifyError("Invalid code!");
+			}
+		} catch (error) {
+			notifyError(error);
+		}
+	};
+
+	const handleRecoveryKeyGeneration = async () => {
+		try {
+			const response = await appPostRequest(
+				recoveryCodesGenerationEndpoint,
+				{}
+			);
+
+			setRecoveryCodes(response.recoveryKeys);
+		} catch (error) {
+			notifyError(error);
+		}
+	};
+
+	const handleTestTOTP = () => {
+		handleValidateTOTPCode();
+	};
+
+	const handleToggleTotp = async () => {
 		if (totpEnabled) {
 			setTOTPDeactivateModalOpen(true);
 		} else {
 			setTOTPActivateModalOpen(true);
+			await handleRecoveryKeyGeneration();
 		}
 	};
 
@@ -209,7 +247,9 @@ const ProfileSettingsView = () => {
 															/>
 															<button
 																type="button"
-																onClick={() => {}}
+																onClick={
+																	handleTestTOTP
+																}
 																className="flex justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
 															>
 																Test
@@ -247,6 +287,15 @@ const ProfileSettingsView = () => {
 														Please save it and keep
 														it in a very safe place!
 													</p>
+													<ul className="text-sm text-blue-600 py-2">
+														{recoveryCodes.map(
+															(item, index) => (
+																<li key={index}>
+																	{item}
+																</li>
+															)
+														)}
+													</ul>
 												</div>
 											</div>
 										</div>

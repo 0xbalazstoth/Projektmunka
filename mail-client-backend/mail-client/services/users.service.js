@@ -141,6 +141,7 @@ module.exports = {
 		},
 		generateRecoveryKeys: {
 			auth: true,
+			params: {},
 			async handler(ctx) {
 				const recoveryKeys = [];
 
