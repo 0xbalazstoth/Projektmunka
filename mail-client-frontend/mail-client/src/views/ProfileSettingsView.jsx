@@ -75,7 +75,11 @@ const ProfileSettingsView = () => {
 	};
 
 	const handleTestTOTP = () => {
-		handleValidateTOTPCode();
+		if (testTOTPCode) {
+			handleValidateTOTPCode();
+		} else {
+			notifyError("Enter code to test it!");
+		}
 	};
 
 	const handleToggleTotp = async () => {

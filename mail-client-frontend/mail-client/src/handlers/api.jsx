@@ -8,7 +8,7 @@ const api = axios.create({
 	headers: {
 		"Content-Type": "application/json",
 		Accept: "application/json",
-		Origin: "http://0.0.0.0:3000",
+		// Origin: "http://0.0.0.0:3000",
 	},
 });
 

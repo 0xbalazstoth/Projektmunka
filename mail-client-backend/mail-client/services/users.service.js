@@ -139,6 +139,27 @@ module.exports = {
 				}
 			},
 		},
+		destroyAccount: {
+			auth: true,
+			params: {},
+			async handler(ctx) {
+				const user = ctx.meta.user;
+
+				try {
+					const result = await User.deleteOne({ _id: user._id });
+
+					if (result.deletedCount > 0) {
+						return { message: "User deleted successfully" };
+					} else {
+						return { message: "User not found" };
+					}
+				} catch (error) {
+					// Handle error
+					console.error(error);
+					return { message: "Error deleting user" };
+				}
+			},
+		},
 		generateRecoveryKeys: {
 			auth: true,
 			params: {},
