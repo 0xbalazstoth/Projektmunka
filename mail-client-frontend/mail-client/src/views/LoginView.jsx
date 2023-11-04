@@ -189,18 +189,8 @@ const LoginView = () => {
 												<div className="flex flex-col justify-center gap-y-2">
 													<div className="mt-2">
 														<p className="text-sm text-gray-500 text-justify">
-															Are you sure you
-															want to
-															<strong>
-																{" "}
-																activate
-															</strong>{" "}
-															TOTP authentication?{" "}
-															<strong>
-																More safer{" "}
-															</strong>
-															way to log in to
-															your account!
+															Enter code to log in
+															safely!
 														</p>
 														<div className="flex gap-x-2">
 															<input
