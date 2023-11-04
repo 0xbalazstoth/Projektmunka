@@ -1,7 +1,14 @@
 ﻿import { Fragment, useRef } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 
-function Modal({ open, onClose, onConfirm, onCancel, children }) {
+function Modal({
+	open,
+	onClose,
+	onConfirm,
+	onCancel,
+	isConfirmDisabled,
+	children,
+}) {
 	const cancelButtonRef = useRef(null);
 
 	return (
@@ -42,6 +49,7 @@ function Modal({ open, onClose, onConfirm, onCancel, children }) {
 										type="button"
 										className="inline-flex w-full justify-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 sm:ml-3 sm:w-auto"
 										onClick={onConfirm}
+										disabled={isConfirmDisabled}
 									>
 										Confirm
 									</button>

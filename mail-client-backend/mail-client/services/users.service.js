@@ -154,7 +154,6 @@ module.exports = {
 						return { message: "User not found" };
 					}
 				} catch (error) {
-					// Handle error
 					console.error(error);
 					return { message: "Error deleting user" };
 				}
