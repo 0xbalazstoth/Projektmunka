@@ -295,12 +295,6 @@ const ProfileSettingsView = () => {
 															way to log in to
 															your account!
 														</p>
-														<label
-															htmlFor="firstName"
-															className="block text-sm font-medium leading-6 text-gray-900"
-														>
-															Test it!
-														</label>
 														<div className="flex gap-x-2">
 															<input
 																id="testTOTPCode"

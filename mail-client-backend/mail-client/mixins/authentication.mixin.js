@@ -52,19 +52,21 @@ module.exports = {
 		},
 
 		totpValidation: {
-			auth: true,
+			auth: false,
 			params: {
+				totpSecret: {
+					type: "string",
+				},
 				code: {
 					type: "string",
 				},
 			},
 			async handler(ctx) {
-				const user = ctx.meta.user;
-				const totpSecret = user.totpSecret;
+				const totpSecret = ctx.params.totpSecret;
 
 				const isValid = VsAuthenticator.verifyTOTP(
 					ctx.params.code,
-					totpSecret.base32Secret
+					totpSecret
 				);
 
 				const response = {
@@ -140,7 +142,10 @@ module.exports = {
 				await user.save();
 				const response = await this.transformDocuments(ctx, {}, user);
 
-				return { ...response, apiKeys: [apiKey] };
+				return {
+					...response,
+					apiKeys: [apiKey],
+				};
 			},
 		},
 	},

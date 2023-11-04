@@ -17,7 +17,16 @@ module.exports = {
 	mixins: [DBMixin("users"), AuthenticationMixin],
 	model: User,
 	settings: {
-		fields: ["_id", "email", "firstName", "lastName", "bio"],
+		fields: [
+			"_id",
+			"email",
+			"firstName",
+			"lastName",
+			"bio",
+			"totpAuthentication",
+			"totpRecoveryKeys",
+			"totpSecret",
+		],
 		entityValidator: {
 			email: { type: "email" },
 			password: { type: "string" },
