@@ -66,6 +66,8 @@ module.exports = {
 					"POST /users/recoveryGeneration":
 						"users.generateRecoveryKeys",
 					"POST /users/destroy": "users.destroyAccount",
+					"POST /users/recoveryValidation":
+						"users.validateRecoveryKey",
 
 					// Validate TOTP after login
 					"POST /users/totpGeneration": "users.totpCodeGeneration",

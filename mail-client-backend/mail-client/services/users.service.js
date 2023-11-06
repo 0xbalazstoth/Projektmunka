@@ -168,6 +168,36 @@ module.exports = {
 				}
 			},
 		},
+		validateRecoveryKey: {
+			auth: false,
+			params: {
+				email: {
+					type: "string",
+				},
+				recoveryKey: {
+					type: "string",
+				},
+			},
+			async handler(ctx) {
+				const user = await User.findOne({
+					email: ctx.params.email,
+				});
+
+				if (user) {
+					const isRecoveryKeyValid = user.totpRecoveryKeys.includes(
+						ctx.params.recoveryKey
+					);
+
+					const response = {
+						isRecoveryKeyValid: isRecoveryKeyValid,
+					};
+
+					return response;
+				} else {
+					throw new UserNotFoundError();
+				}
+			},
+		},
 		generateRecoveryKeys: {
 			auth: true,
 			params: {},

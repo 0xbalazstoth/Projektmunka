@@ -14,6 +14,7 @@ const LoginView = () => {
 	const [error, setError] = useState(null);
 	const { setUser } = useContext(UserContext);
 	const [totpCode, setTotpCode] = useState();
+	const [recoveryCode, setRecoveryCode] = useState();
 	const [isTOTPValidationModalOpen, setTOTPValidationModalOpen] =
 		useState(false);
 	const [loginResponse, setLoginResponse] = useState();
@@ -88,6 +89,10 @@ const LoginView = () => {
 			notifyError("Enter a code to validate it!");
 			setTOTPValidated(false);
 		}
+	};
+
+	const handleRecover = async () => {
+		// TODO: Check if given recovery code is valid
 	};
 
 	const handleNavigation = () => {
@@ -217,41 +222,41 @@ const LoginView = () => {
 														</div>
 													</div>
 												</div>
-												{/* <hr></hr>
+												<hr></hr>
 												<div>
-													<h6>Recovery codes</h6>
+													<h6>Use recovery code</h6>
 													<p className="text-sm text-gray-500">
-														Please save it and keep
-														it in a very safe place!
+														In case if you lost your
+														phone. Remember if you
+														used one of your
+														recovery code out of 3,
+														you will be given new
+														recovery codes!
 													</p>
-													<div className="flex flex-row items-center gap-x-3 justify-center">
-														<ul className="text-sm text-blue-600 py-2">
-															{recoveryCodes.map(
-																(
-																	item,
-																	index
-																) => (
-																	<li
-																		key={
-																			index
-																		}
-																	>
-																		{item}
-																	</li>
+													<div className="flex gap-x-2">
+														<input
+															id="RecoveryCode"
+															name="RecoveryCode"
+															type="text"
+															onChange={(e) =>
+																setRecoveryCode(
+																	e.target
+																		.value
 																)
-															)}
-														</ul>
+															}
+															className="w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+														/>
 														<button
 															type="button"
 															onClick={
-																handleRecoveryCodesCopy
+																handleRecover
 															}
-															className="mt-3 inline-flex h-full w-30 justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0"
+															className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
 														>
-															Copy
+															Recover
 														</button>
 													</div>
-												</div> */}
+												</div>
 											</div>
 										</div>
 									</div>

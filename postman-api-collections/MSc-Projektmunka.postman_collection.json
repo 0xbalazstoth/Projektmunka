@@ -1,0 +1,569 @@
+{
+	"info": {
+		"_postman_id": "98f20563-8407-4503-8848-6543dcef2cfe",
+		"name": "MSc-Projektmunka",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9561592"
+	},
+	"item": [
+		{
+			"name": "AI",
+			"item": [
+				{
+					"name": "Email spam classification",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response has 'text', 'classification', 'probability', and 'isSpam' keys\", function () {\r",
+									"    pm.response.to.have.jsonBody('text');\r",
+									"    pm.response.to.have.jsonBody('classification');\r",
+									"    pm.response.to.have.jsonBody('probability');\r",
+									"    pm.response.to.have.jsonBody('isSpam');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check if 'isSpam' is a boolean\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"    pm.expect(pm.response.json().isSpam).to.be.a('boolean');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check if 'classification' is either 'Spam' or 'Ham'\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"    pm.expect(pm.response.json().classification).to.be.oneOf(['Spam', 'Ham']);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check if 'probability' is a number between 0 and 1\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"    let probability = parseFloat(pm.response.json().probability);\r",
+									"    pm.expect(probability).to.be.a('number');\r",
+									"    pm.expect(probability).to.be.within(0, 1);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"Dear Sir=2FMadam=2CI got your contact from an email directory and decided to contact you for assistance=2E I am the son of JOHNSON SAVIMBI the rebel leader in Angola who was short dead on the 25th of February=2C 2002=2C by the opposing Angolan Army=2EPLEASE TAKE A LOOK AT THIS WEB PAGE FOR IT SAYS ALL=2Ehttp=3A=2F=2Fnews=2Ebbc=2Eco=2Euk=2Fhi=2Fenglish=2Fworld=2Fafrica=2Fnewsid=5F1839000=2F1839252=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/spam-classification",
+							"protocol": "http",
+							"host": ["127", "0", "0", "1"],
+							"port": "5000",
+							"path": ["spam-classification"]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Backend",
+			"item": [
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "users",
+							"item": [
+								{
+									"name": "Create user",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"user\": {\r\n        \"email\": \"tesztelek@email.com\",\r\n        \"password\": \"Passw0rd\",\r\n        \"firstName\": \"User2\",\r\n        \"lastName\": \"User2\",\r\n        \"bio\": \"bio\"\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}/api/users",
+											"host": ["{{server}}"],
+											"path": ["api", "users"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get profile",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "api-key",
+												"value": "{{apiKey}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{server}}/api/users/me",
+											"host": ["{{server}}"],
+											"path": ["api", "users", "me"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Login",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"tesztelek@email.com\",\r\n    \"password\": \"Passw0rd\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}/api/users/login",
+											"host": ["{{server}}"],
+											"path": ["api", "users", "login"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Generate TOTP",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "api-key",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTI2YTY0ZGVhNmM5YTU1MGU4NTgxODQiLCJpYXQiOjE2OTc0NzUzMzEsImV4cCI6MTcwMDA2NzMzMX0.JbecsRQ5_3BxBsZhzxZbTbA0VMFE0BxsP2S-Xi4dCe0",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"code\": \"123456\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}/api/users/totp",
+											"host": ["{{server}}"],
+											"path": ["api", "users", "totp"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Validate TOTP",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "api-key",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTQxZjllNDYyZmUzNTAzMDljOGZjMTAiLCJpYXQiOjE2OTg4MjI4NjAsImV4cCI6MTcwMTQxNDg2MH0.Ly46TAa7cLL6O2fLq-O8GgwX3sQ6mOWMZvu1jHpmbxY",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"code\": \"948128\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}/api/users/totpValidation",
+											"host": ["{{server}}"],
+											"path": [
+												"api",
+												"users",
+												"totpValidation"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get user by Id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "api-key",
+												"value": "9e003719baebe1d286d46a962cdf47428d1df3184e6966d12ce565090e44d965",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{server}}/api/users/get/64ac60bb133d88fc93646192",
+											"host": ["{{server}}"],
+											"path": [
+												"api",
+												"users",
+												"get",
+												"64ac60bb133d88fc93646192"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Modify user details",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "api-key",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTQxZmI3NDYyZmUzNTAzMDljOGZjYTkiLCJpYXQiOjE2OTkwMzI5MzksImV4cCI6MTcwMTYyNDkzOX0.tGlNZpxUoDtatnLg7lub29tx56fQbABDOoU1mcQpAEA",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"user\": {\r\n        \"firstName\": \"Tesztelek\",\r\n        \"lastName\": \"Harmadik\",\r\n        \"email\": \"test3@oemail.io\"\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}/api/users",
+											"host": ["{{server}}"],
+											"path": ["api", "users"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "TOTP recovery key generation",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "api-key",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTQ2MTYzNGY1MzU0MjYyN2VkYzdhNGUiLCJpYXQiOjE2OTkwOTIwNDQsImV4cCI6MTcwMTY4NDA0NH0.V-5SS05wAQyvI5-DLr0fDZLVvLgSR7gAmQljqM6b3a8",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{server}}/api/users/recoveryGeneration",
+											"host": ["{{server}}"],
+											"path": [
+												"api",
+												"users",
+												"recoveryGeneration"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Destroy account",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/api/users/destroy",
+											"host": ["{{server}}"],
+											"path": ["api", "users", "destroy"]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "admin",
+					"item": [
+						{
+							"name": "admin.users",
+							"item": [
+								{
+									"name": "Login",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"admin@email.com\",\r\n    \"password\": \"Passw0rd\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}/admin/users/login",
+											"host": ["{{server}}"],
+											"path": ["admin", "users", "login"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create user",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"user\": {\r\n        \"email\": \"tesztelek@email.com\",\r\n        \"password\": \"Passw0rd\",\r\n        \"firstName\": \"User2\",\r\n        \"lastName\": \"User2\",\r\n        \"bio\": \"bio\"\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}/api/users",
+											"host": ["{{server}}"],
+											"path": ["api", "users"]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "smtp",
+					"item": [
+						{
+							"name": "Send email",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "api-key",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTIyODIwNTUyZTlmMWNkY2Y0Njk0MjgiLCJpYXQiOjE2OTY3NjM2NDEsImV4cCI6MTY5OTM1NTY0MX0.9Jrsk16QS2eL0ZtnORP2grMoTuaY9qOvTJ9gBuGODek",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"from\": \"test@oemail.io\",\r\n    \"receivers\": \"test2@oemail.io,test3@oemail.io\",\r\n    \"subject\": \"Tárgy\",\r\n    \"content\": \"<h1>TEST</h1> Simple text\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/api/mail/sendEmail",
+									"host": ["{{server}}"],
+									"path": ["api", "mail", "sendEmail"]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "imap",
+					"item": [
+						{
+							"name": "Get email by mailbox",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "api-key",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTFmYmMzZjI2OTUzMTg3MjFiMDRlODEiLCJpYXQiOjE2OTY1ODc0MTAsImV4cCI6MTY5OTE3OTQxMH0.yMp52AYGA9KVCDPCJnAhonFQFY_sDn_SER10cRQmU0A",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"mailBoxName\": \"INBOX\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/api/mail/getEmailByMailBox",
+									"host": ["{{server}}"],
+									"path": ["api", "mail", "getEmailByMailBox"]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all email by mailbox",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "api-key",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTIyODIwNTUyZTlmMWNkY2Y0Njk0MjgiLCJpYXQiOjE2OTY3NjI3MDYsImV4cCI6MTY5OTM1NDcwNn0.R0YnrSMHadVxPQoc75SxL3Os1UddWFGlErXu-GH4-Bc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"mailBoxName\": \"INBOX\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/api/mail/getAllEmailByMailBox",
+									"host": ["{{server}}"],
+									"path": [
+										"api",
+										"mail",
+										"getAllEmailByMailBox"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete message by mailbox",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "api-key",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTIyODIwNTUyZTlmMWNkY2Y0Njk0MjgiLCJpYXQiOjE2OTY3NjI3MDYsImV4cCI6MTY5OTM1NDcwNn0.R0YnrSMHadVxPQoc75SxL3Os1UddWFGlErXu-GH4-Bc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"mailBoxName\": \"INBOX\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/api/mail/deleteMessage",
+									"host": ["{{server}}"],
+									"path": ["api", "mail", "deleteMessage"]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Filter ermails in mailbox from spam",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "api-key",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTIyODIwNTUyZTlmMWNkY2Y0Njk0MjgiLCJpYXQiOjE2OTY3NjI3MDYsImV4cCI6MTY5OTM1NDcwNn0.R0YnrSMHadVxPQoc75SxL3Os1UddWFGlErXu-GH4-Bc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"mailBoxName\": \"INBOX\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/api/mail/getAllEmailByMailBox",
+									"host": ["{{server}}"],
+									"path": [
+										"api",
+										"mail",
+										"getAllEmailByMailBox"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create mailbox",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "api-key",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTIyODIwNTUyZTlmMWNkY2Y0Njk0MjgiLCJpYXQiOjE2OTY3NjI3MDYsImV4cCI6MTY5OTM1NDcwNn0.R0YnrSMHadVxPQoc75SxL3Os1UddWFGlErXu-GH4-Bc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"mailBoxName\": \"INBOX\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/api/mail/getAllEmailByMailBox",
+									"host": ["{{server}}"],
+									"path": [
+										"api",
+										"mail",
+										"getAllEmailByMailBox"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List mailboxes",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "api-key",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTIyODIwNTUyZTlmMWNkY2Y0Njk0MjgiLCJpYXQiOjE2OTY3NjI3MDYsImV4cCI6MTY5OTM1NDcwNn0.R0YnrSMHadVxPQoc75SxL3Os1UddWFGlErXu-GH4-Bc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server}}/api/mail/listMailboxes",
+									"host": ["{{server}}"],
+									"path": ["api", "mail", "listMailboxes"]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
