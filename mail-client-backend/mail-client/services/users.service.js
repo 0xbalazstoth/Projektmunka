@@ -188,9 +188,31 @@ module.exports = {
 						ctx.params.recoveryKey
 					);
 
-					const response = {
-						isRecoveryKeyValid: isRecoveryKeyValid,
-					};
+					// TODO: If recovery key is valid, generate new recovery keys and return them.
+					let response;
+
+					if (isRecoveryKeyValid) {
+						const recoveryKeys = [];
+
+						for (let i = 0; i < 3; i++) {
+							recoveryKeys.push(randomstring.generate(7));
+						}
+
+						await User.findOneAndUpdate(
+							{ email: user.email },
+							{ totpRecoveryKeys: recoveryKeys },
+							{ new: true }
+						);
+
+						response = {
+							isRecoveryKeyValid: isRecoveryKeyValid,
+							newRecoveryKeys: recoveryKeys,
+						};
+					} else {
+						response = {
+							isRecoveryKeyValid: isRecoveryKeyValid,
+						};
+					}
 
 					return response;
 				} else {

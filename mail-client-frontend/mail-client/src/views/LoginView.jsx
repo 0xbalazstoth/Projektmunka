@@ -14,14 +14,18 @@ const LoginView = () => {
 	const [error, setError] = useState(null);
 	const { setUser } = useContext(UserContext);
 	const [totpCode, setTotpCode] = useState();
-	const [recoveryCode, setRecoveryCode] = useState();
+	const [recoveryKey, setRecoveryKey] = useState();
 	const [isTOTPValidationModalOpen, setTOTPValidationModalOpen] =
 		useState(false);
 	const [loginResponse, setLoginResponse] = useState();
+	const [newRecoveryKeys, setNewRecoveryKeys] = useState([]);
+
 	const [isTOTPValidated, setTOTPValidated] = useState(false);
+	const [isRecoveryKeyValidated, setRecoveryKeyValidated] = useState(false);
 
 	const loginEndpoint = "/api/users/login";
 	const validateTOTPCodeEndpoint = "/api/users/totpValidation";
+	const validateRecoveryKeyEndpoint = "/api/users/recoveryValidation";
 
 	const notifyError = (error) => toast.error(error);
 	const notifySuccessful = (message) => toast.success(message);
@@ -39,6 +43,9 @@ const LoginView = () => {
 
 	const handleCancelTOTPModal = () => {
 		setTOTPValidationModalOpen(false);
+		setNewRecoveryKeys([]);
+		setRecoveryKeyValidated(false);
+		setTOTPValidated(false);
 	};
 
 	const handleSubmit = async () => {
@@ -47,6 +54,7 @@ const LoginView = () => {
 				email: email,
 				password: pwd,
 			});
+
 			setLoginResponse(response);
 
 			if (response.totpAuthentication === true) {
@@ -92,7 +100,31 @@ const LoginView = () => {
 	};
 
 	const handleRecover = async () => {
-		// TODO: Check if given recovery code is valid
+		if (!recoveryKey) {
+			notifyError("Enter recovery key!");
+			setRecoveryKeyValidated(false);
+			return;
+		}
+
+		try {
+			const response = await appPostRequest(validateRecoveryKeyEndpoint, {
+				email: email,
+				recoveryKey: recoveryKey,
+			});
+
+			if (response.isRecoveryKeyValid) {
+				notifySuccessful("Valid recovery key!");
+				setRecoveryKeyValidated(true);
+
+				setNewRecoveryKeys(response.newRecoveryKeys);
+			} else {
+				notifyError("Invalid recovery key!");
+				setRecoveryKeyValidated(false);
+			}
+		} catch (error) {
+			notifyError(error);
+			setRecoveryKeyValidated(false);
+		}
 	};
 
 	const handleNavigation = () => {
@@ -100,6 +132,19 @@ const LoginView = () => {
 		localStorage.setItem("tkn", token);
 		setUser(loginResponse.data);
 		navigate("/mail");
+	};
+
+	const handleRecoveryKeysCopy = () => {
+		const recoveryCodesText = newRecoveryKeys.join("\n");
+
+		const textarea = document.createElement("textarea");
+		textarea.value = recoveryCodesText;
+		document.body.appendChild(textarea);
+		textarea.select();
+		document.execCommand("copy");
+		document.body.removeChild(textarea);
+
+		notifySuccessful("Recovery codes copied to clipboard!");
 	};
 
 	return (
@@ -172,7 +217,8 @@ const LoginView = () => {
 								onConfirm={handleConfirmTOTPModal}
 								onCancel={handleCancelTOTPModal}
 								isConfirmDisabled={
-									isTOTPValidated ? false : true
+									(isTOTPValidated ? false : true) &&
+									(isRecoveryKeyValidated ? false : true)
 								}
 							>
 								<div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
@@ -235,11 +281,11 @@ const LoginView = () => {
 													</p>
 													<div className="flex gap-x-2">
 														<input
-															id="RecoveryCode"
-															name="RecoveryCode"
+															id="recoveryKey"
+															name="recoveryKey"
 															type="text"
 															onChange={(e) =>
-																setRecoveryCode(
+																setRecoveryKey(
 																	e.target
 																		.value
 																)
@@ -256,6 +302,37 @@ const LoginView = () => {
 															Recover
 														</button>
 													</div>
+													{isRecoveryKeyValidated && (
+														<div className="flex flex-row items-center gap-x-3 justify-center">
+															<ul className="text-sm text-blue-600 py-2">
+																{newRecoveryKeys.map(
+																	(
+																		item,
+																		index
+																	) => (
+																		<li
+																			key={
+																				index
+																			}
+																		>
+																			{
+																				item
+																			}
+																		</li>
+																	)
+																)}
+															</ul>
+															<button
+																type="button"
+																onClick={
+																	handleRecoveryKeysCopy
+																}
+																className="mt-3 inline-flex h-full w-30 justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0"
+															>
+																Copy
+															</button>
+														</div>
+													)}
 												</div>
 											</div>
 										</div>
