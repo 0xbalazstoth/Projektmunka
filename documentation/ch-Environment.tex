@@ -1,0 +1,32 @@
+﻿\chapter{Környezet és annak kialakítása}
+
+\section{WSL telepítése}
+\begin{flushleft}
+    \textbf{A Docker szoftverhez szükséges a WSL telepítése.}
+\end{flushleft}
+\begin{enumerate}
+    \item WSL engedélyezése PowerShell-ben
+    \begin{listing}[H]
+        \begin{minted}[linenos, numbersep=-10pt, breaklines]{powershell}
+            dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+        \end{minted}
+        \caption{WSL engedélyezése}
+        \label{code:wsl_ena}
+    \end{listing}
+    \item Virtual Machine Platform engedélyezése
+    \begin{listing}[H]
+        \begin{minted}[linenos, numbersep=-10pt, breaklines]{powershell}
+            dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+        \end{minted}
+        \caption{VMP engedélyezése}
+        \label{code:vmp}
+    \end{listing}
+    \item Ubuntu telepítése WSL segítségével
+    \item \begin{listing}[H]
+        \begin{minted}[linenos, numbersep=-10pt, breaklines]{powershell}
+            wsl --install -d Ubuntu
+        \end{minted}
+        \caption{Ubuntu WSL}
+        \label{code:ubuntu_wsl}
+    \end{listing}
+\end{enumerate}

@@ -14,3 +14,6 @@
 \contentsline {listing}{\numberline {6.7}{\ignorespaces Tanítási ciklus\relax }}{13}{listing.6.7}%
 \contentsline {listing}{\numberline {6.8}{\ignorespaces Modell kiértékelése\relax }}{14}{listing.6.8}%
 \contentsline {listing}{\numberline {6.9}{\ignorespaces Példa adatok a spam üzenet szűrésére\relax }}{14}{listing.6.9}%
+\contentsline {listing}{\numberline {7.1}{\ignorespaces WSL engedélyezése\relax }}{15}{listing.7.1}%
+\contentsline {listing}{\numberline {7.2}{\ignorespaces VMP engedélyezése\relax }}{15}{listing.7.2}%
+\contentsline {listing}{\numberline {7.3}{\ignorespaces Ubuntu WSL\relax }}{15}{listing.7.3}%

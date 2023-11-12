@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  5 NOV 2023 17:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  12 NOV 2023 10:04
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"f:/Egyetemi anyagok/Mesterkepzes/2023-2024/Elso felev/Projektmunka/publikacio/Computer_Society_LaTeX_template/mwzx0d_pub.tex"
-(f:/Egyetemi anyagok/Mesterkepzes/2023-2024/Elso felev/Projektmunka/publikacio/Computer_Society_LaTeX_template/mwzx0d_pub.tex
+**"f:/Egyetemi anyagok/Mesterkepzes/2023-2024/Elso felev/Projektmunka/publikacio/MWZX0D_Publikacio_HUN/mwzx0d_pub.tex"
+(f:/Egyetemi anyagok/Mesterkepzes/2023-2024/Elso felev/Projektmunka/publikacio/MWZX0D_Publikacio_HUN/mwzx0d_pub.tex
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
 (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/ieeetran\IEEEtran.cls
@@ -270,20 +270,20 @@ LaTeX Warning: Unused global option(s):
 (mwzx0d_pub.aux)
 \openout1 = `mwzx0d_pub.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
 
 -- Lines per column: 58 (exact).
 Package caption Info: Begin \AtBeginDocument code.
@@ -308,25 +308,74 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Font Info:    Calculating math sizes for size <24> on input line 25.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (ch-Introduction.tex)
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 38.
+) (ch-Abstract.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--3
+[]\OT1/ptm/b/it/9 Absztrakt\OT1/ptm/b/n/9 ---A tanulm[]any be-mu-tatja a PyTorch-alap[]u
+ []
+
+
+Underfull \hbox (badness 3354) in paragraph at lines 1--3
+\OT1/ptm/b/n/9 mesters[]eges in-tel-li-gen-cia spam sz[]ur[]o fe-jleszt[]es[]et, melynek
+ []
+
+
+Underfull \hbox (badness 1383) in paragraph at lines 1--3
+\OT1/ptm/b/n/9 term[]eszetes nyelvi fel-dol-goz[]as (NLP). Olyan mod-ell ker[]ult
+ []
+
+) (ch-Introduction.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+[]\OT1/ptm/m/n/10 A digit[]alis kom-mu-nik[]aci[]o m[]ara m[]ar sz-inte
+ []
+
+
+Underfull \hbox (badness 2173) in paragraph at lines 2--3
+\OT1/ptm/m/n/10 elenged-hetetlenn[]e v[]alt az em-berek min-den-napi []elet[]eben.
+ []
+
+
+Underfull \hbox (badness 3482) in paragraph at lines 2--3
+\OT1/ptm/m/n/10 Sajnos ezzel p[]arhuzamosan a spam []uzenetek ter-jed[]ese
+ []
+
+
+Underfull \hbox (badness 6252) in paragraph at lines 2--3
+\OT1/ptm/m/n/10 is ex-po-nenci[]alisan n[]ovekszik, ezzel kih[]^^Pv[]ast []all[]^^Ptva a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+
+ []
+
+)
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 36.
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 58.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 56.
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
+ []
+
+
+Overfull \hbox (31.00002pt too wide) in paragraph at lines 60--61
+[]$\OMS/cmsy/m/n/10 n$\OT1/pcr/m/n/10 documentclass[10pt,journal,compsoc]IEEEtran 
  []
 
 
@@ -335,8 +384,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--61
  []
 
 
-Overfull \hbox (31.00002pt too wide) in paragraph at lines 62--63
-[]$\OMS/cmsy/m/n/10 n$\OT1/pcr/m/n/10 documentclass[10pt,journal,compsoc]IEEEtran 
+Overfull \hbox (19.00002pt too wide) in paragraph at lines 62--63
+[]$\OMS/cmsy/m/n/10 n$\OT1/pcr/m/n/10 documentclass[conference,compsoc]IEEEtran 
  []
 
 
@@ -345,17 +394,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--63
  []
 
 
-Overfull \hbox (19.00002pt too wide) in paragraph at lines 64--65
-[]$\OMS/cmsy/m/n/10 n$\OT1/pcr/m/n/10 documentclass[conference,compsoc]IEEEtran 
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 64--65
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
 
@@ -363,27 +402,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
 
 ]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 88--88
+Overfull \hbox (6.0pt too wide) in paragraph at lines 86--86
 []\OT1/pcr/m/n/10 \IEEEmembership{Fellow, IEEE}, Masaki Owari[] 
  []
 
 
-Underfull \hbox (badness 4467) in paragraph at lines 97--99
+Underfull \hbox (badness 4467) in paragraph at lines 95--97
 \OT1/ptm/m/n/10 tify IEEE mem-ber-ship sta-tus. Please see the ``IEEE-
  []
 
 
-Underfull \hbox (badness 1715) in paragraph at lines 114--115
+Underfull \hbox (badness 1715) in paragraph at lines 112--113
 \OT1/ptm/m/n/10 The ab-stract is the first el-e-ment of a pa-per af-ter the
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 135--135
+Overfull \hbox (12.0pt too wide) in paragraph at lines 133--133
 []\OT1/pcr/m/n/10 \IEEEPARstart{T}{his} is the first paragraph[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--156
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
 
@@ -391,93 +430,93 @@ Underfull \hbox (badness 10000) in paragraph at lines 155--156
 <fig1.png, id=14, 188.20313pt x 173.89969pt>
 File: fig1.png Graphic file (type png)
 <use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 190.
+Package pdftex.def Info: fig1.png  used on input line 188.
 (pdftex.def)             Requested size: 180.67499pt x 166.95505pt.
 
-Underfull \hbox (badness 3281) in paragraph at lines 251--252
+Underfull \hbox (badness 3281) in paragraph at lines 249--250
 \OT1/ptm/m/n/10 un-num-bered, num-bered and bul-leted. There have been
  []
 
 
-Underfull \hbox (badness 2213) in paragraph at lines 251--252
+Underfull \hbox (badness 2213) in paragraph at lines 249--250
 \OT1/ptm/m/n/10 be-low, please re-fer to the ``IEEE-tran[]HOWTO.pdf'' for
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 251--252
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
 
  []
 
 [3 <./fig1.png>]
-Underfull \hbox (badness 5388) in paragraph at lines 333--334
+Underfull \hbox (badness 5388) in paragraph at lines 331--332
 \OT1/ptm/b/n/10 References Sim-pli-fied: \OT1/ptm/m/n/10 A sim-ple way of com-pos-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--334
+Underfull \hbox (badness 10000) in paragraph at lines 331--332
 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 367--367
+Overfull \hbox (6.0pt too wide) in paragraph at lines 365--365
 []\OT1/pcr/m/n/10 \textit{International Journal of Modelling,[] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 379--379
+Overfull \hbox (6.0pt too wide) in paragraph at lines 377--377
 []\OT1/pcr/m/n/10 systems using a port-controlled Hamiltonian[] 
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 380--380
+Overfull \hbox (12.0pt too wide) in paragraph at lines 378--378
 []\OT1/pcr/m/n/10 description,'' in \textit{Proceedings of the[] 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 436--437
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
 []\OT1/ptm/m/n/10 Further ex-am-ples can be seen at $http : / / journals .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 436--437
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
 \OT1/ptm/m/n/10 ieeeauthorcenter . ieee . org / wp-[]content / uploads / sites / 7 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 460--462
+Underfull \hbox (badness 10000) in paragraph at lines 458--460
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 463--465
+Underfull \hbox (badness 10000) in paragraph at lines 461--463
 
  []
 
 [5] [6]
-LaTeX Font Info:    Trying to load font information for OMS+pcr on input line 717.
+LaTeX Font Info:    Trying to load font information for OMS+pcr on input line 715.
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omspcr.fd
 File: omspcr.fd 
 )
 LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 717.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 715.
 
-Underfull \hbox (badness 10000) in paragraph at lines 733--734
+Underfull \hbox (badness 10000) in paragraph at lines 731--732
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 738--739
+Underfull \hbox (badness 10000) in paragraph at lines 736--737
 
  []
 
 [7]
 File: fig1.png Graphic file (type png)
 <use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 847.
+Package pdftex.def Info: fig1.png  used on input line 845.
 (pdftex.def)             Requested size: 72.27031pt x 66.77777pt.
 File: fig1.png Graphic file (type png)
 <use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 847.
+Package pdftex.def Info: fig1.png  used on input line 845.
 (pdftex.def)             Requested size: 72.27031pt x 66.77777pt.
  [8] (mwzx0d_pub.aux)
  ***********
@@ -486,15 +525,15 @@ L3 programming layer <2023-06-30>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4632 strings out of 475550
- 82041 string characters out of 5762533
+ 4600 strings out of 475550
+ 81657 string characters out of 5762533
  1938238 words of memory out of 5000000
- 25770 multiletter control sequences out of 15000+600000
- 619693 words of font info for 155 fonts, out of 8000000 for 9000
+ 25746 multiletter control sequences out of 15000+600000
+ 607077 words of font info for 123 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 57i,12n,65p,952b,336s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,12n,65p,942b,336s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on mwzx0d_pub.pdf (8 pages, 282855 bytes).
+Output written on mwzx0d_pub.pdf (8 pages, 282949 bytes).
 PDF statistics:
  124 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
