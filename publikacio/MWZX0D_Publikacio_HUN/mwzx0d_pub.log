@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  12 NOV 2023 10:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  12 NOV 2023 22:22
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -228,17 +228,46 @@ Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEtab
 \sf@bottom=\skip62
 ) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count289
+\lst@gtempboxa=\box57
+\lst@token=\toks25
+\lst@length=\count290
+\lst@currlwidth=\dimen184
+\lst@column=\count291
+\lst@pos=\count292
+\lst@lostspace=\dimen185
+\lst@width=\dimen186
+\lst@newlines=\count293
+\lst@lineno=\count294
+\lst@maxwidth=\dimen187
+ (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count295
+\lst@skipnumbers=\count296
+\lst@framebox=\box58
+) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+ (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count297
+\float@exts=\toks26
+\float@box=\box59
+\@float@everytoks=\toks27
+\@floatcapt=\box60
 ) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/sttools\stfloats.sty
 Package: stfloats 2017/03/27 v3.3 Improve float mechanism and baselineskip settings
-\@dblbotnum=\count289
-\c@dblbotnumber=\count290
+\@dblbotnum=\count298
+\c@dblbotnumber=\count299
 ) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 ) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
 Package: verbatim 2022-07-02 v1.5u LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks25
-\verbatim@line=\toks26
+\every@verbatim=\toks28
+\verbatim@line=\toks29
 \verbatim@in@stream=\read2
 ) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
@@ -253,15 +282,15 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen184
-\Gin@req@width=\dimen185
+\Gin@req@height=\dimen188
+\Gin@req@width=\dimen189
 ) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/preprint\balance.sty
 Package: balance 1999/02/23 4.3 (PWD)
-\oldvsize=\dimen186
+\oldvsize=\dimen190
 ) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count291
-\l__pdf_internal_box=\box57
+\l__color_backend_stack_int=\count300
+\l__pdf_internal_box=\box61
 )
 
 LaTeX Warning: Unused global option(s):
@@ -270,49 +299,51 @@ LaTeX Warning: Unused global option(s):
 (mwzx0d_pub.aux)
 \openout1 = `mwzx0d_pub.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 
 -- Lines per column: 58 (exact).
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count301
 (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count292
-\scratchdimen=\dimen187
-\scratchbox=\box58
-\nofMPsegments=\count293
-\nofMParguments=\count294
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count295
-\MPscratchDim=\dimen188
-\MPnumerator=\count296
-\makeMPintoPDFobject=\count297
-\everyMPtoPDFconversion=\toks28
+\scratchcounter=\count302
+\scratchdimen=\dimen191
+\scratchbox=\box62
+\nofMPsegments=\count303
+\nofMParguments=\count304
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count305
+\MPscratchDim=\dimen192
+\MPnumerator=\count306
+\makeMPintoPDFobject=\count307
+\everyMPtoPDFconversion=\toks31
 ) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (ch-Abstract.tex
@@ -355,187 +386,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
  []
 
-)
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 36.
- (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 56.
- (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
+) (ch-Method.tex
+Underfull \hbox (badness 10000) in paragraph at lines 14--16
+
+ []
+
+
+Underfull \hbox (badness 2443) in paragraph at lines 14--16
+[]\OT1/ptm/m/n/10 Az ada-tok el[]ok[]esz[]^^Pt[]ese sor[]an a fe-lesleges r[]eszeit az
+ []
+
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 18.
+(C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
-
+Underfull \hbox (badness 1394) in paragraph at lines 18--19
+\OT1/ptm/m/n/10 be-menet-tel kell sz[]amolnia. Bel[]athat[]o, hogy a mod-ell-nek
  []
 
+) (ch-Results.tex) (ch-Discussion.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
-
- []
-
-
-Overfull \hbox (31.00002pt too wide) in paragraph at lines 60--61
-[]$\OMS/cmsy/m/n/10 n$\OT1/pcr/m/n/10 documentclass[10pt,journal,compsoc]IEEEtran 
- []
+ [1{C:/Users/rpgix/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
+] [2
 
- []
-
-
-Overfull \hbox (19.00002pt too wide) in paragraph at lines 62--63
-[]$\OMS/cmsy/m/n/10 n$\OT1/pcr/m/n/10 documentclass[conference,compsoc]IEEEtran 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
-
- []
-
-[1{C:/Users/rpgix/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
-
-
-]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 86--86
-[]\OT1/pcr/m/n/10 \IEEEmembership{Fellow, IEEE}, Masaki Owari[] 
- []
-
-
-Underfull \hbox (badness 4467) in paragraph at lines 95--97
-\OT1/ptm/m/n/10 tify IEEE mem-ber-ship sta-tus. Please see the ``IEEE-
- []
-
-
-Underfull \hbox (badness 1715) in paragraph at lines 112--113
-\OT1/ptm/m/n/10 The ab-stract is the first el-e-ment of a pa-per af-ter the
- []
-
-
-Overfull \hbox (12.0pt too wide) in paragraph at lines 133--133
-[]\OT1/pcr/m/n/10 \IEEEPARstart{T}{his} is the first paragraph[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
-
- []
-
-[2]
-<fig1.png, id=14, 188.20313pt x 173.89969pt>
-File: fig1.png Graphic file (type png)
-<use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 188.
-(pdftex.def)             Requested size: 180.67499pt x 166.95505pt.
-
-Underfull \hbox (badness 3281) in paragraph at lines 249--250
-\OT1/ptm/m/n/10 un-num-bered, num-bered and bul-leted. There have been
- []
-
-
-Underfull \hbox (badness 2213) in paragraph at lines 249--250
-\OT1/ptm/m/n/10 be-low, please re-fer to the ``IEEE-tran[]HOWTO.pdf'' for
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
-
- []
-
-[3 <./fig1.png>]
-Underfull \hbox (badness 5388) in paragraph at lines 331--332
-\OT1/ptm/b/n/10 References Sim-pli-fied: \OT1/ptm/m/n/10 A sim-ple way of com-pos-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 331--332
-
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 365--365
-[]\OT1/pcr/m/n/10 \textit{International Journal of Modelling,[] 
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 377--377
-[]\OT1/pcr/m/n/10 systems using a port-controlled Hamiltonian[] 
- []
-
-
-Overfull \hbox (12.0pt too wide) in paragraph at lines 378--378
-[]\OT1/pcr/m/n/10 description,'' in \textit{Proceedings of the[] 
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 434--435
-[]\OT1/ptm/m/n/10 Further ex-am-ples can be seen at $http : / / journals .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 434--435
-\OT1/ptm/m/n/10 ieeeauthorcenter . ieee . org / wp-[]content / uploads / sites / 7 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 458--460
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 461--463
-
- []
-
-[5] [6]
-LaTeX Font Info:    Trying to load font information for OMS+pcr on input line 715.
- (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omspcr.fd
-File: omspcr.fd 
-)
-LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 715.
-
-Underfull \hbox (badness 10000) in paragraph at lines 731--732
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 736--737
-
- []
-
-[7]
-File: fig1.png Graphic file (type png)
-<use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 845.
-(pdftex.def)             Requested size: 72.27031pt x 66.77777pt.
-File: fig1.png Graphic file (type png)
-<use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 845.
-(pdftex.def)             Requested size: 72.27031pt x 66.77777pt.
- [8] (mwzx0d_pub.aux)
+] (mwzx0d_pub.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4600 strings out of 475550
- 81657 string characters out of 5762533
- 1938238 words of memory out of 5000000
- 25746 multiletter control sequences out of 15000+600000
- 607077 words of font info for 123 fonts, out of 8000000 for 9000
+ 6359 strings out of 475550
+ 104686 string characters out of 5762533
+ 2017238 words of memory out of 5000000
+ 27495 multiletter control sequences out of 15000+600000
+ 597777 words of font info for 116 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 57i,12n,65p,942b,336s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on mwzx0d_pub.pdf (8 pages, 282949 bytes).
+ 57i,10n,65p,2268b,1305s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on mwzx0d_pub.pdf (2 pages, 108104 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
+ 50 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

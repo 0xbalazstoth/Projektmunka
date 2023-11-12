@@ -1,0 +1,41 @@
+﻿\section{Módszertan}
+
+\lstset{
+  basicstyle=\small\ttfamily,
+  captionpos=b,
+  frame=single,
+  breaklines=true,
+  showstringspaces=false,
+  aboveskip=2.5pt,
+  belowskip=2pt
+}
+
+\subsection{Adatgyűjtés és előkészítés}
+Első és legfontosabb az adatgyűjtés, hiszen ez az alapja a mesterséges intelligenciának, ezek alapján tud tanulni. A gyűjtött adatok tartalmazzák a spam és nem spam kategóriák reprezentatív mintáit. Az adatforrás felépítése tartalmazza az üzenetet és a besorolást. A besorolás lehetséges értékei 0 és 1, ahol a 0-ás érték jelöli az általános üzenetet és az 1-es érték, hogy gyanús, vagyis spam üzenet. \\ \\
+\indent Az adatok előkészítése során a felesleges részeit az üzenetnek el kell távolítani.
+
+\subsection{PyTorch-alapú modell fejlesztése}
+A modellnek meg kell adni, hogy milyen dimenziójú bemenettel kell számolnia. Belátható, hogy a modellnek három rétege van, melyek teljesen összekapcsolt rétegek, amik alkotják a neurális hálózatot és a \verb|forward| függvényen keresztül halad át a bemeneti adatokon. Tegyük fel, hogy az \verb|input_dim| értéke 100, így annak 100 elemű vektorral kell rendelkeznie, ami az első réteget illeti.
+\begin{lstlisting}[language=Python, caption={Modell Python kód tartalma}, label=modell]
+    class TextClassifier(nn.Module):
+        def __init__(self, input_dim):
+            super(TextClassifier, self).__init__()
+            self.fc1 = nn.Linear(input_dim, 64)
+            self.fc2 = nn.Linear(64, 32)
+            self.fc3 = nn.Linear(32, 2)
+
+        def forward(self, x):
+            x = torch.relu(self.fc1(x))
+            x = torch.relu(self.fc2(x))
+            x = self.fc3(x)
+            return x
+\end{lstlisting}
+\indent \indent Első réteg (\verb|fc1|), ahol az \verb|input_dim| dimenziójú bemeneteket fogadja és 64 dimenziójú kimenetet generál a rektifikált lineáris egység (ReLU) ($H = \mathop{\mathrm{max}}(0, X)$) aktivációs függvénnyel. A második réteg (\verb|fc2|) 64 dimenziójú bemeneteket fogad és 32 dimenziós kimenetet generál, szintén az előző réteg módszere szerint. A harmadik réteg (\verb|fc3|) 32 dimenziójú bemeneteket fogad és 2 dimenziójú kimenetet generál, így ez a végső réteg, vagyis nem kell további aktivációs függvényt alkalmazni, ezáltal a kimenetet visszaadjuk.
+
+\subsection{Természetes nyelvi feldolgozás integrációja}
+
+\subsection{Tanulási folyamat}
+
+\subsection{Modell értékelése}
+
+\subsection{Finomhangolás és optimalizálás}
