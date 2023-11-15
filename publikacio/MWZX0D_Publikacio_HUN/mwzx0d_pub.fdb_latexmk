@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1699824162 "f:/Egyetemi anyagok/Mesterkepzes/2023-2024/Elso felev/Projektmunka/publikacio/MWZX0D_Publikacio_HUN/mwzx0d_pub.tex" "mwzx0d_pub.pdf" "mwzx0d_pub" 1699824164 0
+["pdflatex"] 1699893340 "f:/Egyetemi anyagok/Mesterkepzes/2023-2024/Elso felev/Projektmunka/publikacio/MWZX0D_Publikacio_HUN/mwzx0d_pub.tex" "mwzx0d_pub.pdf" "mwzx0d_pub" 1699893341 0
   "C:/Users/rpgix/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1699201943 207354 c4d565012842f096d0fb11752e76bff3 ""
   "C:/Users/rpgix/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1690721294 24118912 a29ebf4a49ff8d5003480bfceee4beb9 ""
   "C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -84,12 +84,12 @@
   "C:/Users/rpgix/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "ch-Abstract.tex" 1699816784 460 f781dfe0a6af2d824b2347896e7f8ed8 ""
   "ch-Discussion.tex" 1699814483 24 adf8b4712e1a75e4477a6e65c47d2dd6 ""
-  "ch-Introduction.tex" 1699779894 829 fe60adba38ed99b20058ad2c9ee6469b ""
-  "ch-Method.tex" 1699824094 2601 c03d1e2563deeabd526a8e58ffaf25a9 ""
+  "ch-Introduction.tex" 1699878511 805 bcb9196ca05eb138c68eb6e8c3b08347 ""
+  "ch-Method.tex" 1699824442 2595 07bff7118272edaced4e2f698f5b8fce ""
   "ch-Results.tex" 1699814435 24 2b029711536ab8d43c4b5c919714e821 ""
-  "f:/Egyetemi anyagok/Mesterkepzes/2023-2024/Elso felev/Projektmunka/publikacio/MWZX0D_Publikacio_HUN/mwzx0d_pub.tex" 1699824163 4532 624667b0ce816008f246181be7767f20 ""
-  "mwzx0d_pub.aux" 1699824164 1497 5c550003a96346a4630af623c91e7474 "pdflatex"
-  "mwzx0d_pub.tex" 1699824163 4532 624667b0ce816008f246181be7767f20 ""
+  "f:/Egyetemi anyagok/Mesterkepzes/2023-2024/Elso felev/Projektmunka/publikacio/MWZX0D_Publikacio_HUN/mwzx0d_pub.tex" 1699893338 4524 94f55b1f149b61f477b1b5628e9eb915 ""
+  "mwzx0d_pub.aux" 1699893341 1497 115e65b76480a591618b34bc0bd44ff0 "pdflatex"
+  "mwzx0d_pub.tex" 1699893338 4524 94f55b1f149b61f477b1b5628e9eb915 ""
   (generated)
   "mwzx0d_pub.aux"
   "mwzx0d_pub.log"

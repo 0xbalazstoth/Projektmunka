@@ -4,10 +4,11 @@ import torch.optim as optim
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.metrics import accuracy_score, classification_report
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 import pandas as pd
 import pickle
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 from model import TextClassifier
 
@@ -38,6 +39,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 input_dim = X_train.shape[1]
 model = TextClassifier(input_dim)
+print(input_dim)
 
 # Define loss function and optimizer
 criterion = nn.CrossEntropyLoss()
@@ -84,11 +86,21 @@ spam_count = len(y_test[y_test == 1])
 not_spam_count = len(y_test[y_test == 0])
 labels = ['Spam', 'Not Spam']
 sizes = [spam_count, not_spam_count]
-colors = ['#ff9999', '#66b3ff']  # Define colors for the pie chart slices
+colors = ['#ff9999', '#66b3ff'] 
 
 plt.figure(figsize=(8, 6))
 plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', startangle=140)
 plt.title('Distribution of Spam and Not Spam')
-plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+plt.axis('equal')
+
+# Plot confusion matrix as a heatmap
+cm = confusion_matrix(y_test.numpy(), predicted.numpy())
+labels = ['Not Spam', 'Spam']
+
+plt.figure(figsize=(8, 6))
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=labels, yticklabels=labels)
+plt.xlabel('Predicted')
+plt.ylabel('Actual')
+plt.title('Confusion Matrix')
 
 plt.show()
