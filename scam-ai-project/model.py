@@ -3,8 +3,6 @@ import torch.nn as nn
 import os
 from torchviz import make_dot
 
-
-
 class TextClassifier(nn.Module):
     def __init__(self, input_dim):
         super(TextClassifier, self).__init__()

@@ -6,13 +6,14 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 import pandas as pd
+from mpl_toolkits.mplot3d import Axes3D
 import pickle
 import matplotlib.pyplot as plt
 import seaborn as sns
 
 from model import TextClassifier
 
-data = pd.read_csv('fraud_email_.csv')
+data = pd.read_csv('spam.csv')
 
 data['Text'].fillna('', inplace=True)
 

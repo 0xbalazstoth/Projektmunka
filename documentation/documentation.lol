@@ -17,3 +17,4 @@
 \contentsline {listing}{\numberline {7.1}{\ignorespaces WSL engedélyezése\relax }}{15}{listing.7.1}%
 \contentsline {listing}{\numberline {7.2}{\ignorespaces VMP engedélyezése\relax }}{15}{listing.7.2}%
 \contentsline {listing}{\numberline {7.3}{\ignorespaces Ubuntu WSL\relax }}{15}{listing.7.3}%
+\contentsline {listing}{\numberline {7.4}{\ignorespaces Távoli repository klónozása\relax }}{15}{listing.7.4}%

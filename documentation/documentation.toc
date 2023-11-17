@@ -30,3 +30,6 @@
 \contentsline {section}{\numberline {6.4}Spam szűrése}{14}{section.6.4}%
 \contentsline {chapter}{\numberline {7}Környezet és annak kialakítása}{15}{chapter.7}%
 \contentsline {section}{\numberline {7.1}WSL telepítése}{15}{section.7.1}%
+\contentsline {section}{\numberline {7.2}GIT telepítése}{15}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Távoli repository klónozása}{15}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}MongoDBCompass telepítése}{15}{subsection.7.2.2}%

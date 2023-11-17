@@ -30,3 +30,25 @@
         \label{code:ubuntu_wsl}
     \end{listing}
 \end{enumerate}
+
+\section{GIT telepítése}
+\begin{flushleft}
+    GIT hivatalos oldala, \textbf{\href{https://git-scm.com/downloads}{https://git-scm.com/downloads}}, amit szükséges telepíteni.
+\end{flushleft}
+
+\subsection{Távoli repository klónozása}
+\begin{flushleft}
+    A projekt klónozása a GIT verziókezelő rendszer segítségével történik, amely lehetővé teszi a teljes forráskód, konfigurációs fájlok és egyéb szükséges erőforrások másolását a távoli repository-ból a helyi gépre. A klónozási folyamat első lépése a GIT telepítése, majd ezt követően GIT kliens alkalmazás vagy parancssorban a célmappában adjuk ki a \verb|git clone| parancsot.
+\end{flushleft}
+\begin{listing}[H]
+    \begin{minted}[linenos, numbersep=-10pt, breaklines]{bash}
+        git clone https://github.com/0xbalazstoth/Projektmunka.git
+    \end{minted}
+    \caption{Távoli repository klónozása}
+    \label{code:repo_clone}
+\end{listing}
+
+\subsection{MongoDBCompass telepítése}
+\begin{flushleft}
+    MongoDB hivatalos oldala \textbf{\href{https://www.mongodb.com/try/download/compass}{https://www.mongodb.com/try/download/compass}}, telepítése opcionális.
+\end{flushleft}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  11 NOV 2023 20:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  17 NOV 2023 13:15
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -717,7 +717,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 \c@lstlisting=\count346
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<oe_logo.png, id=135, 723.9045pt x 407.3619pt>
+<oe_logo.png, id=147, 723.9045pt x 407.3619pt>
 File: oe_logo.png Graphic file (type png)
 <use oe_logo.png>
 Package pdftex.def Info: oe_logo.png  used on input line 86.
@@ -800,7 +800,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 8.
 (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<./assets/docker-up-dns-server.png, id=212, 603.75563pt x 105.39375pt>
+<./assets/docker-up-dns-server.png, id=227, 603.75563pt x 105.39375pt>
 File: ./assets/docker-up-dns-server.png Graphic file (type png)
 <use ./assets/docker-up-dns-server.png>
 Package pdftex.def Info: ./assets/docker-up-dns-server.png  used on input line 14.
@@ -815,7 +815,7 @@ Package pdftex.def Info: ./assets/docker-up-dns-server.png  used on input line 1
 
  (ch-Mail.tex
 Chapter 4.
-<./assets/hmailServer-accounts.png, id=219, 203.25937pt x 99.37125pt>
+<./assets/hmailServer-accounts.png, id=234, 203.25937pt x 99.37125pt>
 File: ./assets/hmailServer-accounts.png Graphic file (type png)
 <use ./assets/hmailServer-accounts.png>
 Package pdftex.def Info: ./assets/hmailServer-accounts.png  used on input line 7.
@@ -912,7 +912,10 @@ Chapter 7.
  (_minted-documentation/847020CCF7A9D0E85FB19851E146F214DB9E6BA325E77B091DA0E710C2C989B3.pygtex)
 \openout4 = `documentation.pyg'.
 
- (_minted-documentation/16F3700A08D00FE18511EBBCA5D3F2F4DB9E6BA325E77B091DA0E710C2C989B3.pygtex)) [15
+ (_minted-documentation/16F3700A08D00FE18511EBBCA5D3F2F4DB9E6BA325E77B091DA0E710C2C989B3.pygtex)
+\openout4 = `documentation.pyg'.
+
+ (_minted-documentation/98441243CE15F42D03F934B158377AB78E5BD159FA181B7EBCD62175851CD23E.pygtex)) [15
 
 
 
@@ -943,22 +946,22 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
 Package rerunfilecheck Info: File `documentation.out' has not changed.
-(rerunfilecheck)             Checksum: 995320DAD46665E746549BC829F4C4F2;4704.
+(rerunfilecheck)             Checksum: 5614F878F2557D43E5F09B1EA6B647A4;5246.
 runsystem(del documentation.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 30121 strings out of 475550
- 596518 string characters out of 5762533
- 1930238 words of memory out of 5000000
- 50608 multiletter control sequences out of 15000+600000
+ 30140 strings out of 475550
+ 597462 string characters out of 5762533
+ 1931238 words of memory out of 5000000
+ 50620 multiletter control sequences out of 15000+600000
  626087 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,89p,799b,1225s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy5.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on documentation.pdf (19 pages, 660866 bytes).
+Output written on documentation.pdf (19 pages, 665154 bytes).
 PDF statistics:
- 421 PDF objects out of 1000 (max. 8388607)
- 81 named destinations out of 1000 (max. 500000)
- 304 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 441 PDF objects out of 1000 (max. 8388607)
+ 85 named destinations out of 1000 (max. 500000)
+ 328 words of extra memory for PDF output out of 10000 (max. 10000000)
 
