@@ -53,6 +53,16 @@ function App() {
 			<Toaster></Toaster>
 			<Routes>
 				<Route
+					path="/"
+					element={
+						user ? (
+							<Navigate to="/mail" />
+						) : (
+							<Navigate to="/login" />
+						)
+					}
+				/>
+				<Route
 					path="login"
 					element={user ? <Navigate to="/mail" /> : <LoginView />}
 				/>

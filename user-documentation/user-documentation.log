@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  24 NOV 2023 18:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  24 NOV 2023 19:58
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"f:/Egyetemi anyagok/Mesterkepzes/2023-2024/Elso felev/Projektmunka/documentation/documentation.tex"
-(f:/Egyetemi anyagok/Mesterkepzes/2023-2024/Elso felev/Projektmunka/documentation/documentation.tex
+**"f:/Egyetemi anyagok/Mesterkepzes/2023-2024/Elso felev/Projektmunka/user-documentation/user-documentation.tex"
+(f:/Egyetemi anyagok/Mesterkepzes/2023-2024/Elso felev/Projektmunka/user-documentation/user-documentation.tex
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
 (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
@@ -566,7 +566,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@every@listing=\toks40
 \c@listing=\count332
 )
-runsystem(if not exist _minted-documentation mkdir _minted-documentation)...executed.
+runsystem(if not exist _minted-user-documentation mkdir _minted-user-documentation)...executed.
 
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
@@ -628,15 +628,15 @@ Package chngcntr Info: \counterwithout already defined.
 (chngcntr)             Quitting chngcntr on input line 21.
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 58.
-runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > documentation.aex <nul: /p x=^%~$PATH:i>> documentation.aex)...executed.
+runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > user-documentation.aex <nul: /p x=^%~$PATH:i>> user-documentation.aex)...executed.
 
-runsystem(del documentation.aex)...executed.
+runsystem(del user-documentation.aex)...executed.
 
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 84.
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)<<t1.cmap>> (documentation.aux (ch-Projects.aux) (ch-Compare.aux) (ch-DNS.aux) (ch-Mail.aux) (ch-Backend.aux) (ch-AI.aux) (ch-Environment.aux))
-\openout1 = `documentation.aux'.
+)<<t1.cmap>> (user-documentation.aux (ch-Projects.aux) (ch-Compare.aux) (ch-DNS.aux) (ch-Mail.aux) (ch-Backend.aux) (ch-AI.aux) (ch-Environment.aux))
+\openout1 = `user-documentation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
 LaTeX Font Info:    ... okay on input line 84.
@@ -657,9 +657,9 @@ LaTeX Font Info:    ... okay on input line 84.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 84.
 LaTeX Font Info:    ... okay on input line 84.
 Package hyperref Info: Link coloring ON on input line 84.
- (documentation.out) (documentation.out)
+ (user-documentation.out) (user-documentation.out)
 \@outlinefile=\write6
-\openout6 = `documentation.out'.
+\openout6 = `user-documentation.out'.
 
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -747,7 +747,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 86.
  [1
 
-{C:/Users/rpgix/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <./oe_logo.png>] (documentation.toc
+{C:/Users/rpgix/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <./oe_logo.png>] (user-documentation.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -756,7 +756,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 2.
 )
 \tf@toc=\write7
-\openout7 = `documentation.toc'.
+\openout7 = `user-documentation.toc'.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
@@ -830,136 +830,136 @@ Package pdftex.def Info: ./assets/hmailServer-accounts.png  used on input line 7
 
  (ch-Backend.tex
 Chapter 5.
-\openout4 = `documentation.pyg'.
+\openout4 = `user-documentation.pyg'.
 
-(_minted-documentation/default.pygstyle) (_minted-documentation/2F9B7ACA9A16A04B642AC0968C8B4C9D8731B9E3AEDD7D78028B3188D6EE1DB3.pygtex
+(_minted-user-documentation/default.pygstyle) (_minted-user-documentation/2F9B7ACA9A16A04B642AC0968C8B4C9DEC76D2A59414526D053F86754A942021.pygtex
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 3.
 )
 Package hyperref Info: bookmark level for unknown listing defaults to 0 on input line 25.
-\openout4 = `documentation.pyg'.
+\openout4 = `user-documentation.pyg'.
 
- (_minted-documentation/0470AF1682095A4D24878E547426E85B8731B9E3AEDD7D78028B3188D6EE1DB3.pygtex) [7
+ (_minted-user-documentation/0470AF1682095A4D24878E547426E85BEC76D2A59414526D053F86754A942021.pygtex) [7
 
 
 
 
 ]
-\openout4 = `documentation.pyg'.
+\openout4 = `user-documentation.pyg'.
 
- (_minted-documentation/91ADB64E4E0AFFF9463F00BE42FFFD688731B9E3AEDD7D78028B3188D6EE1DB3.pygtex)
-\openout4 = `documentation.pyg'.
+ (_minted-user-documentation/91ADB64E4E0AFFF9463F00BE42FFFD68EC76D2A59414526D053F86754A942021.pygtex)
+\openout4 = `user-documentation.pyg'.
 
- (_minted-documentation/91ADB64E4E0AFFF9463F00BE42FFFD688731B9E3AEDD7D78028B3188D6EE1DB3.pygtex)
-\openout4 = `documentation.pyg'.
+ (_minted-user-documentation/91ADB64E4E0AFFF9463F00BE42FFFD68EC76D2A59414526D053F86754A942021.pygtex)
+\openout4 = `user-documentation.pyg'.
 
- (_minted-documentation/91ADB64E4E0AFFF9463F00BE42FFFD688731B9E3AEDD7D78028B3188D6EE1DB3.pygtex) [8]
-\openout4 = `documentation.pyg'.
+ (_minted-user-documentation/91ADB64E4E0AFFF9463F00BE42FFFD68EC76D2A59414526D053F86754A942021.pygtex) [8]
+\openout4 = `user-documentation.pyg'.
 
- (_minted-documentation/91ADB64E4E0AFFF9463F00BE42FFFD688731B9E3AEDD7D78028B3188D6EE1DB3.pygtex)
-\openout4 = `documentation.pyg'.
+ (_minted-user-documentation/91ADB64E4E0AFFF9463F00BE42FFFD68EC76D2A59414526D053F86754A942021.pygtex)
+\openout4 = `user-documentation.pyg'.
 
- (_minted-documentation/91ADB64E4E0AFFF9463F00BE42FFFD688731B9E3AEDD7D78028B3188D6EE1DB3.pygtex)) [9]
+ (_minted-user-documentation/91ADB64E4E0AFFF9463F00BE42FFFD68EC76D2A59414526D053F86754A942021.pygtex)) [9]
 \openout2 = `ch-AI.aux'.
 
  (ch-AI.tex
 Chapter 6.
-\openout4 = `documentation.pyg'.
+\openout4 = `user-documentation.pyg'.
 
-(_minted-documentation/222B63B1677E4E1B5BABAC63A974A53CC731A7548AEC117701644DC59D46C3FD.pygtex) [10
+(_minted-user-documentation/222B63B1677E4E1B5BABAC63A974A53C3D14594FA020FF0DCA5C452AC66A094D.pygtex) [10
 
 
 
 
 {C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
-\openout4 = `documentation.pyg'.
+\openout4 = `user-documentation.pyg'.
 
- (_minted-documentation/406A2431FD859A42325FC7A0C0EBB57FC731A7548AEC117701644DC59D46C3FD.pygtex)
-\openout4 = `documentation.pyg'.
+ (_minted-user-documentation/406A2431FD859A42325FC7A0C0EBB57F3D14594FA020FF0DCA5C452AC66A094D.pygtex)
+\openout4 = `user-documentation.pyg'.
 
- (_minted-documentation/AA8A743869C28481631CB38D842CB094C731A7548AEC117701644DC59D46C3FD.pygtex
+ (_minted-user-documentation/AA8A743869C28481631CB38D842CB0943D14594FA020FF0DCA5C452AC66A094D.pygtex
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 2.
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )) [11{C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
-\openout4 = `documentation.pyg'.
+\openout4 = `user-documentation.pyg'.
 
- (_minted-documentation/3E034FA40AEFA9B8120FCCAF03710BBEC731A7548AEC117701644DC59D46C3FD.pygtex)
-\openout4 = `documentation.pyg'.
+ (_minted-user-documentation/3E034FA40AEFA9B8120FCCAF03710BBE3D14594FA020FF0DCA5C452AC66A094D.pygtex)
+\openout4 = `user-documentation.pyg'.
 
- (_minted-documentation/79AC0913BED6F9BC915765DF1F3998FFC731A7548AEC117701644DC59D46C3FD.pygtex) [12]
-\openout4 = `documentation.pyg'.
+ (_minted-user-documentation/79AC0913BED6F9BC915765DF1F3998FF3D14594FA020FF0DCA5C452AC66A094D.pygtex) [12]
+\openout4 = `user-documentation.pyg'.
 
- (_minted-documentation/04AEA04E75F42AE253E6F210FB54535FC731A7548AEC117701644DC59D46C3FD.pygtex)
-\openout4 = `documentation.pyg'.
+ (_minted-user-documentation/04AEA04E75F42AE253E6F210FB54535F3D14594FA020FF0DCA5C452AC66A094D.pygtex)
+\openout4 = `user-documentation.pyg'.
 
- (_minted-documentation/8B78529D43EEFEBD42EB630B14BE30FDC731A7548AEC117701644DC59D46C3FD.pygtex) [13]
-\openout4 = `documentation.pyg'.
+ (_minted-user-documentation/8B78529D43EEFEBD42EB630B14BE30FD3D14594FA020FF0DCA5C452AC66A094D.pygtex) [13]
+\openout4 = `user-documentation.pyg'.
 
- (_minted-documentation/C53BC1DEAD3A40164157CEEBDED4A74EC731A7548AEC117701644DC59D46C3FD.pygtex)
-\openout4 = `documentation.pyg'.
+ (_minted-user-documentation/C53BC1DEAD3A40164157CEEBDED4A74E3D14594FA020FF0DCA5C452AC66A094D.pygtex)
+\openout4 = `user-documentation.pyg'.
 
- (_minted-documentation/3543BD307A4CF9F172436748C0B454788731B9E3AEDD7D78028B3188D6EE1DB3.pygtex)) [14]
+ (_minted-user-documentation/3543BD307A4CF9F172436748C0B45478EC76D2A59414526D053F86754A942021.pygtex)) [14]
 \openout2 = `ch-Environment.aux'.
 
  (ch-Environment.tex
 Chapter 7.
-\openout4 = `documentation.pyg'.
+\openout4 = `user-documentation.pyg'.
 
-(_minted-documentation/4077CF9CB36421C4DF828C712AD1E1DDDB9E6BA325E77B091DA0E710C2C989B3.pygtex)
-\openout4 = `documentation.pyg'.
+(_minted-user-documentation/4077CF9CB36421C4DF828C712AD1E1DD5139C1637244284B7041AF17EB8DE11D.pygtex)
+\openout4 = `user-documentation.pyg'.
 
- (_minted-documentation/847020CCF7A9D0E85FB19851E146F214DB9E6BA325E77B091DA0E710C2C989B3.pygtex)
-\openout4 = `documentation.pyg'.
+ (_minted-user-documentation/847020CCF7A9D0E85FB19851E146F2145139C1637244284B7041AF17EB8DE11D.pygtex)
+\openout4 = `user-documentation.pyg'.
 
- (_minted-documentation/16F3700A08D00FE18511EBBCA5D3F2F4DB9E6BA325E77B091DA0E710C2C989B3.pygtex)
-\openout4 = `documentation.pyg'.
+ (_minted-user-documentation/16F3700A08D00FE18511EBBCA5D3F2F45139C1637244284B7041AF17EB8DE11D.pygtex)
+\openout4 = `user-documentation.pyg'.
 
- (_minted-documentation/98441243CE15F42D03F934B158377AB78E5BD159FA181B7EBCD62175851CD23E.pygtex) [15
-
-
+ (_minted-user-documentation/98441243CE15F42D03F934B158377AB743E897407E5ABECF3FF699FA9EBC6694.pygtex) [15
 
 
-{C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]) [16] (documentation.lol)
+
+
+{C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]) [16] (user-documentation.lol)
 \tf@lol=\write8
-\openout8 = `documentation.lol'.
+\openout8 = `user-documentation.lol'.
 
  [17
 
 
 
-] (documentation.lof)
+] (user-documentation.lof)
 \tf@lof=\write9
-\openout9 = `documentation.lof'.
+\openout9 = `user-documentation.lof'.
 
  [18
 
-] (documentation.lot)
+] (user-documentation.lot)
 \tf@lot=\write10
-\openout10 = `documentation.lot'.
+\openout10 = `user-documentation.lot'.
 
  [19
 
-] (documentation.aux (ch-Projects.aux) (ch-Compare.aux) (ch-DNS.aux) (ch-Mail.aux) (ch-Backend.aux) (ch-AI.aux) (ch-Environment.aux))
+] (user-documentation.aux (ch-Projects.aux) (ch-Compare.aux) (ch-DNS.aux) (ch-Mail.aux) (ch-Backend.aux) (ch-AI.aux) (ch-Environment.aux))
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
-Package rerunfilecheck Info: File `documentation.out' has not changed.
+Package rerunfilecheck Info: File `user-documentation.out' has not changed.
 (rerunfilecheck)             Checksum: C7D5F6B4C5282AF07F575BAC280A8855;5436.
-runsystem(del documentation.pyg)...executed.
+runsystem(del user-documentation.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
  30143 strings out of 475550
- 597503 string characters out of 5762533
+ 598498 string characters out of 5762533
  1931238 words of memory out of 5000000
  50621 multiletter control sequences out of 15000+600000
  626087 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,89p,799b,1225s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,12n,89p,809b,1225s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy5.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on documentation.pdf (20 pages, 666748 bytes).
+Output written on user-documentation.pdf (20 pages, 666459 bytes).
 PDF statistics:
  450 PDF objects out of 1000 (max. 8388607)
  87 named destinations out of 1000 (max. 500000)

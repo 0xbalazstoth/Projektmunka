@@ -1,0 +1,192 @@
+﻿\chapter{Backend}
+
+\section{Bejelentkezés}
+\begin{itemize}
+    \item Végpont - \textbf{/api/users/login}
+    \begin{itemize}
+        \item \textbf{POST} (JSON)
+    \end{itemize}
+    \item Előfeltétel(ek): \textbf{Nincs}
+\end{itemize}
+\begin{itemize}
+    \item Bemeneti paraméter(ek):
+    \begin{itemize}
+        \item email - Típus: \textbf{email}
+        \item password - Típus: \textbf{string}
+    \end{itemize}
+\end{itemize}
+\begin{listing}[H]
+    \begin{minted}[linenos, numbersep=-10pt]{json}
+        {
+            "email": "test2@oemail.io",
+            "password": "test"
+        }
+    \end{minted}
+    \caption{Példa adatok a bejelentkezéshez}
+    \label{code:json_login}
+\end{listing}
+
+\section{Regisztráció}
+\begin{itemize}
+    \item Végpont - \textbf{/api/users/}
+    \begin{itemize}
+        \item \textbf{POST} (JSON)
+    \end{itemize}
+    \item Előfeltétel(ek): \textbf{Nincs}
+\end{itemize}
+\begin{itemize}
+    \item Bemeneti paraméter(ek):
+    \begin{itemize}
+        \item user - Típus: \textbf{object}
+    \end{itemize}
+\end{itemize}
+\begin{listing}[H]
+    \begin{minted}[linenos, numbersep=-10pt]{json}
+        {
+            "user": {
+                "email": "test2@oemail.io",
+                "password": "test",
+                "firstName": "Test2",
+                "lastName": "Test2"
+            }
+        }
+    \end{minted}
+    \caption{Példa adatok a regisztrációhoz}
+    \label{code:json_register}
+\end{listing}
+
+\newpage
+\section{Adott email lekérése mappából}
+\begin{itemize}
+    \item Végpont - \textbf{/api/mail/getEmailByMailBox}
+    \begin{itemize}
+        \item \textbf{POST} (JSON)
+    \end{itemize}
+    \item Előfeltétel(ek): \textbf{Felhasználói bejelentkezés (token)}
+\end{itemize}
+\begin{itemize}
+    \item Bemeneti paraméter(ek):
+    \begin{itemize}
+        \item mailBoxName - Típus: \textbf{string}
+    \end{itemize}
+\end{itemize}
+\begin{listing}[H]
+    \begin{minted}[linenos, numbersep=-10pt]{json}
+        {
+            "mailBoxName": "INBOX"
+        }
+    \end{minted}
+    \caption{Példa adatok a legújabb email lekérésére adott mappából}
+    \label{code:json_mailbox_one}
+\end{listing}
+
+\section{Összes email lekérése mappából}
+\begin{itemize}
+    \item Végpont - \textbf{/api/mail/getAllEmailByMailBox}
+    \begin{itemize}
+        \item \textbf{POST} (JSON)
+    \end{itemize}
+    \item Előfeltétel(ek): \textbf{Felhasználói bejelentkezés (token)}
+\end{itemize}
+\begin{itemize}
+    \item Bemeneti paraméter(ek):
+    \begin{itemize}
+        \item mailBoxName - Típus: \textbf{string}
+    \end{itemize}
+\end{itemize}
+\begin{listing}[H]
+    \begin{minted}[linenos, numbersep=-10pt]{json}
+        {
+            "mailBoxName": "INBOX"
+        }
+    \end{minted}
+    \caption{Példa adatok az összes email lekérésére adott mappából}
+    \label{code:json_mailbox_all}
+\end{listing}
+
+\section{Email törlése mappából}
+\begin{itemize}
+    \item Végpont - \textbf{/api/mail/deleteMessage}
+    \begin{itemize}
+        \item \textbf{DELETE} (JSON)
+    \end{itemize}
+    \item Előfeltétel(ek): \textbf{Felhasználói bejelentkezés (token)}
+\end{itemize}
+\begin{itemize}
+    \item Bemeneti paraméter(ek):
+    \begin{itemize}
+        \item mailBoxName - Típus: \textbf{string}
+    \end{itemize}
+\end{itemize}
+\begin{listing}[H]
+    \begin{minted}[linenos, numbersep=-10pt]{json}
+        {
+            "mailBoxName": "INBOX"
+        }
+    \end{minted}
+    \caption{Példa adatok adott email törlésére mappából}
+    \label{code:json_delete_email_mailbox}
+\end{listing}
+
+\section{Spam szűrés}
+\begin{itemize}
+    \item Végpont - \textbf{/api/mail/filterInboxFromSpam}
+    \begin{itemize}
+        \item \textbf{POST} (JSON)
+    \end{itemize}
+    \item Előfeltétel(ek): \textbf{Felhasználói bejelentkezés (token)}
+\end{itemize}
+\begin{itemize}
+    \item Bemeneti paraméter(ek):
+    \begin{itemize}
+        \item mailBoxName - Típus: \textbf{string}
+    \end{itemize}
+\end{itemize}
+\begin{listing}[H]
+    \begin{minted}[linenos, numbersep=-10pt]{json}
+        {
+            "mailBoxName": "INBOX"
+        }
+    \end{minted}
+    \caption{Példa adatok spam emailek szűrésére}
+    \label{code:json_spam_email_mailbox}
+\end{listing}
+
+\section{Mappa létrehozása}
+\begin{itemize}
+    \item Végpont - \textbf{/api/mail/createMailBox}
+    \begin{itemize}
+        \item \textbf{POST} (JSON)
+    \end{itemize}
+    \item Előfeltétel(ek): \textbf{Felhasználói bejelentkezés (token)}
+\end{itemize}
+\begin{itemize}
+    \item Bemeneti paraméter(ek):
+    \begin{itemize}
+        \item mailBoxName - Típus: \textbf{string}
+    \end{itemize}
+\end{itemize}
+\begin{listing}[H]
+    \begin{minted}[linenos, numbersep=-10pt]{json}
+        {
+            "mailBoxName": "INBOX"
+        }
+    \end{minted}
+    \caption{Példa adatok mappa létrehozására}
+    \label{code:json_new_email_mailbox}
+\end{listing}
+
+\section{Mappák lekérése}
+\begin{itemize}
+    \item Végpont - \textbf{/api/mail/listMailboxes}
+    \begin{itemize}
+        \item \textbf{GET}
+    \end{itemize}
+    \item Előfeltétel(ek): \textbf{Felhasználói bejelentkezés (token)}
+\end{itemize}
+\begin{itemize}
+    \item Bemeneti paraméter(ek):
+    \begin{itemize}
+        \item Nincs
+    \end{itemize}
+\end{itemize}

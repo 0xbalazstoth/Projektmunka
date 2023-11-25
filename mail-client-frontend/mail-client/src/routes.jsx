@@ -70,13 +70,6 @@ const routes = [
 		icon: <RiErrorWarningLine className="h-6 w-6" />,
 		component: <SpamView></SpamView>,
 	},
-	{
-		name: "All",
-		layout: "/mail",
-		path: "all",
-		icon: <LuMails className="h-6 w-6" />,
-		component: <AllView></AllView>,
-	},
 ];
 
 export default routes;

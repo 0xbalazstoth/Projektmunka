@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+        \PYG{n}{num\PYGZus{}epochs} \PYG{o}{=} \PYG{l+m+mi}{20}
+        \PYG{n}{train\PYGZus{}losses} \PYG{o}{=} \PYG{p}{[]}
+
+        \PYG{k}{for} \PYG{n}{epoch} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{num\PYGZus{}epochs}\PYG{p}{):}
+            \PYG{n}{optimizer}\PYG{o}{.}\PYG{n}{zero\PYGZus{}grad}\PYG{p}{()}
+            \PYG{n}{outputs} \PYG{o}{=} \PYG{n}{model}\PYG{p}{(}\PYG{n}{X\PYGZus{}train}\PYG{p}{)}
+            \PYG{n}{loss} \PYG{o}{=} \PYG{n}{criterion}\PYG{p}{(}\PYG{n}{outputs}\PYG{p}{,} \PYG{n}{y\PYGZus{}train}\PYG{p}{)}
+            \PYG{n}{loss}\PYG{o}{.}\PYG{n}{backward}\PYG{p}{()}
+            \PYG{n}{optimizer}\PYG{o}{.}\PYG{n}{step}\PYG{p}{()}
+            \PYG{n}{train\PYGZus{}losses}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{loss}\PYG{o}{.}\PYG{n}{item}\PYG{p}{())}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}Epoch [}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{epoch}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{/}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{num\PYGZus{}epochs}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{], Loss: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{loss}\PYG{o}{.}\PYG{n}{item}\PYG{p}{()}\PYG{l+s+si}{:}\PYG{l+s+s1}{.4f}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+
+        \PYG{n}{torch}\PYG{o}{.}\PYG{n}{save}\PYG{p}{(}\PYG{n}{model}\PYG{o}{.}\PYG{n}{state\PYGZus{}dict}\PYG{p}{(),} \PYG{l+s+s2}{\PYGZdq{}spam\PYGZus{}classifier\PYGZus{}model.pth\PYGZdq{}}\PYG{p}{);}
+\end{Verbatim}

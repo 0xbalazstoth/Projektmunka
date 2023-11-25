@@ -1,0 +1,102 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ifpdf}
+\usepackage{cmap}
+% \usepackage[hungarian]{babel}
+\usepackage{lmodern}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{titling}
+\usepackage{geometry}
+\usepackage{titling}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tabularx}
+\usepackage{minted}
+\usepackage{booktabs}
+\usepackage{caption}
+\usetikzlibrary{trees}
+\usepackage{fontawesome5}
+\usepackage{chngcntr}
+\counterwithin{listing}{chapter}
+
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+}
+
+\geometry{
+  top=4cm,    % Adjust the top margin as needed
+  bottom=2cm, % Adjust the bottom margin as needed
+  left=2.5cm, % Adjust the left margin as needed
+  right=2.5cm % Adjust the right margin as needed
+}
+
+\titleformat{\chapter}
+  {\Huge\bfseries}
+  {\Huge\thechapter.}
+  {0.5em}
+  {}
+
+\titlespacing*{\chapter}{0pt}{-2cm}{0.5cm}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection}{0.7em}{}
+\titlespacing*{\subsection}{0pt}{0.7em}{0.7em}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\renewcommand\contentsname{Tartalomjegyzék}
+\renewcommand{\tablename}{Tábla}
+
+\captionsetup[listing]{labelfont={bf},name={Kód},labelsep=colon}
+\renewcommand\listoflistingscaption{Kódjegyzék}
+
+\captionsetup[figure]{labelfont={bf},name={Ábra},labelsep=colon}
+\renewcommand{\listfigurename}{Ábrajegyzék}
+
+\captionsetup[table]{labelfont={bf},name={Tábla},labelsep=colon}
+\renewcommand\listtablename{Táblajegyzék}
+
+\title{Email kliens fejlesztés - Projektmunka}
+\subtitle{Felhasználói dokumentáció}
+\author{Tóth Balázs - MWZX0D}
+\date{}
+
+\pretitle{%
+  \begin{center}
+  \LARGE
+  \includegraphics[width=0.4\textwidth]{oe_logo.png}\\ % Adjust the width as needed
+  \vspace{-7cm}
+}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\include{ch-Projects}
+\include{ch-Compare}
+\include{ch-DNS}
+\include{ch-Mail}
+\include{ch-Backend}
+\include{ch-AI}
+\include{ch-Environment}
+
+\listoflistings
+\listoffigures
+\listoftables
+
+\end{document}
