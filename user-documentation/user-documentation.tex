@@ -22,6 +22,7 @@
 \usepackage{fontawesome5}
 \usepackage{chngcntr}
 \counterwithin{listing}{chapter}
+\graphicspath{ {./assets/} }
 
 \newcommand{\subtitle}[1]{%
   \posttitle{%
@@ -60,9 +61,6 @@
 \renewcommand\contentsname{Tartalomjegyzék}
 \renewcommand{\tablename}{Tábla}
 
-\captionsetup[listing]{labelfont={bf},name={Kód},labelsep=colon}
-\renewcommand\listoflistingscaption{Kódjegyzék}
-
 \captionsetup[figure]{labelfont={bf},name={Ábra},labelsep=colon}
 \renewcommand{\listfigurename}{Ábrajegyzék}
 
@@ -87,15 +85,9 @@
 
 \tableofcontents
 
-\include{ch-Projects}
-\include{ch-Compare}
-\include{ch-DNS}
-\include{ch-Mail}
-\include{ch-Backend}
-\include{ch-AI}
-\include{ch-Environment}
+\include{ch-Login}
+\include{ch-Pages}
 
-\listoflistings
 \listoffigures
 \listoftables
 

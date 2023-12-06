@@ -13,7 +13,7 @@ import seaborn as sns
 
 from model import TextClassifier
 
-data = pd.read_csv('spam.csv')
+data = pd.read_csv('fraud_email_.csv')
 
 data['Text'].fillna('', inplace=True)
 

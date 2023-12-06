@@ -6,38 +6,46 @@
 \usepackage{textcomp}
 \usepackage{listings}
 \usepackage{float}
+\usepackage{makecell}
 \usepackage{stfloats}
+\usepackage{hyperref}
 \usepackage{url}
 \usepackage{verbatim}
 \usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{booktabs}
 \hyphenation{op-tical net-works semi-conduc-tor IEEE-Xplore}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \usepackage{balance}
 
 % Renews
-\renewcommand\IEEEkeywordsname{Kulcsszavak}
-\renewcommand\abstractname{Absztrakt}
-\renewcommand\refname{Hivatkozások}
-\setlength{\tabcolsep}{4em}
-\renewcommand\lstlistingname{Ábra}
+\renewcommand\IEEEkeywordsname{Keywords}
+% \renewcommand\abstractname{Absztrakt}
+% \renewcommand\refname{Hivatkozások}
+% \renewcommand\lstlistingname{Ábra}
 
 \begin{document}
 
-\title{Mesterséges intelligencia alapú spam szűrőfejlesztés neuro-lingvisztikus megközelítéssel, PyTorch keretrendszerrel}
-\author{Óbudai Egyetem, Neumann János Informatikai Kar}
+\title{Artificial intelligence-based spam filtering using a neuro-linguistic approach with PyTorch framework}
+% \author{Óbudai Egyetem, Neumann János Informatikai Kar}
 % \thanks{Manuscript created October, 2020; This work was developed by the IEEE Publication Technology Department. This work is distributed under the \LaTeX \ Project Public License (LPPL) ( http://www.latex-project.org/ ) version 1.3. A copy of the LPPL, version 1.3, is included in the base \LaTeX \ documentation of all distributions of \LaTeX \ released 2003/12/01 or later. The opinions expressed here are entirely that of the author. No warranty is expressed or implied. User assumes all risk.}}
 
 % \markboth{Journal of \LaTeX\ Class Files,~Vol.~18, No.~9, September~2020}%
 % {How to Use the IEEEtran \LaTeX \ Templates}
 
 \author{%
-  \begin{tabular}{ccc}
-      \small{Tóth Balázs} & \small{Dr. Póser Valéria} \\
-      \small{\it{Neumann János Informatikai Kar}} & \small{\it{Neumann János Informatikai Kar}} \\
-      \small{\it{Óbudai Egyetem}} & \small{\it{Óbudai Egyetem}} \\
-      \small{Magyarország, Budapest}  & \small{Magyarország, Budapest} \\
-      \small{mwzx0d@stud.uni-obuda.hu}  & \small{poser.valeria@nik.uni-obuda.hu}
+  \setlength{\tabcolsep}{4em}
+  \begin{tabular}{@{}ccc@{}}
+      \small{Balázs Tóth} & \small{Valéria Póser} & \small{Szandra Anna Laczi} \\[0ex]
+      \small{\it John von Neumann Faculty of} & \small{\it John von Neumann Faculty of} & \small{\it John von Neumann Faculty of} \\[0ex]
+      \small{\it Informatics} & \small{\it Informatics} & \small{\it Informatics} \\[0ex]
+      \small{\it Óbuda University} & \small{\it Óbuda University} & \small{\it Óbuda University} \\[0ex]
+      \small{Budapest, Hungary}  & \small{Budapest, Hungary} & \small{Budapest, Hungary} \\[0ex]
+      \small{mwzx0d@stud.uni-obuda.hu}  & \small{poser.valeria@nik.uni-obuda.hu} & \small{laczi.szandra@nik.uni-obuda.hu}
   \end{tabular}
 }
 
@@ -45,16 +53,30 @@
 
 \input{ch-Abstract.tex}
 \input{ch-Introduction.tex}
+\input{ch-Target.tex}
+\input{ch-PyTorch.tex}
+\input{ch-SpamStats.tex}
 \input{ch-Method.tex}
-
-\input{ch-Results.tex}
-\input{ch-Discussion.tex}
+% \input{ch-Results.tex}
+% \input{ch-Discussion.tex}
 
 \begin{thebibliography}{1}
+
+\bibitem{comparison_with_pytorch}
+{\it{PyTorch vs Tensorflow vs Keras}}, \href{https://www.datacamp.com/tutorial/pytorch-vs-tensorflow-vs-keras}{https://www.datacamp.com/tutorial/pytorch-vs-tensorflow-vs-keras}, Last viewed; 20:59, 6th of December, 2023
 
 \bibitem{nlp_a_review}
 Basemah Alshemali and Jugal Kalita, {\it{Improving the Reliability of Deep Neural Networks in NLP: A Review}}, Knowledge-Based Systems, 2020.
 % https://pdf.sciencedirectassets.com/271505/1-s2.0-S0950705120X00049/1-s2.0-S0950705119305428/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEO3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIB9Q81jtclHiK2cyXFGuYQ2rDJBioJUzBsliHIHpNQ0cAiBHP2kKxAxZaS7Yb0CaQp1gstozuiE%2FAVphiNJVmiSJFSqzBQg2EAUaDDA1OTAwMzU0Njg2NSIMZGSYRIA%2FTjWHFhdzKpAFAZD0FW5O1A%2FH%2BdgMFadkl2FM4Q%2FK7JGRkg1Zzv92NmUghhSmfkzxXwzFj6jSs0wZpbqI2KHgFRx%2FORmgOtd%2Bah8MslJu98okL7FnrGBhBgL4XcwORmSLR4XnTSPpMuZfZOxqfBJ3cm5STT1JkJ%2B5%2BhC7NDVHYgoBuZXril9qJRYIog3fCfxplB3M6aQDPB%2BDPj9Y5rBj0xl1kPuXD6wEduMT689Qp%2FEGJO5kytKnuWyKlokaUdlbm2VHP9CdOaJ4quk4jI%2BFNP79NCa%2FrdkGfq5GIBp15msP3gK3YySq6lZr5V6hRjf4%2FCdaJdxVv4fnWHKmyEJsoRwQ0pSPlFuuVHlceHTZmR3Rm5Rp1GUzFORTlkJLnGVrJTLOgrZlSe8q6vYNfRHozNmYvkG2qwe7cZX1r3c%2FQnBOE8nRP0HtWxt3td73ypReXX%2FTF03zIOvot%2FgXdhcu0kwBeQr0c27VLzcx5dOvFU47eW3p1axhfw6kCY5AzrhL7dZkamasnQphjLqY5OMLvISlOd0jWbfT6wgdjJZi5mfinz9VbKBiuioUr8CT9J0Wsk4z1a2C6vQx7R4xy0r2vtUbni1Jn%2FAHgEgDjx4dKfvmJsX8iney%2BltIP8gaP50pX780fLTfaTjAlo5FpZxdCsTudmapVimd3Rte35fBk4RZ8DueM%2BJLzNnJFfZGzf6VBSiLdBtw0t%2FTSJiXjGT5bQLv%2BoMgmiW%2FkWlboaAefFwcES%2BuXnWYxsFaKG1pzZVH7uN18JCcdNPXo2p9haHp4AhFXgkvBnyl75fOo7ZgXBEHVRmAN7WzDTvHI0owuAhqDIFQhNFl590IcS%2FYwVlNNTS8oQ4a%2BLQxhZZFiDRNZskntDY%2BAaglHR8wxu%2FEqgY6sgE3LHOMDUwrmZHt9iND8Q9gwiUvVOvASRJfvj%2B%2BYwlYP%2BOwylZCvmvhDLCt3pF3z4FHxcz3T45QksywQKe5eudtaz9pHqiThnVJiZ%2B8Yrr5LiVJ%2FM%2FTSSnarYtxptmYG9bTAHNmcGIVY6hcxGel5SbiF0NhkImv3sOB2RXf3aXkFYrK2EE70zoX8MIPPPOfL28bKZo9SKIzTMFZYevQdWsovi0hS%2FjIcaeBVCR4cR5wmki8&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20231112T211640Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTY5P63WSMT%2F20231112%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=051c763dafceea513e2fbd3428c486441b6417e95ac61f2c55930e16265aad62&hash=a0cb713a450b33da3a83ddcee5933325cc60cb01d9408d9d2e2d873bea673014&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S0950705119305428&tid=spdf-f07d1bb7-d615-4425-8f79-e7d0b0ef4333&sid=aba1626392d9a741b04a477-913e067e33a9gxrqb&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=12135e555b5e0102515356&rr=8251cc227bde1ce0&cc=hu
+
+\bibitem{spam_filtering_approaches}
+Emmanuel Gbenga Dada, Joseph Stephen Bassi, Haruna Chiroma, Shafi'i Muhammad Abdulhamid, Adebayo Olusola Adetunmbi, Opeyemi Emmanuel Ajibuwa, {\it{Machine learning for email spam filtering: review, approaches and open research problems}}, Heliyon, 2019.
+% https://pdf.sciencedirectassets.com/313379/1-s2.0-S2405844018X00073/1-s2.0-S2405844018353404/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjELT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIE8%2F4jtn3wq9C0c5w41Z5d9sSKmIDZAYXxf%2FNhV2LK6MAiBwFRPZXvF2U7WhxwXJm9X7SfmfwvH444yqG5IJlFNvUCqyBQgdEAUaDDA1OTAwMzU0Njg2NSIMRasJD19kHNfsSQdjKo8FNvpOgOTi9mP1Xto%2BRCCX8BZ%2F5qHrWYFNqORlF2Ou6fTRD5PEV5HWNn5ipSU2Drk6YtaizAW8BDXrQgCrI2oL4MFJz4UNL%2BgrBXEGyC3MZfK689O06p93X9gBO0f89k%2Folq3YZaYlVwdmJe6T7sM4Qs370fn40h3Z2fuAjSy1PMxupOsNf13Z3ZAX0ZLe2o7o6nGgDO9DsgR8cktwHQHkp9VckWi%2FnhbVbHEocbx5UYi%2F8qRNuDZwMofcYl%2F%2BRkW4YKkAm%2Fvhg%2FCAvXhhT%2FSXJOR%2BgaGo5CQEsk%2Ba%2B6%2B9LxZM1aDkuK2LVT2afWxn7U2F0LY%2FKVKOMYuAsIwZAo5gjiNFRyIhJQ9%2B%2BvDmNsUj2oe21c6Qri1HDRz%2BB1QaYBzx8NkhKvwlfcguQRTPuX6YD9rmGkVdIq3xMN3QZsxHyfF15CNcLRuZhMYo7VvKOJO4%2FRsNHMpLKmEfCWafNcRH9w3aCSPfaiJaAbocZq0%2FcUoLDwUv7uQN1DKbRVKnq1AHMQ1gZrorXigHuJbcyh8tdxTNNIGWpDvooAKiXDkHIwDP632uWGNluHRVfSLhfQ95O1lj6WN4Q32E2ICX7Fh3r9oyy88lp%2B%2F1cQSNRbog05in4OiZKTr%2BOk0rfp%2BRqzPCU4v3LlT%2BixN3WYNio5ofSjgGj80OMgZXx2OnBpFNiE4SsCcfs%2Fe9Af90LQPN7HgWLz%2BrQwkagRcrg3gkAEbyRC946z6SVijUTgB3e3glfS7wFu3LtPDAjGnr%2FT%2FLvboZbMC%2F0kGP0Sbuka02LY%2F8InsyTpSZq4KdELsvvLOfW68ls4CLEXxbixlBufBsEHgUv87iOLyLoRZdbJncNgU1WkjljaTQ2IaNm%2Fefgdy0azCC6KirBjqyAWPsOlKbXSwvC8T22YMt%2BNvoF9ZDU1lypuBXO8AqUB711fNHyOYUXsy1%2BPzEosGI7rlY9Q34P9oue5VU3UKSy5IO%2Fr4sNsxtWV6pNqdk%2FNgUwYuIjps%2Bll5RNyqosDqPCAN4zRHmYH7eCnykPQFIGItKbSFrsXaOxi4TJX%2Budaya36MHtI9VMaLG25vUp%2F1DHNhrs%2FKMfeXzuY%2B1Fbv7NNYIrJqn0CFNaJlU73GpklHxesE%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20231201T203222Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTY2LSFAP6F%2F20231201%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=07e5203981b016585c19ae5cc1721869ba6a6e39696bc428772c975789659223&hash=da351ba6a4bea675b363942414a0e3054d648ef20dd16b035255ccc80bfd5d0c&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S2405844018353404&tid=spdf-9b5f4af4-7857-4fa6-889a-6f868f1bcd2e&sid=1fb806587d846144fb8a4bb8db8e765c7649gxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=12135e550b0a5358560302&rr=82ee195bcb3f68ad&cc=hu
+
+%https://www.ijrte.org/wp-content/uploads/papers/v7i5s4/E10250275S419.pdf
+
+\bibitem{spam_stats}
+{\it{Spam statistics: a deep dive into unwanted emails}}, \href{https://eftsure.com/statistics/spam-statistics/}{https://eftsure.com/statistics/spam-statistics/}, Last viewed; 18:34, 6th of December, 2023
 
 \end{thebibliography}
 

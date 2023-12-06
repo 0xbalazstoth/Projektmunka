@@ -1,4 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-        \PYG{n}{criterion} \PYG{o}{=} \PYG{n}{nn}\PYG{o}{.}\PYG{n}{CrossEntropyLoss}\PYG{p}{()}
-        \PYG{n}{optimizer} \PYG{o}{=} \PYG{n}{optim}\PYG{o}{.}\PYG{n}{Adam}\PYG{p}{(}\PYG{n}{model}\PYG{o}{.}\PYG{n}{parameters}\PYG{p}{(),} \PYG{n}{lr}\PYG{o}{=}\PYG{l+m+mf}{0.001}\PYG{p}{)}
-\end{Verbatim}

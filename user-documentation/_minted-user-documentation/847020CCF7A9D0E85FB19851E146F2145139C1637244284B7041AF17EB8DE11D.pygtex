@@ -1,3 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-            \PYG{n}{dism}\PYG{p}{.}\PYG{n}{exe} \PYG{p}{/}\PYG{n}{online} \PYG{p}{/}\PYG{n+nb}{enable\PYGZhy{}feature} \PYG{p}{/}\PYG{n}{featurename}\PYG{p}{:}\PYG{n}{VirtualMachinePlatform} \PYG{p}{/}\PYG{n}{all} \PYG{p}{/}\PYG{n}{norestart}
-\end{Verbatim}

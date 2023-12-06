@@ -16,6 +16,20 @@ class TextClassifier(nn.Module):
         x = self.fc3(x)
         return x
 
+# class TextClassifier(nn.Module):
+#     def __init__(self, input_dim, hidden_dim=64, lstm_layers=1, output_dim=2):
+#         super(TextClassifier, self).__init__()
+#         self.embedding = nn.Embedding(input_dim, hidden_dim)
+#         self.lstm = nn.LSTM(hidden_dim, hidden_dim, num_layers=lstm_layers)
+#         self.fc = nn.Linear(hidden_dim, output_dim)
+
+#     def forward(self, x):
+#         x = self.embedding(x)
+#         lstm_out, _ = self.lstm(x)
+#         lstm_out = lstm_out[:,-1:]
+#         output = self.fc(lstm_out)
+#         return output
+
 # Visualization
 # os.environ["PATH"] += os.pathsep + "F:\\Graphviz\\bin"
 # input_dim = 100

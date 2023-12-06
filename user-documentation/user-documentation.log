@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  24 NOV 2023 19:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  25 NOV 2023 11:43
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -627,36 +627,36 @@ Package: chngcntr 2018/04/09 v1.1a change counter resetting
 Package chngcntr Info: \counterwithout already defined.
 (chngcntr)             Quitting chngcntr on input line 21.
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 58.
+Package hyperref Info: Option `colorlinks' set `true' on input line 59.
 runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > user-documentation.aex <nul: /p x=^%~$PATH:i>> user-documentation.aex)...executed.
 
 runsystem(del user-documentation.aex)...executed.
 
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 84.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 82.
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)<<t1.cmap>> (user-documentation.aux (ch-Projects.aux) (ch-Compare.aux) (ch-DNS.aux) (ch-Mail.aux) (ch-Backend.aux) (ch-AI.aux) (ch-Environment.aux))
+)<<t1.cmap>> (user-documentation.aux (ch-Login.aux) (ch-Pages.aux))
 \openout1 = `user-documentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-Package hyperref Info: Link coloring ON on input line 84.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+Package hyperref Info: Link coloring ON on input line 82.
  (user-documentation.out) (user-documentation.out)
 \@outlinefile=\write6
 \openout6 = `user-documentation.out'.
@@ -717,43 +717,43 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 \c@lstlisting=\count346
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<oe_logo.png, id=151, 723.9045pt x 407.3619pt>
+<oe_logo.png, id=39, 723.9045pt x 407.3619pt>
 File: oe_logo.png Graphic file (type png)
 <use oe_logo.png>
-Package pdftex.def Info: oe_logo.png  used on input line 86.
+Package pdftex.def Info: oe_logo.png  used on input line 84.
 (pdftex.def)             Requested size: 188.8096pt x 106.24724pt.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 86.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 84.
 (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )<<ot1.cmap>>
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 86.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 84.
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )<<oml.cmap>>
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 86.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 84.
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )<<oms.cmap>>
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 86.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 84.
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 86.
+(Font)              <12> on input line 84.
 <<omx.cmap>>
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 86.
+(Font)              <8> on input line 84.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 86.
+(Font)              <6> on input line 84.
  [1
 
 {C:/Users/rpgix/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <./oe_logo.png>] (user-documentation.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 2.
+(Font)              <10> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 2.
+(Font)              <7> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 2.
+(Font)              <5> on input line 3.
 )
 \tf@toc=\write7
 \openout7 = `user-documentation.toc'.
@@ -762,206 +762,103 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.90 \include{ch-Projects}
-                           [1
+l.88 \include{ch-Login}
+                        [1
 
 ]
-\openout2 = `ch-Projects.aux'.
+\openout2 = `ch-Login.aux'.
 
- (ch-Projects.tex
+ (ch-Login.tex
 Chapter 1.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 47.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4.
 (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+<./assets/login.png, id=68, 387.69844pt x 310.91156pt>
+File: ./assets/login.png Graphic file (type png)
+<use ./assets/login.png>
+Package pdftex.def Info: ./assets/login.png  used on input line 12.
+(pdftex.def)             Requested size: 236.01561pt x 189.27148pt.
+<./assets/failed_login.png, id=69, 320.69812pt x 324.46219pt>
+File: ./assets/failed_login.png Graphic file (type png)
+<use ./assets/failed_login.png>
+Package pdftex.def Info: ./assets/failed_login.png  used on input line 17.
+(pdftex.def)             Requested size: 212.4126pt x 214.90813pt.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 21.
+ (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+<./assets/nav.png, id=70, 189.70876pt x 344.03531pt>
+File: ./assets/nav.png Graphic file (type png)
+<use ./assets/nav.png>
+Package pdftex.def Info: ./assets/nav.png  used on input line 35.
+(pdftex.def)             Requested size: 165.2102pt x 299.61278pt.
 ) [2
 
 
-{C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]) [3]
-\openout2 = `ch-Compare.aux'.
+{C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc} <./assets/login.png> <./assets/failed_login.png> <./assets/nav.png>]
+\openout2 = `ch-Pages.aux'.
 
- (ch-Compare.tex
+ (ch-Pages.tex
 Chapter 2.
-(C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\ufontawesomefree0.fd) (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\ufontawesomefree3.fd)
-Overfull \hbox (4.19484pt too wide) in paragraph at lines 17--17
- []|\T1/lmr/bx/n/10 Funkció/Egyéb| 
- []
-
-) [4
-
-
-
-
-{C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free0.enc}{C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free3.enc}]
-\openout2 = `ch-DNS.aux'.
-
- (ch-DNS.tex
-Chapter 3.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 8.
-(C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-<./assets/docker-up-dns-server.png, id=232, 603.75563pt x 105.39375pt>
-File: ./assets/docker-up-dns-server.png Graphic file (type png)
-<use ./assets/docker-up-dns-server.png>
-Package pdftex.def Info: ./assets/docker-up-dns-server.png  used on input line 14.
-(pdftex.def)             Requested size: 424.82523pt x 74.15945pt.
-) [5
+<./assets/send.png, id=80, 562.35094pt x 444.15938pt>
+File: ./assets/send.png Graphic file (type png)
+<use ./assets/send.png>
+Package pdftex.def Info: ./assets/send.png  used on input line 16.
+(pdftex.def)             Requested size: 330.42041pt x 260.97415pt.
+<./assets/message.png, id=81, 725.71124pt x 391.4625pt>
+File: ./assets/message.png Graphic file (type png)
+<use ./assets/message.png>
+Package pdftex.def Info: ./assets/message.png  used on input line 25.
+(pdftex.def)             Requested size: 377.62642pt x 203.70502pt.
+[3
 
 
 
 
- <./assets/docker-up-dns-server.png>]
-\openout2 = `ch-Mail.aux'.
+ <./assets/send.png> <./assets/message.png>]) [4] (user-documentation.lof)
+\tf@lof=\write8
+\openout8 = `user-documentation.lof'.
 
- (ch-Mail.tex
-Chapter 4.
-<./assets/hmailServer-accounts.png, id=239, 203.25937pt x 99.37125pt>
-File: ./assets/hmailServer-accounts.png Graphic file (type png)
-<use ./assets/hmailServer-accounts.png>
-Package pdftex.def Info: ./assets/hmailServer-accounts.png  used on input line 7.
-(pdftex.def)             Requested size: 236.01561pt x 115.38899pt.
-) [6
+ [5
 
 
-
-
- <./assets/hmailServer-accounts.png>]
-\openout2 = `ch-Backend.aux'.
-
- (ch-Backend.tex
-Chapter 5.
-\openout4 = `user-documentation.pyg'.
-
-(_minted-user-documentation/default.pygstyle) (_minted-user-documentation/2F9B7ACA9A16A04B642AC0968C8B4C9DEC76D2A59414526D053F86754A942021.pygtex
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 3.
-)
-Package hyperref Info: bookmark level for unknown listing defaults to 0 on input line 25.
-\openout4 = `user-documentation.pyg'.
-
- (_minted-user-documentation/0470AF1682095A4D24878E547426E85BEC76D2A59414526D053F86754A942021.pygtex) [7
-
-
-
-
-]
-\openout4 = `user-documentation.pyg'.
-
- (_minted-user-documentation/91ADB64E4E0AFFF9463F00BE42FFFD68EC76D2A59414526D053F86754A942021.pygtex)
-\openout4 = `user-documentation.pyg'.
-
- (_minted-user-documentation/91ADB64E4E0AFFF9463F00BE42FFFD68EC76D2A59414526D053F86754A942021.pygtex)
-\openout4 = `user-documentation.pyg'.
-
- (_minted-user-documentation/91ADB64E4E0AFFF9463F00BE42FFFD68EC76D2A59414526D053F86754A942021.pygtex) [8]
-\openout4 = `user-documentation.pyg'.
-
- (_minted-user-documentation/91ADB64E4E0AFFF9463F00BE42FFFD68EC76D2A59414526D053F86754A942021.pygtex)
-\openout4 = `user-documentation.pyg'.
-
- (_minted-user-documentation/91ADB64E4E0AFFF9463F00BE42FFFD68EC76D2A59414526D053F86754A942021.pygtex)) [9]
-\openout2 = `ch-AI.aux'.
-
- (ch-AI.tex
-Chapter 6.
-\openout4 = `user-documentation.pyg'.
-
-(_minted-user-documentation/222B63B1677E4E1B5BABAC63A974A53C3D14594FA020FF0DCA5C452AC66A094D.pygtex) [10
-
-
-
-
-{C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
-\openout4 = `user-documentation.pyg'.
-
- (_minted-user-documentation/406A2431FD859A42325FC7A0C0EBB57F3D14594FA020FF0DCA5C452AC66A094D.pygtex)
-\openout4 = `user-documentation.pyg'.
-
- (_minted-user-documentation/AA8A743869C28481631CB38D842CB0943D14594FA020FF0DCA5C452AC66A094D.pygtex
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 2.
- (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmtt.fd
-File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [11{C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
-\openout4 = `user-documentation.pyg'.
-
- (_minted-user-documentation/3E034FA40AEFA9B8120FCCAF03710BBE3D14594FA020FF0DCA5C452AC66A094D.pygtex)
-\openout4 = `user-documentation.pyg'.
-
- (_minted-user-documentation/79AC0913BED6F9BC915765DF1F3998FF3D14594FA020FF0DCA5C452AC66A094D.pygtex) [12]
-\openout4 = `user-documentation.pyg'.
-
- (_minted-user-documentation/04AEA04E75F42AE253E6F210FB54535F3D14594FA020FF0DCA5C452AC66A094D.pygtex)
-\openout4 = `user-documentation.pyg'.
-
- (_minted-user-documentation/8B78529D43EEFEBD42EB630B14BE30FD3D14594FA020FF0DCA5C452AC66A094D.pygtex) [13]
-\openout4 = `user-documentation.pyg'.
-
- (_minted-user-documentation/C53BC1DEAD3A40164157CEEBDED4A74E3D14594FA020FF0DCA5C452AC66A094D.pygtex)
-\openout4 = `user-documentation.pyg'.
-
- (_minted-user-documentation/3543BD307A4CF9F172436748C0B45478EC76D2A59414526D053F86754A942021.pygtex)) [14]
-\openout2 = `ch-Environment.aux'.
-
- (ch-Environment.tex
-Chapter 7.
-\openout4 = `user-documentation.pyg'.
-
-(_minted-user-documentation/4077CF9CB36421C4DF828C712AD1E1DD5139C1637244284B7041AF17EB8DE11D.pygtex)
-\openout4 = `user-documentation.pyg'.
-
- (_minted-user-documentation/847020CCF7A9D0E85FB19851E146F2145139C1637244284B7041AF17EB8DE11D.pygtex)
-\openout4 = `user-documentation.pyg'.
-
- (_minted-user-documentation/16F3700A08D00FE18511EBBCA5D3F2F45139C1637244284B7041AF17EB8DE11D.pygtex)
-\openout4 = `user-documentation.pyg'.
-
- (_minted-user-documentation/98441243CE15F42D03F934B158377AB743E897407E5ABECF3FF699FA9EBC6694.pygtex) [15
-
-
-
-
-{C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]) [16] (user-documentation.lol)
-\tf@lol=\write8
-\openout8 = `user-documentation.lol'.
-
- [17
-
-
-
-] (user-documentation.lof)
-\tf@lof=\write9
-\openout9 = `user-documentation.lof'.
-
- [18
 
 ] (user-documentation.lot)
-\tf@lot=\write10
-\openout10 = `user-documentation.lot'.
+\tf@lot=\write9
+\openout9 = `user-documentation.lot'.
 
- [19
 
-] (user-documentation.aux (ch-Projects.aux) (ch-Compare.aux) (ch-DNS.aux) (ch-Mail.aux) (ch-Backend.aux) (ch-AI.aux) (ch-Environment.aux))
+
+Package caption Warning: Unused \captionsetup[figure] on input line 64.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: Unused \captionsetup[table] on input line 67.
+See the caption package documentation for explanation.
+
+[6
+
+] (user-documentation.aux (ch-Login.aux) (ch-Pages.aux))
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
 Package rerunfilecheck Info: File `user-documentation.out' has not changed.
-(rerunfilecheck)             Checksum: C7D5F6B4C5282AF07F575BAC280A8855;5436.
-runsystem(del user-documentation.pyg)...executed.
-
+(rerunfilecheck)             Checksum: 4507D10A460B95CF4D6A88292062A49A;1040.
  ) 
 Here is how much of TeX's memory you used:
- 30143 strings out of 475550
- 598498 string characters out of 5762533
- 1931238 words of memory out of 5000000
- 50621 multiletter control sequences out of 15000+600000
- 626087 words of font info for 77 fonts, out of 8000000 for 9000
+ 29331 strings out of 475550
+ 570317 string characters out of 5762533
+ 1922238 words of memory out of 5000000
+ 50012 multiletter control sequences out of 15000+600000
+ 605336 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,89p,809b,1225s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy5.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on user-documentation.pdf (20 pages, 666459 bytes).
+ 84i,6n,89p,508b,527s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+Output written on user-documentation.pdf (7 pages, 476890 bytes).
 PDF statistics:
- 450 PDF objects out of 1000 (max. 8388607)
- 87 named destinations out of 1000 (max. 500000)
- 336 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 133 PDF objects out of 1000 (max. 8388607)
+ 18 named destinations out of 1000 (max. 500000)
+ 127 words of extra memory for PDF output out of 10000 (max. 10000000)
 
