@@ -8,7 +8,7 @@ class TextClassifier(nn.Module):
         super(TextClassifier, self).__init__()
         self.fc1 = nn.Linear(input_dim, 64)
         self.fc2 = nn.Linear(64, 32)
-        self.fc3 = nn.Linear(32, 2)  # 2 output classes (0 and 1)
+        self.fc3 = nn.Linear(32, 2)
 
     def forward(self, x):
         x = torch.relu(self.fc1(x))

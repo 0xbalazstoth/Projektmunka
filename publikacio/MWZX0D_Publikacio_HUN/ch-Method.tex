@@ -10,11 +10,16 @@
   belowskip=2pt
 }
 
+\subsection{Hyperparameters}
+
 \subsection{Data collection and preprocessing}
 
-
 \subsection{Model architecture}
-A modellnek meg kell adni, hogy milyen dimenziójú bemenettel kell számolnia. Belátható, hogy a modellnek három rétege van, melyek teljesen összekapcsolt rétegek, amik alkotják a neurális hálózatot és a \verb|forward| függvényen keresztül halad át a bemeneti adatokon. Tegyük fel, hogy az \verb|input_dim| értéke 100, így annak 100 elemű vektorral kell rendelkeznie, ami az első réteget illeti.
+\[
+    input\_dim = \sum_{j=1}^{m} \begin{cases} 1 & \text{if feature}_j \text{ is in the vocabulary} \\ 0 & \text{otherwise} \end{cases}
+\]
+Sum of ones and zeros, where each 1 indicates the presence of unique feature in the vocabulary.
+
 \begin{lstlisting}[language=Python, caption={Modell Python kód tartalma}, label=modell]
     class TextClassifier(nn.Module):
         def __init__(self, input_dim):
@@ -30,3 +35,50 @@ A modellnek meg kell adni, hogy milyen dimenziójú bemenettel kell számolnia. 
             return x
 \end{lstlisting}
 \includegraphics[width=0.4\textwidth]{text_classifier_model.png} \\
+
+\subsection{Training process}
+
+\subsection{Evaluation metrics}
+True Positives (TP):
+\begin{itemize}
+  \item Cases that were actually positive (spam) and correctly predicted by the filter to be positive (spam).
+  \item Example: An email containing known spam keywords and characteristics is correctly classified as spam by the filter.
+\end{itemize}
+
+True Negatives (TN):
+\begin{itemize}
+  \item Cases that were indeed negative (not spam) and the filter correctly flagged them as negative (not spam).
+  \item Example: A regular non-spam email, without any spam-like attributes, is correctly identified as not spam by the filter.
+\end{itemize}
+
+False Positives (FP):
+\begin{itemize}
+  \item Cases that were in fact negative (not spam) but were wrongly flagged by the filter as positive (spam).
+  \item Example: A legitimate email from a friend contains certain words or patterns that the spam filter misclassifies as spam.
+\end{itemize}
+
+False Negatives (FN):
+\begin{itemize}
+  \item Cases that were actually positive (spam) but the filter incorrectly flagged them as negative (not spam).
+  \item Example: An actual spam email manages to evade detection and is incorrectly classified as a non-spam email.
+\end{itemize}
+
+\[
+\text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
+\]
+Accuracy measures the overall correctness of the model by calculating the proportion of correctly predicted cases (true positives and true negatives) relative to all cases.
+
+\[
+\text{Precision} = \frac{TP}{TP + FP}
+\]
+Precision is the ratio of correctly predicted positive observations (true positives) to the total number of predicted positives. It focuses on how many of the predicted positive cases were actually positive.
+
+\[
+\text{Recall (Sensitivity)} = \frac{TP}{TP + FN}
+\]
+The recall calculates the ratio of correctly predicted positive observations (true positives) to the total number of true positives. This shows how well the model captures all positive cases.
+
+\[
+\text{F1 Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
+\]
+The F1 score is the harmonic mean of accuracy and recall. It balances accuracy and recall and provides a single metric for evaluating model performance. It is particularly useful when the distribution of classes is uneven.
