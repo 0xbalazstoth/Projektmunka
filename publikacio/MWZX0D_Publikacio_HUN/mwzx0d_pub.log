@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  7 DEC 2023 19:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  7 DEC 2023 20:30
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -557,17 +557,33 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 <text_classifier_model.png, id=62, 546.04pt x 749.80125pt>
 File: text_classifier_model.png Graphic file (type png)
 <use text_classifier_model.png>
-Package pdftex.def Info: text_classifier_model.png  used on input line 37.
+Package pdftex.def Info: text_classifier_model.png  used on input line 40.
 (pdftex.def)             Requested size: 206.39685pt x 283.41722pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
-
- []
-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2 <./text_classifier_model.png>])
+ [2 <./text_classifier_model.png>]
+<confusion_matrix.png, id=91, 578.16pt x 433.62pt>
+File: confusion_matrix.png Graphic file (type png)
+<use confusion_matrix.png>
+Package pdftex.def Info: confusion_matrix.png  used on input line 71.
+(pdftex.def)             Requested size: 277.20154pt x 207.89703pt.
+
+Overfull \hbox (25.20154pt too wide) in paragraph at lines 71--72
+ [][] 
+ []
+
+<training_loss.png, id=92, 578.16pt x 433.62pt>
+File: training_loss.png Graphic file (type png)
+<use training_loss.png>
+Package pdftex.def Info: training_loss.png  used on input line 78.
+(pdftex.def)             Requested size: 277.20154pt x 207.89703pt.
+
+Overfull \hbox (25.20154pt too wide) in paragraph at lines 78--79
+ [][] 
+ []
+
+)
 Overfull \hbox (8.84538pt too wide) in paragraph at lines 71--72
 []\OT1/ptm/m/it/8 PyTorch vs Ten-sor-flow vs Keras\OT1/ptm/m/n/8 , []https://www.datacamp.com/tutorial/pytorch-
  []
@@ -577,28 +593,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--75
 []\OT1/ptm/m/it/8 Spam statis-tics: a deep dive into un-wanted emails\OT1/ptm/m/n/8 ,
  []
 
-[3
-
-] (mwzx0d_pub.aux)
+[3 <./confusion_matrix.png> <./training_loss.png>] (mwzx0d_pub.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
 Package rerunfilecheck Info: File `mwzx0d_pub.out' has not changed.
-(rerunfilecheck)             Checksum: 38D9B33BAD9FC67156FF6E1FFFA57CB9;1770.
+(rerunfilecheck)             Checksum: EB2C13241D323F3626584A3673EF3E08;1770.
  ) 
 Here is how much of TeX's memory you used:
- 14215 strings out of 475550
- 228244 string characters out of 5762533
- 2010238 words of memory out of 5000000
- 35184 multiletter control sequences out of 15000+600000
+ 14237 strings out of 475550
+ 228750 string characters out of 5762533
+ 2011238 words of memory out of 5000000
+ 35203 multiletter control sequences out of 15000+600000
  601525 words of font info for 131 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
  75i,10n,79p,2288b,1322s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on mwzx0d_pub.pdf (3 pages, 186679 bytes).
+Output written on mwzx0d_pub.pdf (3 pages, 232414 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
- 102 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 175 PDF objects out of 1000 (max. 8388607)
+ 38 named destinations out of 1000 (max. 500000)
+ 112 words of extra memory for PDF output out of 10000 (max. 10000000)
 

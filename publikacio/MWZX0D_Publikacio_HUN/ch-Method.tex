@@ -18,7 +18,7 @@
 \[
     input\_dim = \sum_{j=1}^{m} \begin{cases} 1 & \text{if feature}_j \text{ is in the vocabulary} \\ 0 & \text{otherwise} \end{cases}
 \]
-Sum of ones and zeros, where each 1 indicates the presence of unique feature in the vocabulary.
+\indent Sum of ones and zeros, where each 1 indicates the presence of unique feature in the vocabulary.
 
 \begin{lstlisting}[language=Python, caption={Modell Python kód tartalma}, label=modell]
     class TextClassifier(nn.Module):
@@ -34,11 +34,13 @@ Sum of ones and zeros, where each 1 indicates the presence of unique feature in 
             x = self.fc3(x)
             return x
 \end{lstlisting}
-\includegraphics[width=0.4\textwidth]{text_classifier_model.png} \\
+\begin{figure}[H]
+    \centering
+    \caption{Visualization of the Text Classifier Model}
+    \includegraphics[width=0.4\textwidth]{text_classifier_model.png}
+\end{figure}
 
 \subsection{Training process}
-
-\subsection{Evaluation metrics}
 True Positives (TP):
 \begin{itemize}
   \item Cases that were actually positive (spam) and correctly predicted by the filter to be positive (spam).
@@ -63,22 +65,36 @@ False Negatives (FN):
   \item Example: An actual spam email manages to evade detection and is incorrectly classified as a non-spam email.
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \caption{Confusion Matrix}
+    \includegraphics[width=1.1\columnwidth]{confusion_matrix.png}
+\end{figure}
+\indent The confusion matrix provides a visual representation of these variables, making the representation of these values clearer.
+
+\begin{figure}[H]
+    \centering
+    \caption{Training loss over time}
+    \includegraphics[width=1.1\columnwidth]{training_loss.png}
+\end{figure}
+
+\subsection{Evaluation metrics}
 \[
 \text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
 \]
-Accuracy measures the overall correctness of the model by calculating the proportion of correctly predicted cases (true positives and true negatives) relative to all cases.
+\indent Accuracy measures the overall correctness of the model by calculating the proportion of correctly predicted cases (true positives and true negatives) relative to all cases.
 
 \[
 \text{Precision} = \frac{TP}{TP + FP}
 \]
-Precision is the ratio of correctly predicted positive observations (true positives) to the total number of predicted positives. It focuses on how many of the predicted positive cases were actually positive.
+\indent Precision is the ratio of correctly predicted positive observations (true positives) to the total number of predicted positives. It focuses on how many of the predicted positive cases were actually positive.
 
 \[
 \text{Recall (Sensitivity)} = \frac{TP}{TP + FN}
 \]
-The recall calculates the ratio of correctly predicted positive observations (true positives) to the total number of true positives. This shows how well the model captures all positive cases.
+\indent The recall calculates the ratio of correctly predicted positive observations (true positives) to the total number of true positives. This shows how well the model captures all positive cases.
 
 \[
 \text{F1 Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
 \]
-The F1 score is the harmonic mean of accuracy and recall. It balances accuracy and recall and provides a single metric for evaluating model performance. It is particularly useful when the distribution of classes is uneven.
+\indent The F1 score is the harmonic mean of accuracy and recall. It balances accuracy and recall and provides a single metric for evaluating model performance. It is particularly useful when the distribution of classes is uneven.

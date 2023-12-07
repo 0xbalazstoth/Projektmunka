@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1701973249 "f:/Egyetemi anyagok/Mesterkepzes/2023-2024/Elso felev/Projektmunka/publikacio/MWZX0D_Publikacio_HUN/mwzx0d_pub.tex" "mwzx0d_pub.pdf" "mwzx0d_pub" 1701973251 0
+["pdflatex"] 1701977403 "f:/Egyetemi anyagok/Mesterkepzes/2023-2024/Elso felev/Projektmunka/publikacio/MWZX0D_Publikacio_HUN/mwzx0d_pub.tex" "mwzx0d_pub.pdf" "mwzx0d_pub" 1701977405 0
   "C:/Users/rpgix/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1701890114 207354 c4d565012842f096d0fb11752e76bff3 ""
   "C:/Users/rpgix/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1690721294 24118912 a29ebf4a49ff8d5003480bfceee4beb9 ""
   "C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -132,15 +132,17 @@
   "C:/Users/rpgix/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "ch-Abstract.tex" 1701457253 377 3918b1339509410f3b2179ce02fb9b81 ""
   "ch-Introduction.tex" 1701893089 1449 c2b6faf6277adf73f3c584889f07d68c ""
-  "ch-Method.tex" 1701973248 3486 a91a67e7ef50211127892544b1a332da ""
+  "ch-Method.tex" 1701977401 4070 e95d2084f6fcc5e31cd626c13da32128 ""
   "ch-PyTorch.tex" 1701892637 1876 98e7dc151655b6653cf6b32902a50cb6 ""
   "ch-SpamStats.tex" 1701969277 2108 5a4cb4a413ff1a71ae6ee55f86e96264 ""
   "ch-Target.tex" 1701884599 216 3d3fe496355592bc3c0c7bd0aa7f079c ""
+  "confusion_matrix.png" 1700145901 20415 0a5dfd4b9b02241230fa546c0760675b ""
   "f:/Egyetemi anyagok/Mesterkepzes/2023-2024/Elso felev/Projektmunka/publikacio/MWZX0D_Publikacio_HUN/mwzx0d_pub.tex" 1701969750 8257 f24fb3fc36cf61b336f75e7028fb362e ""
-  "mwzx0d_pub.aux" 1701973250 2906 a1ec89684c21a51b833603cbf6977742 "pdflatex"
-  "mwzx0d_pub.out" 1701973250 1770 38d9b33bad9fc67156ff6e1fffa57cb9 "pdflatex"
+  "mwzx0d_pub.aux" 1701977405 3365 ad91b59311e52469855eff2dafaeae81 "pdflatex"
+  "mwzx0d_pub.out" 1701977405 1770 eb2c13241d323f3626584a3673ef3e08 "pdflatex"
   "mwzx0d_pub.tex" 1701969750 8257 f24fb3fc36cf61b336f75e7028fb362e ""
   "text_classifier_model.png" 1699982616 27782 f7aa9e8bd42c24e6585feae03a81a949 ""
+  "training_loss.png" 1700145891 35701 de06f43a4247de7b2209105ae046816c ""
   (generated)
   "mwzx0d_pub.aux"
   "mwzx0d_pub.log"
