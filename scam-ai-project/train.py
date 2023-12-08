@@ -47,7 +47,7 @@ criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
 # Training loop
-num_epochs = 20
+num_epochs = 30
 train_losses = []
 
 for epoch in range(num_epochs):
