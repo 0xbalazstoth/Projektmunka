@@ -1,1 +1,86 @@
-﻿\section{Eredmények}
+﻿\section{Results}
+
+\indent \textit{1. Spam assassin dataset}: Provided by Apacha Spam Assassin Public Corpus, where the dataset contains 5796 unique values [10]. Has 1896 spam messages and 3900 not spam messages. The results are shown in Table IV, including precision, recall, f1 core and average values.
+\begin{table}[H]
+    \begin{center}
+    \label{spam_assassin}
+    \caption{Spam Assassin dataset}
+    \small
+        \begin{tabularx}{\columnwidth}{| X | c | c | c |}
+            \hline
+             & Precision & Recall & F1 score \\
+            \hline
+            Not spam & 0.99 & 1.0 & 0.99 \\
+            \hline
+            Spam & 1.00 & 0.97 & 0.99 \\
+            \hline
+            Macro average & 0.99 & 0.99 & 0.99 \\
+            \hline
+            Weighted average & 0.99 & 0.99 & 0.99 \\
+            \hline
+        \end{tabularx}
+    \end{center}
+\end{table}
+
+\indent \textit{2. SMS Spam dataset}: Provided by UCI Machine Learning Repository where the dataset contains 5573 unique values. [11] Has 4825 spam messages and 748 not spam messages. The results are shown in Table V, including precision, recall, f1 score and average values.
+\begin{table}[H]
+    \begin{center}
+    \label{sms_spam_dataset}
+    \caption{SMS Spam dataset}
+    \small
+        \begin{tabularx}{\columnwidth}{| X | c | c | c |}
+            \hline
+             & Precision & Recall & F1 score \\
+            \hline
+            Not spam & 0.98 & 1.0 & 0.99 \\
+            \hline
+            Spam & 0.98 & 0.88 & 0.92 \\
+            \hline
+            Macro average & 0.98 & 0.94 & 0.96 \\
+            \hline
+            Weighted average & 0.98 & 0.98 & 0.98 \\
+            \hline
+        \end{tabularx}
+    \end{center}
+\end{table}
+
+\indent \textit{3. YouTube spam dataset}: Provided by UCI Machine Learning Repository where five datasets can be found, our project merged them. This means that the merged dataset contains 1961 unique values [12]. Has 1012 spam messages and 949 not spam messages. The results are shown in Table VI, including precision, recall, f1 score, and average values.
+\begin{table}[H]
+    \begin{center}
+    \label{yt_spam_dataset}
+    \caption{YouTube spam dataset}
+    \small
+        \begin{tabularx}{\columnwidth}{| X | c | c | c |}
+            \hline
+             & Precision & Recall & F1 score \\
+            \hline
+            Not spam & 1.0 & 0.96 & 0.98 \\
+            \hline
+            Spam & 0.98 & 1.00 & 0.99 \\
+            \hline
+            Macro average & 0.99 & 0.98 & 0.98 \\
+            \hline
+            Weighted average & 0.98 & 0.98 & 0.98 \\
+            \hline
+        \end{tabularx}
+    \end{center}
+\end{table}
+
+\indent Table VII presents the overall accuracy of the three public datasets for a better overview of which the model was trained.
+\begin{table}[htp]
+    \centering
+    \label{accuracy}
+    \caption{Overall accuracy values by each dataset}
+    \small
+    \begin{tabularx}{\columnwidth}{| X | X |}
+        \hline
+        & Accuracy \\
+        \hline
+        Spam assassin dataset [10] & 99.14 \\
+        \hline
+        SMS spam dataset [11] & 98.12 \\
+        \hline
+        YouTube spam dataset [12] & 98.57 \\
+        \hline
+    \end{tabularx}
+\end{table}

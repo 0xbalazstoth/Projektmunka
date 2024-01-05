@@ -13,7 +13,7 @@ import seaborn as sns
 
 from model import TextClassifier
 
-data = pd.read_csv('fraud_email_.csv')
+data = pd.read_csv('ytr.csv')
 
 data['Text'].fillna('', inplace=True)
 
@@ -47,7 +47,7 @@ criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
 # Training loop
-num_epochs = 30
+num_epochs = 70
 train_losses = []
 
 for epoch in range(num_epochs):
@@ -85,6 +85,8 @@ plt.show()
 # Create a pie chart
 spam_count = len(y_test[y_test == 1])
 not_spam_count = len(y_test[y_test == 0])
+print("SPAM COUNT: ", spam_count)
+print("NOT SPAM COUNT: ", not_spam_count)
 labels = ['Spam', 'Not Spam']
 sizes = [spam_count, not_spam_count]
 colors = ['#ff9999', '#66b3ff'] 

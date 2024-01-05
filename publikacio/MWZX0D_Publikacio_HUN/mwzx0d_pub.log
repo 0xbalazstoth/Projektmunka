@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  8 DEC 2023 18:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  4 JAN 2024 18:29
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -514,22 +514,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \hbox (2.63678pt too wide) in paragraph at lines 58--58
- [][] 
- []
-
-
-Overfull \hbox (2.63678pt too wide) in paragraph at lines 58--58
- [][] 
- []
-
-
-Overfull \hbox (2.63678pt too wide) in paragraph at lines 58--58
- [][] 
- []
-
-(ch-Abstract.tex) (ch-Introduction.tex
+) (ch-Abstract.tex) (ch-Introduction.tex
 Underfull \hbox (badness 1622) in paragraph at lines 2--5
 \OT1/ptm/m/n/10 in peo-ple's daily lives. Un-for-tu-nately, spam is grow-ing
  []
@@ -539,80 +524,177 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--5
 
  []
 
-) (ch-Target.tex) (ch-PyTorch.tex) (ch-SpamStats.tex
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 13.
- (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)) (ch-Method.tex [1{C:/Users/rpgix/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
+) (ch-PyTorch.tex) (ch-SpamStats.tex (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd)) (ch-Method.tex
+Underfull \vbox (badness 1057) has occurred while \output is active []
+
+ [1{C:/Users/rpgix/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
-] (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+]
+Underfull \hbox (badness 10000) in paragraph at lines 43--46
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--50
+
+ []
+
+(C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 23.
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 23.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 54.
  (C:\Users\rpgix\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-<text_classifier_model.png, id=62, 546.04pt x 749.80125pt>
+<text_classifier_model.png, id=66, 448.67625pt x 899.36pt>
 File: text_classifier_model.png Graphic file (type png)
 <use text_classifier_model.png>
-Package pdftex.def Info: text_classifier_model.png  used on input line 40.
-(pdftex.def)             Requested size: 206.39685pt x 283.41722pt.
+Package pdftex.def Info: text_classifier_model.png  used on input line 87.
+(pdftex.def)             Requested size: 206.39685pt x 413.71062pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+
+ []
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2 <./text_classifier_model.png>]
-<confusion_matrix.png, id=91, 578.16pt x 433.62pt>
-File: confusion_matrix.png Graphic file (type png)
-<use confusion_matrix.png>
-Package pdftex.def Info: confusion_matrix.png  used on input line 71.
-(pdftex.def)             Requested size: 277.20154pt x 207.89703pt.
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 94--96
 
-Overfull \hbox (25.20154pt too wide) in paragraph at lines 71--72
- [][] 
  []
 
-<training_loss.png, id=92, 578.16pt x 433.62pt>
-File: training_loss.png Graphic file (type png)
-<use training_loss.png>
-Package pdftex.def Info: training_loss.png  used on input line 78.
-(pdftex.def)             Requested size: 277.20154pt x 207.89703pt.
 
-Overfull \hbox (25.20154pt too wide) in paragraph at lines 78--79
- [][] 
+Underfull \hbox (badness 10000) in paragraph at lines 97--99
+
+ []
+
+) (ch-Results.tex [3 <./text_classifier_model.png>]) (ch-Conclusion.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+
+Underfull \hbox (badness 3872) in paragraph at lines 8--9
+[]\OT1/ptm/m/n/10 The in-te-gra-tion of adap-tive learn-ing tech-niques and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
  []
 
 )
-Overfull \hbox (8.84538pt too wide) in paragraph at lines 71--72
+Overfull \hbox (8.84538pt too wide) in paragraph at lines 75--76
 []\OT1/ptm/m/it/8 PyTorch vs Ten-sor-flow vs Keras\OT1/ptm/m/n/8 , []https://www.datacamp.com/tutorial/pytorch-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
+[]\OT1/ptm/m/it/8 Linear | Py-Torch 2.1 doc-u-men-ta-tion.\OT1/ptm/m/n/8 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
+[]\OT1/ptm/m/n/8 https://pytorch.org/docs/stable/generated/torch.nn.Linear.html[], Last
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
+[]\OT1/ptm/m/it/8 ReLU | Py-Torch 2.1 doc-u-men-ta-tion.\OT1/ptm/m/n/8 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
+[]\OT1/ptm/m/n/8 https://pytorch.org/docs/stable/generated/torch.nn.ReLU.html[], Last
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
+[]\OT1/ptm/m/it/8 Dropout | Py-Torch 2.1 doc-u-men-ta-tion.\OT1/ptm/m/n/8 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
+[]\OT1/ptm/m/n/8 https://pytorch.org/docs/stable/generated/torch.nn.Dropout.html[], Last
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
 []\OT1/ptm/m/it/8 Spam statis-tics: a deep dive into un-wanted emails\OT1/ptm/m/n/8 ,
  []
 
-[3 <./confusion_matrix.png> <./training_loss.png>] (mwzx0d_pub.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+[]\OT1/ptm/m/it/8 CrossEntropyLoss | Py-Torch 2.1 doc-u-men-ta-tion.\OT1/ptm/m/n/8 ,
+ []
+
+
+Overfull \hbox (0.90143pt too wide) in paragraph at lines 93--94
+[]\OT1/ptm/m/n/8 https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html[],
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+[]\OT1/ptm/m/it/8 Adam | Py-Torch 2.1 doc-u-men-ta-tion.\OT1/ptm/m/n/8 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+[]\OT1/ptm/m/n/8 https://pytorch.org/docs/stable/generated/torch.optim.Adam.html[], Last
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+[]\OT1/ptm/m/it/8 Email clas-si-fi-ca-tion. (2021, Au-gust 6).\OT1/ptm/m/n/8 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+[]\OT1/ptm/m/n/8 https://www.kaggle.com/datasets/ganiyuolalekan/spam-assassin-email-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+[]\OT1/ptm/m/it/8 SMS spam col-lec-tion - UCI Ma-chine Learn-ing Repos-i-tory.\OT1/ptm/m/n/8 ,
+ []
+
+
+Underfull \hbox (badness 3128) in paragraph at lines 105--106
+[]\OT1/ptm/m/it/8 YouTube spam col-lec-tion - UCI Ma-chine Learn-ing Repos-i-tory.\OT1/ptm/m/n/8 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
+[]\OT1/ptm/m/n/8 https://archive.ics.uci.edu/dataset/380/youtube+spam+collection[], Last
+ []
+
+[4] (mwzx0d_pub.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
 Package rerunfilecheck Info: File `mwzx0d_pub.out' has not changed.
-(rerunfilecheck)             Checksum: EB2C13241D323F3626584A3673EF3E08;1770.
+(rerunfilecheck)             Checksum: 55944964346F982A7346EF2E7ECB58FB;1713.
  ) 
 Here is how much of TeX's memory you used:
- 14237 strings out of 475550
- 228750 string characters out of 5762533
- 2011238 words of memory out of 5000000
- 35203 multiletter control sequences out of 15000+600000
- 601525 words of font info for 131 fonts, out of 8000000 for 9000
+ 14264 strings out of 475550
+ 229070 string characters out of 5762533
+ 2054238 words of memory out of 5000000
+ 35210 multiletter control sequences out of 15000+600000
+ 601309 words of font info for 130 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 75i,10n,79p,2288b,1322s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on mwzx0d_pub.pdf (3 pages, 232405 bytes).
+ 75i,11n,79p,2290b,1433s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/rpgix/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on mwzx0d_pub.pdf (4 pages, 178417 bytes).
 PDF statistics:
- 175 PDF objects out of 1000 (max. 8388607)
- 38 named destinations out of 1000 (max. 500000)
- 112 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 192 PDF objects out of 1000 (max. 8388607)
+ 55 named destinations out of 1000 (max. 500000)
+ 110 words of extra memory for PDF output out of 10000 (max. 10000000)
 
